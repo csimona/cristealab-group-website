@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Detection AI | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .research-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .research-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .research-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .research-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .research-section {
+            margin-bottom: 4rem;
+        }
+        .research-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .project-details h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .methodology-list {
+            list-style: none;
+            padding: 0;
+        }
+        .methodology-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .methodology-list li:last-child {
+            border-bottom: none;
+        }
+        .methodology-list li::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+        .impact-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .impact-highlight h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .clinical-urgency {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #f44336;
+            margin: 2rem 0;
+        }
+        .clinical-urgency h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+        }
+        .ehr-data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .data-type-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+        .challenge-highlight {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 2rem 0;
+        }
+        .challenge-highlight h4 {
+            color: #f57c00;
+            margin-bottom: 1rem;
+        }
+        .validation-pipeline {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #4caf50;
+            margin: 2rem 0;
+        }
+        .validation-pipeline h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        .milestones-timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        .milestones-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        .milestone-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-left: 40px;
+        }
+        .milestone-item::before {
+            content: '';
+            position: absolute;
+            left: -49px;
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+        .milestone-date {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#research" class="nav-link">Research</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#software" class="nav-link">Software</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Page Content -->
+    <div class="research-page">
+        <!-- Hero Section -->
+        <div class="research-hero">
+            <div class="container">
+                <h1>Early Detection AI</h1>
+                <p>
+                    Developing Large Language Model methodology for early detection of pancreatic cancer from 
+                    electronic health record data using deep learning clinical decision support tools.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Overview -->
+            <div class="research-section">
+                <h2>Research Overview</h2>
+                <div class="project-description">
+                    Pancreatic cancer is one of the most lethal cancers, largely due to late-stage diagnosis when treatment 
+                    options are limited. Our early detection research leverages the power of Large Language Models and deep 
+                    learning to identify high-risk patients years before clinical symptoms appear, using electronic health 
+                    record data from routine healthcare interactions.
+                </div>
+                
+                <div class="clinical-urgency">
+                    <h4>The Pancreatic Cancer Early Detection Challenge</h4>
+                    <p>
+                        Pancreatic cancer has a 5-year survival rate of only 12%, primarily because 80% of patients are 
+                        diagnosed at advanced stages when surgical resection is no longer possible. Early detection could 
+                        dramatically improve outcomes, as patients diagnosed at early stages have survival rates approaching 
+                        70%. However, pancreatic cancer is often called "silent" because it produces few symptoms until 
+                        advanced stages.
+                    </p>
+                </div>
+
+                <div class="impact-highlight">
+                    <h4>Transformative Potential</h4>
+                    <p>
+                        This research has the potential to transform pancreatic cancer outcomes by identifying patients 
+                        at high risk 1-3 years before clinical diagnosis. Early identification would enable enhanced 
+                        surveillance, early intervention, and potentially preventive treatments, fundamentally changing 
+                        the trajectory of this devastating disease.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Data Resources -->
+            <div class="research-section">
+                <h2>Electronic Health Record Data</h2>
+                <div class="project-card">
+                    <h3>Mass Gen-Brigham-Dana Farber Medical System</h3>
+                    <div class="project-description">
+                        We have access to electronic health records from 1 million patients in the Mass Gen-Brigham-Dana 
+                        Farber medical system, representing one of the largest and most comprehensive healthcare datasets 
+                        available for pancreatic cancer research. This dataset includes decades of patient interactions 
+                        across multiple healthcare settings.
+                    </div>
+
+                    <div class="ehr-data-grid">
+                        <div class="data-type-card">
+                            <i class="fas fa-notes-medical" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Clinical Notes</h4>
+                            <p>Physician notes, radiology reports, pathology reports</p>
+                        </div>
+                        <div class="data-type-card">
+                            <i class="fas fa-vial" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Laboratory Results</h4>
+                            <p>Blood tests, tumor markers, metabolic panels</p>
+                        </div>
+                        <div class="data-type-card">
+                            <i class="fas fa-x-ray" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Imaging Studies</h4>
+                            <p>CT, MRI, ultrasound reports and findings</p>
+                        </div>
+                        <div class="data-type-card">
+                            <i class="fas fa-pills" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Medications</h4>
+                            <p>Prescriptions, dosages, treatment histories</p>
+                        </div>
+                        <div class="data-type-card">
+                            <i class="fas fa-procedures" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Procedures</h4>
+                            <p>Surgical procedures, endoscopies, biopsies</p>
+                        </div>
+                        <div class="data-type-card">
+                            <i class="fas fa-heartbeat" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Vital Signs</h4>
+                            <p>Weight, blood pressure, symptom tracking</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Data Characteristics</h5>
+                        <ul class="methodology-list">
+                            <li>1 million patient records spanning 20+ years</li>
+                            <li>Longitudinal patient tracking across multiple care settings</li>
+                            <li>Rich clinical annotation and outcome data</li>
+                            <li>Multi-modal data integration (text, numerical, imaging)</li>
+                            <li>Real-world data reflecting actual clinical practice</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Electronic Health Records</span>
+                        <span class="tech-tag">1M Patients</span>
+                        <span class="tech-tag">Longitudinal Data</span>
+                        <span class="tech-tag">Multi-modal</span>
+                        <span class="tech-tag">Real-world Evidence</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology Development -->
+            <div class="research-section">
+                <h2>LLM Methodology Development</h2>
+                <div class="project-card">
+                    <h3>Adapting Foundation Models for EHR Analysis</h3>
+                    <div class="project-description">
+                        Led by Dr. Jifan Gao (joining June 2025), we are developing novel Large Language Model 
+                        architectures specifically designed for electronic health record analysis. This work builds 
+                        on recent breakthroughs in medical AI while addressing the unique challenges of pancreatic 
+                        cancer early detection.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Technical Innovation</h5>
+                        <ul class="methodology-list">
+                            <li>Adaptation of transformer architectures for temporal medical data</li>
+                            <li>Multi-modal integration of text, numerical, and imaging data</li>
+                            <li>Attention mechanisms for long-term temporal relationships</li>
+                            <li>Handling missing and incomplete data in real-world settings</li>
+                            <li>Privacy-preserving training methods for sensitive health data</li>
+                        </ul>
+                    </div>
+
+                    <div class="challenge-highlight">
+                        <h4>Real-World Data Challenges</h4>
+                        <p>
+                            Unlike previous research that used heavily curated datasets, our work addresses the 
+                            challenges of real-world clinical data including missing values, inconsistent formatting, 
+                            varying data quality, and the need to handle data from multiple healthcare systems with 
+                            different practices and documentation standards.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Foundation Model Baseline</h5>
+                        <p>
+                            We begin by implementing and validating the methodology from Placido et al. (Nature Medicine 2023) 
+                            on our institutional dataset. This provides a benchmark for performance comparison and helps 
+                            identify areas where our novel approaches can improve upon existing methods.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Large Language Models</span>
+                        <span class="tech-tag">Transformer Architecture</span>
+                        <span class="tech-tag">Multi-modal AI</span>
+                        <span class="tech-tag">Temporal Modeling</span>
+                        <span class="tech-tag">Privacy-Preserving AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clinical Decision Support -->
+            <div class="research-section">
+                <h2>Clinical Decision Support Integration</h2>
+                <div class="project-card">
+                    <h3>Deployment in Healthcare Workflows</h3>
+                    <div class="project-description">
+                        Our early detection system is designed as a clinical decision support tool that can be 
+                        integrated into routine healthcare workflows. The system will provide risk scores and 
+                        recommendations to clinicians during regular patient encounters, enabling proactive 
+                        screening and intervention.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Integration Features</h5>
+                        <ul class="methodology-list">
+                            <li>Real-time risk assessment during patient visits</li>
+                            <li>Integration with electronic health record systems</li>
+                            <li>Automated alerts for high-risk patients</li>
+                            <li>Evidence-based recommendations for follow-up care</li>
+                            <li>Continuous learning from new patient data</li>
+                        </ul>
+                    </div>
+
+                    <div class="validation-pipeline">
+                        <h4>Clinical Validation Pipeline</h4>
+                        <p>
+                            The project will culminate in a prospective clinical trial to evaluate how our AI system 
+                            performs in real-world settings when deployed to help clinicians identify high-risk patients. 
+                            This validation study will assess not only diagnostic accuracy but also clinical utility, 
+                            physician acceptance, and patient outcomes.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Implementation Considerations</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>User Interface Design</strong> - Intuitive dashboards for busy clinicians</li>
+                            <li><strong>Alert Fatigue Prevention</strong> - Calibrated thresholds to minimize false positives</li>
+                            <li><strong>Explainable AI</strong> - Clear reasoning for risk assessments</li>
+                            <li><strong>Privacy and Security</strong> - HIPAA-compliant implementation</li>
+                            <li><strong>Continuous Monitoring</strong> - Performance tracking and model updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Clinical Decision Support</span>
+                        <span class="tech-tag">EHR Integration</span>
+                        <span class="tech-tag">Real-time Analysis</span>
+                        <span class="tech-tag">Explainable AI</span>
+                        <span class="tech-tag">Clinical Validation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Timeline -->
+            <div class="research-section">
+                <h2>Project Timeline & Milestones</h2>
+                <div class="project-card">
+                    <h3>5-Year Research Plan</h3>
+                    <div class="project-description">
+                        This ambitious project is structured as a comprehensive 5-year research program, from initial 
+                        methodology development through clinical validation and deployment. Each phase builds on previous 
+                        results while addressing specific technical and clinical challenges.
+                    </div>
+
+                    <div class="milestones-timeline">
+                        <div class="milestone-item">
+                            <div class="milestone-date">Year 1 (2025-2026)</div>
+                            <h4>Foundation & Baseline</h4>
+                            <p>Validate existing methodologies on institutional dataset, establish baseline performance, 
+                               and identify key challenges in real-world data application.</p>
+                        </div>
+                        <div class="milestone-item">
+                            <div class="milestone-date">Year 2 (2026-2027)</div>
+                            <h4>Algorithm Development</h4>
+                            <p>Develop novel LLM architectures adapted for pancreatic cancer early detection, implement 
+                               multi-modal data integration, and optimize for missing data handling.</p>
+                        </div>
+                        <div class="milestone-item">
+                            <div class="milestone-date">Year 3 (2027-2028)</div>
+                            <h4>Validation & Optimization</h4>
+                            <p>Extensive validation on held-out datasets, performance optimization, and development 
+                               of clinical decision support interface.</p>
+                        </div>
+                        <div class="milestone-item">
+                            <div class="milestone-date">Year 4 (2028-2029)</div>
+                            <h4>Clinical Integration</h4>
+                            <p>Pilot deployment in clinical settings, physician training, workflow integration, 
+                               and collection of prospective validation data.</p>
+                        </div>
+                        <div class="milestone-item">
+                            <div class="milestone-date">Year 5 (2029-2030)</div>
+                            <h4>Prospective Clinical Trial</h4>
+                            <p>Large-scale prospective clinical trial to evaluate real-world performance, patient outcomes, 
+                               and clinical utility of the early detection system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Leadership -->
+            <div class="research-section">
+                <h2>Research Team</h2>
+                <div class="project-card">
+                    <h3>Dr. Jifan Gao - Project Lead</h3>
+                    <div class="project-description">
+                        Dr. Jifan Gao will join the Cristea Lab in June 2025 as a postdoctoral fellow to lead this 
+                        groundbreaking early detection research. Dr. Gao brings expertise in large language models, 
+                        medical AI, and electronic health record analysis, making him uniquely qualified to tackle 
+                        this challenging project.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Research Expertise</h5>
+                        <ul class="methodology-list">
+                            <li>Large Language Models for healthcare applications</li>
+                            <li>Natural language processing of clinical text</li>
+                            <li>Multi-modal AI for medical data integration</li>
+                            <li>Privacy-preserving machine learning methods</li>
+                            <li>Clinical decision support system development</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Collaborative Network</h5>
+                        <p>
+                            Dr. Gao will work closely with our interdisciplinary team of computational biologists, 
+                            statisticians, and clinical collaborators. The project also involves partnerships with 
+                            clinicians across the Mass Gen-Brigham-Dana Farber system and AI researchers at Harvard 
+                            and MIT.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Dr. Jifan Gao</span>
+                        <span class="tech-tag">Postdoctoral Fellow</span>
+                        <span class="tech-tag">Medical AI Expert</span>
+                        <span class="tech-tag">June 2025 Start</span>
+                        <span class="tech-tag">Project Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expected Impact -->
+            <div class="research-section">
+                <h2>Expected Impact & Innovation</h2>
+                <div class="project-card">
+                    <h3>Transforming Pancreatic Cancer Outcomes</h3>
+                    <div class="project-description">
+                        This research represents a paradigm shift in pancreatic cancer care, moving from reactive 
+                        treatment of advanced disease to proactive identification and intervention for high-risk patients. 
+                        The potential impact extends beyond pancreatic cancer to other challenging-to-detect cancers.
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Clinical Impact</h4>
+                        <p>
+                            Early detection could increase pancreatic cancer survival rates from 12% to potentially 
+                            50-70% by enabling treatment at resectable stages. For a disease that affects 60,000+ 
+                            Americans annually, this could save tens of thousands of lives each year and dramatically 
+                            reduce healthcare costs associated with advanced cancer care.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Scientific Innovation</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Methodological Advances</strong> - Novel LLM architectures for medical data</li>
+                            <li><strong>Real-World Application</strong> - First large-scale EHR-based pancreatic cancer prediction</li>
+                            <li><strong>Clinical Translation</strong> - Direct pathway from research to patient care</li>
+                            <li><strong>Generalizable Framework</strong> - Applicable to other cancer types</li>
+                        </ul>
+                    </div>
+
+                    <div class="validation-pipeline">
+                        <h4>Broader Applications</h4>
+                        <p>
+                            The methodologies developed for pancreatic cancer early detection will be applicable to 
+                            other cancers and diseases that benefit from early intervention. This research establishes 
+                            a framework for AI-driven preventive medicine that could transform healthcare from reactive 
+                            to proactive care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../index.html#research" class="btn btn-secondary">Back to Research Overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

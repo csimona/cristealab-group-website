@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Discovery & KRAS Inhibition | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .research-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .research-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .research-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .research-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .research-section {
+            margin-bottom: 4rem;
+        }
+        .research-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .project-details h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .methodology-list {
+            list-style: none;
+            padding: 0;
+        }
+        .methodology-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .methodology-list li:last-child {
+            border-bottom: none;
+        }
+        .methodology-list li::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+        .impact-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .impact-highlight h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .drug-highlight {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 2rem 0;
+        }
+        .drug-highlight h4 {
+            color: #f57c00;
+            margin-bottom: 1rem;
+        }
+        .resistance-analysis {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #e91e63;
+            margin: 2rem 0;
+        }
+        .resistance-analysis h4 {
+            color: #c2185b;
+            margin-bottom: 1rem;
+        }
+        .screen-results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .screen-result-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+        .target-discovery {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #2196f3;
+            margin: 2rem 0;
+        }
+        .target-discovery h4 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#research" class="nav-link">Research</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#software" class="nav-link">Software</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Page Content -->
+    <div class="research-page">
+        <!-- Hero Section -->
+        <div class="research-hero">
+            <div class="container">
+                <h1>Drug Discovery & KRAS Inhibition</h1>
+                <p>
+                    Pioneering drug perturbation analysis through CRISPR screens and cell surfaceome analysis 
+                    to identify novel therapeutic targets and overcome resistance to KRAS inhibitors in pancreatic cancer.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Overview -->
+            <div class="research-section">
+                <h2>Research Overview</h2>
+                <div class="project-description">
+                    Our drug discovery research focuses on understanding and overcoming resistance to KRAS inhibitors, 
+                    one of the most promising recent advances in pancreatic cancer treatment. We employ cutting-edge 
+                    CRISPR screening technologies and proteomics approaches to identify vulnerabilities in KRAS-driven 
+                    cancers and develop next-generation therapeutic strategies.
+                </div>
+                
+                <div class="drug-highlight">
+                    <h4>KRAS: The "Undruggable" Target</h4>
+                    <p>
+                        KRAS has long been considered "undruggable" due to its smooth protein surface and high affinity 
+                        for its substrate. Recent breakthroughs in KRAS inhibitor development have opened new therapeutic 
+                        possibilities for pancreatic cancer patients, but resistance inevitably emerges. Our research 
+                        aims to stay ahead of resistance by understanding its mechanisms and developing combination 
+                        strategies to prevent or overcome it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project A: Resistance Mechanisms -->
+            <div class="research-section">
+                <h2>Project A: Mechanisms of KRAS Inhibition Resistance</h2>
+                <div class="project-card">
+                    <h3>Whole Exome Sequencing and Bulk Genomics Analysis</h3>
+                    <div class="project-description">
+                        We perform comprehensive genomic analysis of pancreatic cancer models and patient samples that 
+                        have developed resistance to KRAS inhibitors. This work identifies genetic alterations that 
+                        drive resistance and reveals potential therapeutic targets to overcome resistance mechanisms.
+                    </div>
+                    
+                    <div class="project-details">
+                        <h5>Resistance Analysis Pipeline</h5>
+                        <ul class="methodology-list">
+                            <li>Longitudinal whole exome sequencing of resistant tumor samples</li>
+                            <li>Comparative genomics between sensitive and resistant cell lines</li>
+                            <li>Identification of resistance-associated mutations and copy number alterations</li>
+                            <li>Pathway analysis of resistance mechanisms</li>
+                            <li>Validation of resistance drivers through functional studies</li>
+                        </ul>
+                    </div>
+
+                    <div class="resistance-analysis">
+                        <h4>Key Resistance Mechanisms Identified</h4>
+                        <p>
+                            Our analysis has revealed multiple pathways through which pancreatic cancers can escape 
+                            KRAS inhibition, including reactivation of downstream signaling pathways, activation 
+                            of alternative oncogenic drivers, and metabolic reprogramming. Understanding these 
+                            mechanisms enables the development of rational combination therapies.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Translation</h5>
+                        <p>
+                            We work closely with clinical teams to analyze samples from patients who develop resistance 
+                            to KRAS inhibitors. This real-world data validation ensures that our laboratory findings 
+                            are clinically relevant and can inform patient treatment decisions.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Whole Exome Sequencing</span>
+                        <span class="tech-tag">Resistance Mechanisms</span>
+                        <span class="tech-tag">Comparative Genomics</span>
+                        <span class="tech-tag">Pathway Analysis</span>
+                        <span class="tech-tag">Clinical Validation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project B: CRISPR Screens -->
+            <div class="research-section">
+                <h2>Project B: CRISPR Screening of KRAS Inhibitors</h2>
+                <div class="project-card">
+                    <h3>Pan-RAS and KRAS Mutant-Selective Inhibition Analysis</h3>
+                    <div class="project-description">
+                        We conduct large-scale CRISPR knockout screens to identify genetic dependencies and resistance 
+                        mechanisms for both pan-RAS inhibitors and KRAS mutant-selective inhibitors in pancreatic 
+                        cancer cell lines. This systematic approach reveals vulnerabilities that can be exploited 
+                        for combination therapies.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>CRISPR Screen Design</h5>
+                        <ul class="methodology-list">
+                            <li>Genome-wide CRISPR knockout screens in multiple pancreatic cancer cell lines</li>
+                            <li>Comparative analysis of pan-RAS vs. mutant-selective inhibitor responses</li>
+                            <li>Time-course analysis to identify early and late resistance mechanisms</li>
+                            <li>Drug dose response screening to identify synergistic combinations</li>
+                            <li>Functional validation of top candidate genes</li>
+                        </ul>
+                    </div>
+
+                    <div class="screen-results-grid">
+                        <div class="screen-result-card">
+                            <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Synthetic Lethal Targets</h4>
+                            <p>Genes essential only in KRAS mutant context</p>
+                        </div>
+                        <div class="screen-result-card">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Resistance Genes</h4>
+                            <p>Genes that protect against KRAS inhibition</p>
+                        </div>
+                        <div class="screen-result-card">
+                            <i class="fas fa-link" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Combination Targets</h4>
+                            <p>Genes for synergistic drug combinations</p>
+                        </div>
+                        <div class="screen-result-card">
+                            <i class="fas fa-route" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Pathway Dependencies</h4>
+                            <p>Essential signaling pathways in resistance</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Drug Classes Analyzed</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>G12C-specific inhibitors</strong> - AMG510 (sotorasib), MRTX849 (adagrasib)</li>
+                            <li><strong>Pan-KRAS inhibitors</strong> - RMC-6236, next-generation compounds</li>
+                            <li><strong>Downstream targets</strong> - MEK, ERK, PI3K/AKT pathway inhibitors</li>
+                            <li><strong>Combination approaches</strong> - KRAS + CDK4/6, KRAS + autophagy, etc.</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Therapeutic Innovation</h4>
+                        <p>
+                            Our CRISPR screens have identified several promising combination therapy opportunities 
+                            that are now being tested in preclinical models and clinical trials. These rational 
+                            combinations have the potential to prevent resistance and improve patient outcomes 
+                            compared to KRAS inhibitor monotherapy.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">CRISPR Screening</span>
+                        <span class="tech-tag">Pan-RAS Inhibitors</span>
+                        <span class="tech-tag">Synthetic Lethality</span>
+                        <span class="tech-tag">Combination Therapy</span>
+                        <span class="tech-tag">Drug Synergy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project A: PhageDisplay Screening -->
+            <div class="research-section">
+                <h2>Project A: PhageDisplay Antibody Screening</h2>
+                <div class="project-card">
+                    <h3>Large-scale Antibody Screening for KRAS Inhibition</h3>
+                    <div class="project-description">
+                        We employ PhageDisplay technology to screen large antibody libraries for novel binding partners 
+                        and therapeutic targets in KRAS-driven pancreatic cancer. This approach enables the discovery 
+                        of cell surface proteins that can be targeted with antibody-drug conjugates or immunotherapies.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>PhageDisplay Screening Pipeline</h5>
+                        <ul class="methodology-list">
+                            <li>Large-scale phage display library screening on pancreatic cancer cell lines</li>
+                            <li>Differential screening between KRAS mutant and wild-type cells</li>
+                            <li>Identification of cell surface proteins enriched in resistant populations</li>
+                            <li>Antibody affinity maturation and characterization</li>
+                            <li>Functional validation of antibody-target interactions</li>
+                        </ul>
+                    </div>
+
+                    <div class="target-discovery">
+                        <h4>Novel Target Discovery</h4>
+                        <p>
+                            PhageDisplay screening has identified several previously unknown cell surface proteins 
+                            that are specifically expressed or upregulated in KRAS-driven pancreatic cancers. 
+                            These targets represent opportunities for developing highly specific antibody-drug 
+                            conjugates that can deliver cytotoxic payloads directly to cancer cells.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Antibody-Drug Conjugate Development</h5>
+                        <p>
+                            Selected antibodies from our screens are being developed into antibody-drug conjugates 
+                            (ADCs) in collaboration with pharmaceutical partners. This approach allows for targeted 
+                            delivery of potent cytotoxic agents while minimizing systemic toxicity.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">PhageDisplay</span>
+                        <span class="tech-tag">Antibody Screening</span>
+                        <span class="tech-tag">Target Discovery</span>
+                        <span class="tech-tag">ADC Development</span>
+                        <span class="tech-tag">Cell Surface Targets</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project B: Mass Spectrometry Analysis -->
+            <div class="research-section">
+                <h2>Project B: Mass Spectrometry Target Identification</h2>
+                <div class="project-card">
+                    <h3>Proteomics Analysis of KRAS Inhibition Resistance</h3>
+                    <div class="project-description">
+                        We use quantitative mass spectrometry to identify proteins that are differentially expressed 
+                        in response to KRAS inhibition and during the development of resistance. This proteomics 
+                        approach reveals post-translational modifications and protein-level changes that may not 
+                        be detected through genomic or transcriptomic analyses.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Proteomics Pipeline</h5>
+                        <ul class="methodology-list">
+                            <li>Quantitative proteomics analysis under various drug concentrations</li>
+                            <li>Time-course analysis of protein expression changes during treatment</li>
+                            <li>Comparative analysis of sensitive vs. resistant cell populations</li>
+                            <li>Post-translational modification analysis (phosphoproteomics, ubiquitinomics)</li>
+                            <li>Cell surface proteome enrichment for ADC target identification</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Resistance Biomarker Discovery</h5>
+                        <p>
+                            Our mass spectrometry analysis has identified protein signatures that can predict 
+                            resistance to KRAS inhibitors before it becomes clinically apparent. These biomarkers 
+                            could enable early intervention with combination therapies to prevent resistance 
+                            development.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Drug Target Validation</h5>
+                        <p>
+                            Proteins identified through mass spectrometry are validated as potential drug targets 
+                            through functional studies, including CRISPR knockout, overexpression experiments, 
+                            and small molecule inhibition. This multi-level validation ensures that identified 
+                            targets are therapeutically relevant.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Mass Spectrometry</span>
+                        <span class="tech-tag">Quantitative Proteomics</span>
+                        <span class="tech-tag">Phosphoproteomics</span>
+                        <span class="tech-tag">Biomarker Discovery</span>
+                        <span class="tech-tag">Target Validation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Translational Applications -->
+            <div class="research-section">
+                <h2>Translational Applications</h2>
+                <div class="project-card">
+                    <h3>From Discovery to Clinical Translation</h3>
+                    <div class="project-description">
+                        Our drug discovery research is designed with clinical translation in mind. We work closely 
+                        with pharmaceutical companies, clinical investigators, and regulatory agencies to ensure 
+                        that our discoveries can be rapidly translated into new treatments for patients.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Collaboration</h5>
+                        <ul class="methodology-list">
+                            <li>Partnership with Revolution Medicines for RMC-6236 clinical trial analysis</li>
+                            <li>Collaboration with biotech companies for ADC development</li>
+                            <li>Integration with ongoing clinical trials at Dana-Farber</li>
+                            <li>Biomarker validation in patient samples</li>
+                            <li>Regulatory guidance for companion diagnostic development</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Patient Impact</h4>
+                        <p>
+                            Several targets and biomarkers identified through our research are now being tested 
+                            in clinical trials. This direct translational pathway ensures that our discoveries 
+                            can rapidly benefit pancreatic cancer patients, who have limited treatment options 
+                            and urgent need for new therapeutic approaches.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Publications & Patents -->
+            <div class="research-section">
+                <h2>Publications & Intellectual Property</h2>
+                <div class="project-card">
+                    <h3>Key Outputs</h3>
+                    <div class="project-details">
+                        <h5>Manuscripts in Preparation</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>CRISPR screening reveals vulnerabilities in KRAS-driven pancreatic cancer</strong> - Submission planned for Nature Cancer 2025</li>
+                            <li><strong>Mechanisms of resistance to pan-RAS inhibition</strong> - Cancer Cell submission 2025</li>
+                            <li><strong>PhageDisplay identification of novel ADC targets</strong> - Nature Biotechnology 2025</li>
+                            <li><strong>Proteomics-guided combination therapy strategies</strong> - Cell Chemical Biology 2025</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Patent Applications</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Novel ADC targets in pancreatic cancer</strong> - Patent application filed 2024</li>
+                            <li><strong>Biomarkers for KRAS inhibitor resistance</strong> - Patent application in preparation</li>
+                            <li><strong>Combination therapy strategies</strong> - Patent applications filed 2024-2025</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Software & Databases</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>CRISPR-Analytics Suite</strong> - Pipeline for CRISPR screen analysis</li>
+                            <li><strong>Resistance Predictor</strong> - ML models for resistance prediction</li>
+                            <li><strong>ADC Target Database</strong> - Curated database of cell surface targets</li>
+                            <li><strong>Drug Combination Optimizer</strong> - Tools for rational combination design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Directions -->
+            <div class="research-section">
+                <h2>Future Directions</h2>
+                <div class="impact-highlight">
+                    <h4>Next-Generation Drug Discovery</h4>
+                    <p>
+                        We are expanding our drug discovery efforts to include AI-driven approaches for target 
+                        identification and drug design. By integrating our CRISPR screening and proteomics data 
+                        with machine learning models, we can predict novel drug targets and optimize combination 
+                        therapies before experimental validation, accelerating the translation of discoveries 
+                        to patient care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../index.html#research" class="btn btn-secondary">Back to Research Overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

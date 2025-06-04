@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Cristea Lab | Dana-Farber Cancer Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .team-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .team-intro h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .team-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .team-section {
+            margin-bottom: 4rem;
+        }
+        .team-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .enhanced-team-member {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+        .enhanced-team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .member-header {
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .member-photo-small {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .member-details h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .member-title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .view-profile-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .view-profile-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .member-expertise {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .expertise-tag {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .join-team {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .join-team h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .join-team p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        @media (max-width: 768px) {
+            .member-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .member-photo-small {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="index.html#software" class="nav-link">Software</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Page Content -->
+    <div class="team-page">
+        <div class="container">
+            <!-- Team Introduction -->
+            <div class="team-intro">
+                <h1>Our Team</h1>
+                <p>
+                    We are a diverse group of 14 computational biologists, data scientists, statisticians, and researchers 
+                    united by our passion for advancing cancer research through cutting-edge AI and Large Language Models. 
+                    Our interdisciplinary team combines expertise in AI/ML, genomics, spatial biology, and clinical translation 
+                    to tackle pancreatic and breast cancer through innovative computational approaches.
+                </p>
+            </div>
+
+            <!-- Principal Investigator -->
+            <div class="team-section">
+                <h2>Principal Investigator</h2>
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/headshot.jpg" alt="Dr. Simona Cristea" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Dr. Simona Cristea</h3>
+                            <p class="member-title">Principal Investigator</p>
+                            <p>Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer. Leading research in single cell LLMs, AI foundation models, and computational efforts to cure pancreatic cancer.</p>
+                        </div>
+                        <a href="team/simona-cristea.html" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Large Language Models</span>
+                        <span class="expertise-tag">Spatial Genomics</span>
+                        <span class="expertise-tag">AI Foundation Models</span>
+                        <span class="expertise-tag">Cancer Evolution</span>
+                        <span class="expertise-tag">Single-Cell Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Scientists -->
+            <div class="team-section">
+                <h2>Research Scientists</h2>
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/research-scientist-placeholder.jpg" alt="Research Scientist" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Dr. Jifan Gao</h3>
+                            <p class="member-title">Postdoctoral Fellow (Starting June 2025)</p>
+                            <p>Developing LLM methodology for early detection of pancreatic cancer from electronic health record data using deep learning clinical decision support tools.</p>
+                        </div>
+                        <a href="team/research-scientist.html" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Large Language Models</span>
+                        <span class="expertise-tag">Early Detection</span>
+                        <span class="expertise-tag">Electronic Health Records</span>
+                        <span class="expertise-tag">Clinical AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postdoctoral Researchers -->
+            <div class="team-section">
+                <h2>Postdoctoral Researchers</h2>
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/postdoc-placeholder.jpg" alt="Postdoctoral Researcher" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Dr. Chong Zhuo</h3>
+                            <p class="member-title">Postdoctoral Researcher (Medical Oncology)</p>
+                            <p>Working on longitudinal single cell immune analyses in pancreatic cancer, integrative analysis of tumor and blood in immunotherapy-treated patients.</p>
+                        </div>
+                        <a href="team/postdoc-researcher.html" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Immunotherapy</span>
+                        <span class="expertise-tag">Single Cell Analysis</span>
+                        <span class="expertise-tag">TCR Sequencing</span>
+                        <span class="expertise-tag">Clinical Genomics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graduate Students -->
+            <div class="team-section">
+                <h2>Graduate Students</h2>
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/grad-student-placeholder.jpg" alt="Graduate Student" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Runzi Tan</h3>
+                            <p class="member-title">Computational Biologist I</p>
+                            <p>Working on large language models in single cell cancer genomics, multi-modal LLMs for genomics, and CRISPR screens on KRAS inhibitors.</p>
+                        </div>
+                        <a href="team/graduate-student.html" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Large Language Models</span>
+                        <span class="expertise-tag">CRISPR Screens</span>
+                        <span class="expertise-tag">scRNA-seq Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/grad-student-2-placeholder.jpg" alt="Graduate Student" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Xi (Sam) Wang</h3>
+                            <p class="member-title">Computational Biologist I</p>
+                            <p>Working on multi-modal LLMs for genomics, cancer evolution modeling, spatial transcriptomics pipeline development, and fibroblast subtyping.</p>
+                        </div>
+                        <a href="#" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Spatial Genomics</span>
+                        <span class="expertise-tag">LLM Development</span>
+                        <span class="expertise-tag">Cancer Evolution</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Team Members -->
+            <div class="team-section">
+                <h2>Additional Team Members</h2>
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/undergrad-placeholder.jpg" alt="Undergraduate Researcher" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Audrey Lacy</h3>
+                            <p class="member-title">Associate Computational Biologist</p>
+                            <p>Working on spatial genomics analyses, single cell spatial proteomics frameworks, and foundation models for computational pathology.</p>
+                        </div>
+                        <a href="#" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Spatial Proteomics</span>
+                        <span class="expertise-tag">Foundation Models</span>
+                        <span class="expertise-tag">Computational Pathology</span>
+                    </div>
+                </div>
+                
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/team-member-placeholder.jpg" alt="Team Member" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Baiqi Jiang</h3>
+                            <p class="member-title">Computational Biologist I</p>
+                            <p>Working on CRISPR screens on KRAS inhibitors, whole exome sequencing analyses, and cell surfaceome analysis for drug target identification.</p>
+                        </div>
+                        <a href="#" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">CRISPR Screens</span>
+                        <span class="expertise-tag">Drug Target Discovery</span>
+                        <span class="expertise-tag">Mass Spectrometry</span>
+                    </div>
+                </div>
+                
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/team-member-placeholder2.jpg" alt="Team Member" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Sung (David) Chul Hong</h3>
+                            <p class="member-title">Statistician I</p>
+                            <p>Working on spatial genomics analyses, fibroblast subtyping in pancreatic cancer data, and statistical modeling of collagen-stroma associations.</p>
+                        </div>
+                        <a href="#" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Statistical Modeling</span>
+                        <span class="expertise-tag">Spatial Analysis</span>
+                        <span class="expertise-tag">Fibroblast Biology</span>
+                    </div>
+                </div>
+                
+                <div class="enhanced-team-member">
+                    <div class="member-header">
+                        <img src="images/team-member-placeholder3.jpg" alt="Team Member" class="member-photo-small placeholder-img">
+                        <div class="member-details">
+                            <h3>Len Taing</h3>
+                            <p class="member-title">Software Developer III</p>
+                            <p>Working exclusively on spatial genomics analyses and modeling, specifically single cell spatial transcriptomics pipeline development.</p>
+                        </div>
+                        <a href="#" class="view-profile-btn">View Profile</a>
+                    </div>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Pipeline Development</span>
+                        <span class="expertise-tag">Software Engineering</span>
+                        <span class="expertise-tag">Spatial Transcriptomics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join Our Team -->
+            <div class="join-team">
+                <h2>Join Our Team</h2>
+                <p>
+                    We are always looking for talented and motivated individuals to join our research group. 
+                    If you're passionate about computational cancer research and want to make a meaningful impact, 
+                    we'd love to hear from you.
+                </p>
+                <a href="index.html#contact" class="btn btn-secondary">Open Positions</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

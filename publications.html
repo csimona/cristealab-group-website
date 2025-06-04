@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Cristea Lab | Dana-Farber Cancer Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .publications-page {
+            margin-top: 100px;
+            padding: 2rem 0;
+        }
+        .year-section {
+            margin-bottom: 3rem;
+        }
+        .year-header {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background-color: var(--bg-light);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as main page) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="index.html#software" class="nav-link">Software</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Publications Page Content -->
+    <div class="publications-page">
+        <div class="container">
+            <h1 class="section-title">Publications</h1>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterPublications('all')">All</button>
+                <button class="filter-btn" onclick="filterPublications('cancer-evolution')">Cancer Evolution</button>
+                <button class="filter-btn" onclick="filterPublications('machine-learning')">Machine Learning</button>
+                <button class="filter-btn" onclick="filterPublications('single-cell')">Single Cell</button>
+                <button class="filter-btn" onclick="filterPublications('spatial')">Spatial</button>
+            </div>
+
+            <!-- 2024 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2024</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Multi-modal foundation models for molecular biology: opportunities and challenges</h3>
+                        <p class="pub-authors">Haotian Cui, Alejandro Tejada-Lapuerta, Maria Brbic, Julio Saez-Rodriguez, <strong>Simona Cristea</strong>, Hani Goodarzi, Mohammad Lotfollahi, Fabian J. Theis, Bo Wang</p>
+                        <p class="pub-journal">Nature 640, 623–633, 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41586-024-08042-3" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="single-cell">
+                        <h3>Evaluating and interpreting scGPT: A foundation model for single-cell biology in real-world cancer clinical trial data</h3>
+                        <p class="pub-authors">Runzi Tan, Haotian Cui, Bo Wang, Kimberly Perez, Andressa Dias Costa, Alexander Jordan, Thomas Karacic, Dalia Elganainy, Dan Y Gui, Suryun Kim, Chen Yuan, Morgan Truitt, Michael Downes, Ronald Evans, Tae Gyu Oh, Peter O'Dwyer, Andrew Aguirre, Jonathan A Nowak, Brian Wolpin, <strong>Simona Cristea</strong>+</p>
+                        <p class="pub-journal">Cancer Research 84 (17): A029, 2024 (+ corresponding author)</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link" target="_blank">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Mechanisms of resistance to oncogenic KRAS inhibition in pancreatic cancer</h3>
+                        <p class="pub-authors">Julien Dilly, Megan T Hoffman, Laleh Abbassi, Ziyue Li, Francesca Paradiso, Brendan D Parent, Connor J Hennessey, Alexander C Jordan, Micaela Morgado, Shatavisha Dasgupta, Giselle A Uribe, Annan Yang, Kevin S Kapner, Felix P Hambitzer, Li Qiang, Hanrong Feng, Jacob Geisberg, Junning Wang, Kyle E Evans, Hengyu Lyu, Aislyn Schalck, Ningping Feng, Anastasia M Lopez, Christopher A Bristow, Michael P Kim, Kimal I Rajapakshe, Vahid Bahrambeigi, Jennifer A Roth, Kavita Garg, Paola A Guerrero, Ben Z Stanger, <strong>Simona Cristea</strong>, Scott W Lowe, Timour Baslan, Eliezer M Van Allen, Joseph D Mancias, Emily Chan, Abraham Anderson, Yuliya V Katlinskaya, Alex K Shalek, David S Hong, Shubham Pant, Jill Hallin, Kenna Anderes, Peter Olson, Timothy P Heffernan, Seema Chugh, James G Christensen, Anirban Maitra, Brian M Wolpin, Srivatsan Raghavan, Jonathan A Nowak, Peter S Winter, Stephanie K Dougan, Andrew J Aguirre</p>
+                        <p class="pub-journal">Cancer Discovery 14(11), 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1158/2159-8290.CD-24-0177" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="spatial">
+                        <h3>Intratumoral heterogeneity drives resistance to Antibody Drug Conjugate therapy: Analysis of the NeoSTAR trial</h3>
+                        <p class="pub-authors">Laura M. Spring, Bogang Wu, Ting Liu, Jacob Geisberg, <strong>Simona Cristea</strong>, Veerle Bossuyt, Rachel Occhiogrosso Abelman, Nicole Peiris, James Coates, Siang-Boon Koh, Mengran Zhang, Lianne Ryan, Beverly Moy, Steven J. Isakoff, Sara M. Tolaney, Franziska Michor, Aditya Bardia, Leif W. Ellisen</p>
+                        <p class="pub-journal">Cancer Research 84 (3): PR08, 2024</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link" target="_blank">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="single-cell">
+                        <h3>Cycling T regulatory cells architect an immune escape hub during in situ to invasive breast carcinoma transition</h3>
+                        <p class="pub-authors">Triet Minh Bui, Ernesto A Rojas, Pierre Foidart, Zheqi Vaciry Li, Pengze Yan, Jun Nishida, Robert West, Shelley Hwang, <strong>Simona Cristea</strong>, Kornelia Polyak</p>
+                        <p class="pub-journal">Cancer Immunology Research 12(10): A028, 2024</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link" target="_blank">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Predicting patient outcomes after treatment with immune checkpoint blockade: A review of biomarkers derived from diverse data modalities</h3>
+                        <p class="pub-authors">Yang Liu, Jennifer Altreuter, Sudheshna Bodapati, <strong>Simona Cristea</strong>, Cheryl J Wong, Catherine J Wu, Franziska Michor</p>
+                        <p class="pub-journal">Cell Genomics 4, 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.xgen.2023.100481" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2023 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2023</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="single-cell">
+                        <h3>Peripheral blood TCR clonotype diversity as an age-associated marker of breast cancer progression</h3>
+                        <p class="pub-authors">Jun Nishida*, <strong>Simona Cristea</strong>*+, Sudheshna Bodapati*, Julieann Puleo, Gali Bai, Ashka Patel, Melissa Hughes, Craig Snow, Virginia Borges, Kathryn J Ruddy, Laura C Collins, Anne-Marie Feeney, Kara Slowik, Veerle Bossuyt, Deborah Dillon, Nancy U Lin, Ann H Partridge, Franziska Michor+, Kornelia Polyak+</p>
+                        <p class="pub-journal">PNAS 120(49), 2023 (*co-first; +co-senior author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1073/pnas.2311174120" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>A paracrine circuit of IL-1β and IL-1R1 between myeloid and tumor cells drives glioblastoma progression</h3>
+                        <p class="pub-authors">Zhihong Chen, Bruno Giotti, Milota Kaluzova, Cameron Herting, Gonzalo Pinero, <strong>Simona Cristea</strong>, James L Ross, James Ackley, Victor Maximov, Frank Szulzewsky, Mar Marquez-Ropero, Angelo Angione, Noah Nichols, Nadejda Tsankkova, Franziska Michor, Dmitry M Shayakhmetov, David H Gutmann, Alexander M Tsankov, Dolores Hambardzumyan</p>
+                        <p class="pub-journal">Journal of Clinical Investigation 133:22, 2023</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1172/JCI163718" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="single-cell">
+                        <h3>Utilizing scRNA sequencing to understand biomarkers of response and resistance to Sacitizumab Govetican in localized TNBC</h3>
+                        <p class="pub-authors">Nicole Peiris, <strong>Simona Cristea</strong>, Mengran Zhang, Siang Koh, James Coates, Ilze Smidt, Veerle Bossuyt, Laura Spring, Aditya Bardia, Leif Ellisen</p>
+                        <p class="pub-journal">Cancer Research 83: 4353, 2023</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link" target="_blank">Abstract</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="single-cell">
+                        <h3>H3K36 methylation maintains cell identity by regulating opposing lineage programs</h3>
+                        <p class="pub-authors">Michael S. Hoetker, Masaki Yagi, Bruno Di Stefano, Justin Langerman, <strong>Simona Cristea</strong>, Lai Ping Wong, Aaron J. Huebner, Jocelyn Charlton, Weixian Deng, Chuck Haggerty, Ruslan I. Sadreyev, Alexander Meissner, Franziska Michor, Kathrin Plath, Konrad Hochedlinger</p>
+                        <p class="pub-journal">Nature Biotechnology 25(8), 2023</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41587-023-01744-5" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="single-cell">
+                        <h3>Single-cell heterogeneity of EGFR and CDK4 co-amplification is linked to immune infiltration in glioblastoma</h3>
+                        <p class="pub-authors">Kacper A. Walentynowicz*, Dalit Engelhardt*, <strong>Simona Cristea</strong>*, Shreya Yadav, Ugoma Onubogu, Roberto Salatino, Cristina Vincentelli, Thomas O. McDonald, Franziska Michor, Michalina Janiszewska</p>
+                        <p class="pub-journal">Cell Reports 42(3), 2023 (*co-first author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.celrep.2023.112252" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/glioblastoma-EGFR-CDK4" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2022 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2022</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Breast cancer prevention by short-term inhibition of TGFβ signaling</h3>
+                        <p class="pub-authors">Masa Aleckovic*, <strong>Simona Cristea</strong>*, Carlos R. Gil Del Alcazar*, Pengze Yan, Lina Ding, Ethan D. Krop, Nicholas W. Harper, Ernesto Rojas Jimenez, Donghao Lu, Anushree C. Gulvady, Pierre Foidart, Marco Seehawer, Benedetto Diciaccio, Katherine C. Murphy, Jason Pyrdol, Jayati Anand, Kodie Garza, Kai W. Wucherpfennig, Rulla Tamimi, Franziska Michor, Kornelia Polyak</p>
+                        <p class="pub-journal">Nature Communications 13:7558, 2022 (*co-first author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41467-022-35043-5" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/breast-cancer-prevention" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Functional analysis identifies damaging CHEK2 missense variants associated with increased cancer risk</h3>
+                        <p class="pub-authors">Rick ACM Boonen, Wouter W Wiegant, Nandi Celosse, Bas Vroling, Stephan Heijl, Zsofia Kote-Jarai, Martina Mijuskovic, <strong>Simona Cristea</strong>, Nienke Solleveld-Westerink, Tom van Wezel, Niko Beerenwinkel, Rosalind Eeles, Peter Devilee, Maaike PG Vreeswijk, Giancarlo Marra, Haico van Attikum</p>
+                        <p class="pub-journal">Cancer Research 82(4):615–631, 2022</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1158/0008-5472.CAN-21-1845" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2021 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2021</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="single-cell">
+                        <h3>Systematic tissue collection during clinical breast biopsy is feasible, safe and enables high-content translational analyses</h3>
+                        <p class="pub-authors">Siang-Boon Koh, Brian N Dontchos, Veerle Bossuyt, Christine Edmonds, <strong>Simona Cristea</strong>, Nsan Melkonjan, Lindsey Mortensen, Annie Ma, Kassidy Beyerlin, Elyssa Denault, Elizabeth Niehoff, Taghreed Hirz, David B Sykes, Franziska Michor, Michelle Specht, Constance Lehman, Leif W Ellisen, Laura M Spring</p>
+                        <p class="pub-journal">npj Precision Oncology 5:85, 2021</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41698-021-00224-w" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="single-cell">
+                        <h3>Dissecting dual roles of MyoD during lineage conversion to mature myocytes and myogenic stem cells</h3>
+                        <p class="pub-authors">Masaki Yagi, Fei Ji, Jocelyn Charlton*, <strong>Simona Cristea</strong>*, Kathleen Messemer, Naftali Horwitz, Bruno Di Stefano, Nikolaos Tsopoulidis, Michael S Hoetker, Aaron J Huebner, Ori Bar-Nur, Albert E Almada, Masakazu Yamamoto, Anthony Patelunas, David J Goldhamer, Amy J Wagers, Franziska Michor, Alexander Meissner, Ruslan I Sadreyev, Konrad Hochedlinger</p>
+                        <p class="pub-journal">Genes & Development 35:1209-1228, 2021 (*equal contribution)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1101/gad.348678.121" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="spatial">
+                        <h3>The impact of tumor epithelial and microenvironmental heterogeneity on treatment responses in HER2+ breast cancer</h3>
+                        <p class="pub-authors">Michalina Janiszewska, Shayna Stein, Otto Metzger Filho, Jennifer Eng, Natalie L. Kingston, Nicholas W. Harper, Inga H. Rye, Maša Aleckovic, Anne Trinh, Katherine C. Murphy, Elisabetta Marangoni, <strong>Simona Cristea</strong>, Benjamin Oakes, Eric P. Winer, Ian E. Krop, Hege G. Russnes, Paul T. Spellman, Elmar Bucher, Zhi Hu, Koei Chin, Joe W. Gray, Franziska Michor, Kornelia Polyak</p>
+                        <p class="pub-journal">JCI insight 16(11):e147617, 2021</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1172/jci.insight.147617" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2020 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2020</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Clonal evolution driven by superdriver mutations</h3>
+                        <p class="pub-authors">Patrick Grossmann, <strong>Simona Cristea</strong>, Niko Beerenwinkel</p>
+                        <p class="pub-journal">BMC Evolutionary Biology 20(1),1-11, 2020</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1186/s12862-020-01647-y" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2019 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2019</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Subclonal cooperation drives metastasis by modulating local and systemic immune microenvironments</h3>
+                        <p class="pub-authors">Michalina Janiszewska, Doris P Tabassum, Zafira Castano, <strong>Simona Cristea</strong>, Kimiyo N Yamamoto, Natalie L Kingston, Katherine C Murphy, Shaokun Shu, Nicholas W Harper, Carlos Gil Del Alcazar, Masa Aleckovic, Muhammad B Ekram, Ofir Cohen, ..., Andriy Marusyk, Kai W Wucherpfennig, Nikhil Wagle, Rong Fan, Franziska Michor, Sandra S McAllister, Kornelia Polyak</p>
+                        <p class="pub-journal">Nature Cell Biology 21(7),879-888, 2019</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41556-019-0346-x" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Simultaneous Integration of multi-omics data improves the identification of cancer driver modules</h3>
+                        <p class="pub-authors">Dana Silverbush*+, <strong>Simona Cristea</strong>*+, Gali Yanovich, Tamar Geiger, Niko Beerenwinkel, Roded Sharan</p>
+                        <p class="pub-journal">Cell Systems 8(5),456-466.e5, 2019 (*co-first; +co-senior author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.cels.2019.04.005" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/ModulOmics" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Perturbed myoepithelial cell differentiation in BRCA mutation carriers and in ductal carcinoma in situ</h3>
+                        <p class="pub-authors">Lina Ding, Ying Su, Anne Fassl, Kunihiko Hinohara, Xintao Qiu, Nicholas W Harper, Sung Jin Huh, Noga Bloushtain-Qimron, Bojana Jovanovic, Muhammad Ekram, Xiaoyuan Zi, William C Hines, Masa Aleckovic, Carlos Gil del Alcazar, Ryan J Caulfield, Dennis M Bonal, Quang-De Nguyen, Vanessa F Merino, Sibgat Choudhury, Gabrielle Ethington, Laura Panos, Michael Grant, William Herlihy, Alfred Au, Gedge D Rosson, Pedram Argani, Andrea L Richardson, Deborah Dillon, D Craig Allred, Kirsten Babski, Elizabeth Min Hui Kim, Charles H McDonnell, Jon Wagner, Ron Rowberry, Kristie Bobolis, Celina G Kleer, E Shelley Hwang, Joanne L Blum, <strong>Simona Cristea</strong>, Piotr Sicinski, Rong Fan, Henry W Long, Saraswati Sukumar, So Yeon Park, Judy E Garber, Mina Bissell, Jun Yao, Kornelia Polyak</p>
+                        <p class="pub-journal">Nature Communications 10(1),1-16, 2019</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41467-019-12125-5" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="single-cell">
+                        <h3>Physical and molecular landscapes of mouse glioma extracellular vesicles define heterogeneity</h3>
+                        <p class="pub-authors">Aron Gyuris, Jose Navarrete-Perea, Ala Jo, <strong>Simona Cristea</strong>, Shuang Zhou, Kyle Fraser, Zhiyun Wei, Anna M Krichevsky, Ralph Weissleder, Hakho Lee, Steve P Gygi, Al Charest</p>
+                        <p class="pub-journal">Cell Reports 27(13),3972-3987.e6, 2019</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.celrep.2019.05.089" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 2018 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2018</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="single-cell">
+                        <h3>Unravelling subclonal heterogeneity and aggressive disease states in TNBC through single-cell RNA-seq</h3>
+                        <p class="pub-authors">Mihriban Karaayvaz*, <strong>Simona Cristea</strong>*, Shawn M. Gillespie, Anoop P. Patel, Ravi Mylvaganam, Christina C. Luo, Michelle C. Specht, Bradley E. Bernstein, Franziska Michor, Leif W. Ellisen</p>
+                        <p class="pub-journal">Nature Communications 9(1),3588, 2018 (*co-first author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41467-018-06052-0" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/TNBC-scRNAseq" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="single-cell">
+                        <h3>Dissecting the mammary gland one cell at a time</h3>
+                        <p class="pub-authors"><strong>Simona Cristea</strong>, Kornelia Polyak</p>
+                        <p class="pub-journal">Nature Communications 9(1),2473, 2018</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41467-018-04905-2" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Simultaneous integration of multi-omics data improves the identification of cancer driver modules</h3>
+                        <p class="pub-authors">Dana Silverbush*+, <strong>Simona Cristea</strong>*+, Gali Yanovich, Tamar Geiger, Niko Beerenwinkel, Roded Sharan</p>
+                        <p class="pub-journal">Research in Computational Molecular Biology Conference 2018 (RECOMB) in Paris, France; highlight paper at Intelligent Systems for Molecular Biology Conference 2018 (ISMB) in Chicago, IL (*co-first; +co-corresponding author)</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link" target="_blank">Conference Paper</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Earlier Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2017 and Earlier</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Recurring amplification at 11q22.1-q22.2 locus plays an important role in lymph node metastasis and radioresistance in OSCC</h3>
+                        <p class="pub-authors">Priyanka G Bhosale, Manishkumar Pandey, <strong>Simona Cristea</strong>, Mickey Shah, Asawari Patil, Niko Beerenwinkel, Alejandro A. Schäffer, Manoj B Mahimkar</p>
+                        <p class="pub-journal">Scientific Reports 7 (1), 16051, 2017</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41598-017-16247-y" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="machine-learning">
+                        <h3>pathTiMEx: Joint inference of mutually exclusive cancer pathways and their progression dynamics</h3>
+                        <p class="pub-authors"><strong>Simona Cristea</strong>, Jack Kuipers, Niko Beerenwinkel</p>
+                        <p class="pub-journal">Journal of Computational Biology 24 (6), 603-615, 2017</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1089/cmb.2016.0171" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/pathTiMEx" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                    
+                    <article class="publication" data-category="cancer-evolution">
+                        <h3>Chromosomal alterations and gene expression changes associated with the progression of leukoplakia to advanced gingivobuccal cancer</h3>
+                        <p class="pub-authors">Priyanka G. Bhosale*, <strong>Simona Cristea</strong>*, Srikant Ambatipudi*, Rajiv S. Desai, Rajiv Kumar, Asawari Patil, Shubhada Kane, Anita M. Borges, Alejandro A. Schäffer, Niko Beerenwinkel, Manoj B. Mahimkar</p>
+                        <p class="pub-journal">Translational Oncology 10 (3), 396-409, 2017 (*co-first author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.tranon.2017.03.008" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="machine-learning">
+                        <h3>TiMEx: A waiting time model for mutually exclusive cancer alterations</h3>
+                        <p class="pub-authors">Simona Constantinescu, Ewa Szczurek, Pejman Mohammadi, Jörg Rahnenführer, Niko Beerenwinkel</p>
+                        <p class="pub-journal">Bioinformatics 32(7), 2016</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1093/bioinformatics/btv400" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/TiMEx" class="pub-link" target="_blank">Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterPublications(category) {
+            const publications = document.querySelectorAll('.publication');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().replace(' ', '-') === category || 
+                    (category === 'all' && btn.textContent === 'All')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter publications
+            publications.forEach(pub => {
+                if (category === 'all' || pub.dataset.category === category) {
+                    pub.style.display = 'block';
+                    pub.classList.add('animate');
+                } else {
+                    pub.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Genomics | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .research-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .research-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .research-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .research-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .research-section {
+            margin-bottom: 4rem;
+        }
+        .research-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .project-details h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .methodology-list {
+            list-style: none;
+            padding: 0;
+        }
+        .methodology-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .methodology-list li:last-child {
+            border-bottom: none;
+        }
+        .methodology-list li::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+        .impact-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .impact-highlight h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .prevention-highlight {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #4caf50;
+            margin: 2rem 0;
+        }
+        .prevention-highlight h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .discovery-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+        .clinical-translation {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 2rem 0;
+        }
+        .clinical-translation h4 {
+            color: #f57c00;
+            margin-bottom: 1rem;
+        }
+        .immune-escape {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #f44336;
+            margin: 2rem 0;
+        }
+        .immune-escape h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+        }
+        .adc-highlight {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #2196f3;
+            margin: 2rem 0;
+        }
+        .adc-highlight h4 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+        .collaboration-network {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .collaborator-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 3px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#research" class="nav-link">Research</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#software" class="nav-link">Software</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Page Content -->
+    <div class="research-page">
+        <!-- Hero Section -->
+        <div class="research-hero">
+            <div class="container">
+                <h1>Breast Cancer Genomics</h1>
+                <p>
+                    Advancing breast cancer research through spatial and temporal single cell analyses of tumor initiation, 
+                    malignant transformations, and clinical response prediction for innovative therapeutic strategies.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Overview -->
+            <div class="research-section">
+                <h2>Research Overview</h2>
+                <div class="project-description">
+                    Our breast cancer research program focuses on understanding the earliest events in breast cancer 
+                    development, from initial cellular transformations to immune evasion mechanisms. We employ cutting-edge 
+                    single-cell genomics and spatial analysis techniques to map the evolution of breast cancer at 
+                    unprecedented resolution, with the ultimate goal of developing prevention strategies and improving 
+                    treatment outcomes.
+                </div>
+                
+                <div class="impact-highlight">
+                    <h4>Paradigm Shift: From Treatment to Prevention</h4>
+                    <p>
+                        Our research represents a fundamental shift from treating established breast cancers to understanding 
+                        and preventing their formation. By studying the earliest cellular events in breast cancer development, 
+                        we aim to identify intervention points that could prevent cancer before it becomes clinically apparent, 
+                        potentially through mRNA vaccines and other preventive strategies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Research Area 1: Tumor Initiation -->
+            <div class="research-section">
+                <h2>Tumor Initiation & Stem Cell Transformations</h2>
+                
+                <!-- Project A: Novel Stem Cell Population -->
+                <div class="project-card">
+                    <h3>Project A: Novel Stem Cell Population for Breast Cancer Prevention</h3>
+                    <div class="project-description">
+                        We have discovered a novel stem cell population responsible for breast cancer prevention in rat models. 
+                        This groundbreaking finding challenges conventional understanding of breast cancer initiation and 
+                        opens new avenues for prevention-based therapies, including the potential development of mRNA vaccines.
+                    </div>
+                    
+                    <div class="prevention-highlight">
+                        <h4>Revolutionary Discovery</h4>
+                        <p>
+                            This research identifies specific cellular populations that actively prevent tumor formation, 
+                            rather than simply lacking tumorigenic potential. Understanding these protective mechanisms 
+                            could lead to the development of preventive therapies that enhance natural tumor suppression 
+                            mechanisms in high-risk individuals.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Research Methodology</h5>
+                        <ul class="methodology-list">
+                            <li>Single-cell RNA sequencing of mammary stem cell populations</li>
+                            <li>Lineage tracing of protective stem cell subsets</li>
+                            <li>Functional validation through transplantation assays</li>
+                            <li>Comparative analysis across cancer-resistant and susceptible models</li>
+                            <li>Identification of prevention-associated molecular signatures</li>
+                        </ul>
+                    </div>
+
+                    <div class="discovery-grid">
+                        <div class="discovery-card">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Protective Mechanisms</h4>
+                            <p>Active tumor suppression pathways</p>
+                        </div>
+                        <div class="discovery-card">
+                            <i class="fas fa-syringe" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>mRNA Vaccine Targets</h4>
+                            <p>Prevention-specific antigens</p>
+                        </div>
+                        <div class="discovery-card">
+                            <i class="fas fa-microscope" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h4>Biomarker Discovery</h4>
+                            <p>Early detection signatures</p>
+                        </div>
+                    </div>
+
+                    <div class="clinical-translation">
+                        <h4>Clinical Translation Potential</h4>
+                        <p>
+                            This discovery has immediate implications for breast cancer prevention strategies. We are working 
+                            to translate these findings into clinical applications, including the development of mRNA vaccines 
+                            that could enhance protective stem cell function in high-risk women, such as those with BRCA 
+                            mutations or strong family histories of breast cancer.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Stem Cell Biology</span>
+                        <span class="tech-tag">Cancer Prevention</span>
+                        <span class="tech-tag">mRNA Vaccines</span>
+                        <span class="tech-tag">Lineage Tracing</span>
+                        <span class="tech-tag">Single-cell Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Project B: Secretory Basal Cells -->
+                <div class="project-card">
+                    <h3>Project B: Secretory Basal Cells as Prevention-Associated Progenitors</h3>
+                    <div class="project-description">
+                        We have identified secretory basal cells as progenitors associated with breast tumor prevention. 
+                        This research reveals how specific cellular differentiation programs can protect against malignant 
+                        transformation and identifies new targets for prevention-based interventions.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Secretory Basal Cell Characterization</h5>
+                        <ul class="methodology-list">
+                            <li>Single-cell transcriptomics of mammary epithelial populations</li>
+                            <li>Spatial mapping of secretory basal cell distribution</li>
+                            <li>Functional analysis of secreted factors and paracrine signaling</li>
+                            <li>Developmental trajectory analysis from progenitors to differentiated cells</li>
+                            <li>Comparison between normal and pre-malignant tissue environments</li>
+                        </ul>
+                    </div>
+
+                    <div class="prevention-highlight">
+                        <h4>Protective Secretome</h4>
+                        <p>
+                            Secretory basal cells produce a unique set of factors that create a protective microenvironment 
+                            against tumor initiation. Understanding this secretome could lead to the development of preventive 
+                            therapies that mimic or enhance these natural protective mechanisms.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Secretory Cells</span>
+                        <span class="tech-tag">Paracrine Signaling</span>
+                        <span class="tech-tag">Protective Secretome</span>
+                        <span class="tech-tag">Tumor Prevention</span>
+                        <span class="tech-tag">Mammary Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Area 2: Immune Analyses -->
+            <div class="research-section">
+                <h2>Spatial & Temporal Immune Analyses</h2>
+                
+                <!-- Project A: TCR Clonotype Diversity -->
+                <div class="project-card">
+                    <h3>Project A: Peripheral Blood TCR Clonotype Diversity</h3>
+                    <div class="project-description">
+                        We investigate peripheral blood T-cell receptor (TCR) clonotype diversity as an age-associated 
+                        marker of breast cancer progression. This work reveals how immune repertoire changes can serve 
+                        as early biomarkers for cancer development and progression.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>TCR Repertoire Analysis</h5>
+                        <ul class="methodology-list">
+                            <li>High-throughput TCR sequencing from peripheral blood samples</li>
+                            <li>Longitudinal tracking of clonotype dynamics</li>
+                            <li>Age-stratified analysis of immune repertoire diversity</li>
+                            <li>Correlation with cancer progression and clinical outcomes</li>
+                            <li>Integration with tumor-infiltrating lymphocyte analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Published Impact: PNAS 2023</h4>
+                        <p>
+                            This work was published as a co-first and co-senior author paper in PNAS (Jun Nishida*, 
+                            <strong>Simona Cristea</strong>*+, et al., 2023). The study demonstrates that TCR diversity 
+                            patterns in blood can predict breast cancer progression, providing a non-invasive biomarker 
+                            for disease monitoring and potentially early detection.
+                        </p>
+                    </div>
+
+                    <div class="clinical-translation">
+                        <h4>Liquid Biopsy Applications</h4>
+                        <p>
+                            This research enables the development of blood-based tests for breast cancer monitoring and 
+                            early detection. TCR repertoire analysis could be incorporated into routine screening programs, 
+                            particularly for high-risk populations, providing a minimally invasive method for cancer 
+                            surveillance.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">TCR Sequencing</span>
+                        <span class="tech-tag">Immune Repertoire</span>
+                        <span class="tech-tag">Liquid Biopsy</span>
+                        <span class="tech-tag">Age-Associated Markers</span>
+                        <span class="tech-tag">PNAS 2023</span>
+                    </div>
+                </div>
+
+                <!-- Project B: Cycling T Regulatory Cells -->
+                <div class="project-card">
+                    <h3>Project B: Cycling T Regulatory Cells in Immune Escape</h3>
+                    <div class="project-description">
+                        We have identified a subpopulation of cycling T regulatory cells that creates an immune escape hub 
+                        during the transition from in situ to invasive breast carcinoma. This discovery reveals a critical 
+                        window for immune intervention and provides new targets for immunotherapy.
+                    </div>
+
+                    <div class="immune-escape">
+                        <h4>Critical Transition Point</h4>
+                        <p>
+                            The transition from ductal carcinoma in situ (DCIS) to invasive breast cancer represents a 
+                            critical juncture where early intervention could prevent cancer progression. Our identification 
+                            of cycling T regulatory cells as key mediators of this transition provides specific targets 
+                            for preventing cancer invasion.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Immune Escape Mechanism Analysis</h5>
+                        <ul class="methodology-list">
+                            <li>Single-cell analysis of immune populations in DCIS vs. invasive cancer</li>
+                            <li>Spatial mapping of T regulatory cell distribution</li>
+                            <li>Cell cycle analysis of regulatory T cell populations</li>
+                            <li>Functional validation of immune suppression mechanisms</li>
+                            <li>Identification of therapeutic targets for immune restoration</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Under Review: Nature Immunology</h4>
+                        <p>
+                            This groundbreaking work is currently under revision at Nature Immunology as a senior author 
+                            publication. The findings provide new insights into immune evasion mechanisms and identify 
+                            specific time points and cellular targets for immune-based interventions to prevent cancer 
+                            progression.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Therapeutic Implications</h5>
+                        <p>
+                            Understanding how cycling T regulatory cells facilitate immune escape opens new avenues for 
+                            early intervention. Targeting these cells during the DCIS stage could prevent progression to 
+                            invasive cancer, fundamentally changing breast cancer treatment from reactive to preventive.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Regulatory T cells</span>
+                        <span class="tech-tag">Immune Escape</span>
+                        <span class="tech-tag">DCIS Transition</span>
+                        <span class="tech-tag">Spatial Immunology</span>
+                        <span class="tech-tag">Nature Immunology</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Area 3: Clinical Response Prediction -->
+            <div class="research-section">
+                <h2>Triple-Negative Breast Cancer Clinical Applications</h2>
+                
+                <!-- Project A: Biopsy Collection Framework -->
+                <div class="project-card">
+                    <h3>Project A: Single Cell Analysis Framework for Clinical Trials</h3>
+                    <div class="project-description">
+                        We have developed comprehensive frameworks for biopsy collection and single-cell analysis in clinical 
+                        trial settings for breast cancer patients. This infrastructure enables real-time analysis of treatment 
+                        responses and biomarker discovery in clinical contexts.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Trial Integration</h5>
+                        <ul class="methodology-list">
+                            <li>Standardized biopsy collection protocols for single-cell analysis</li>
+                            <li>Real-time processing of clinical samples</li>
+                            <li>Integration with clinical trial databases and outcomes</li>
+                            <li>Quality control measures for clinical-grade genomics data</li>
+                            <li>Regulatory compliance for translational research</li>
+                        </ul>
+                    </div>
+
+                    <div class="clinical-translation">
+                        <h4>Published Framework: npj Precision Oncology 2021</h4>
+                        <p>
+                            Our systematic approach to tissue collection during clinical breast biopsy was published in 
+                            npj Precision Oncology (Siang-Boon Koh, Brian N Dontchos, et al., including <strong>Simona Cristea</strong>, 2021). 
+                            This work demonstrates that comprehensive translational analyses are feasible and safe in 
+                            routine clinical practice.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Clinical Trials</span>
+                        <span class="tech-tag">Biopsy Protocols</span>
+                        <span class="tech-tag">Single-cell Genomics</span>
+                        <span class="tech-tag">Translational Research</span>
+                        <span class="tech-tag">npj Precision Oncology</span>
+                    </div>
+                </div>
+
+                <!-- Project B: ADC Response Prediction -->
+                <div class="project-card">
+                    <h3>Project B: Spatio-temporal Profiling of Antibody-Drug Conjugate Response</h3>
+                    <div class="project-description">
+                        We conduct comprehensive spatio-temporal profiling of antibody-drug conjugate (ADC) response in 
+                        triple-negative breast cancer clinical trial data, focusing on Sacituzumab Govitecan treatment. 
+                        This work aims to predict treatment responses and optimize ADC therapy strategies.
+                    </div>
+
+                    <div class="adc-highlight">
+                        <h4>Sacituzumab Govitecan Analysis</h4>
+                        <p>
+                            Sacituzumab Govitecan represents a breakthrough in triple-negative breast cancer treatment, 
+                            but not all patients respond to this therapy. Our spatial and temporal analysis of tumor 
+                            samples from treated patients aims to identify predictive biomarkers and understand resistance 
+                            mechanisms to optimize patient selection and treatment strategies.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Multi-dimensional Analysis</h5>
+                        <ul class="methodology-list">
+                            <li>Pre-treatment and post-treatment single-cell profiling</li>
+                            <li>Spatial analysis of ADC distribution and response</li>
+                            <li>Temporal tracking of cellular responses to treatment</li>
+                            <li>Integration of genomic, transcriptomic, and proteomic data</li>
+                            <li>Predictive modeling for treatment response</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Impact</h5>
+                        <p>
+                            This research directly impacts patient care by identifying biomarkers that can predict 
+                            response to Sacituzumab Govitecan before treatment initiation. These predictive models 
+                            enable personalized treatment selection and help identify patients who would benefit 
+                            from alternative therapies.
+                        </p>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Manuscript in Preparation</h4>
+                        <p>
+                            High-resolution profiling of antibody-drug conjugate response in triple-negative breast cancer 
+                            (Liu et al., manuscript in preparation, to be submitted in 2025). This work represents one of 
+                            the most comprehensive analyses of ADC response mechanisms in clinical samples.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Antibody-Drug Conjugates</span>
+                        <span class="tech-tag">Sacituzumab Govitecan</span>
+                        <span class="tech-tag">Triple-Negative Breast Cancer</span>
+                        <span class="tech-tag">Response Prediction</span>
+                        <span class="tech-tag">Spatial Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Collaborations -->
+            <div class="research-section">
+                <h2>Key Collaborations</h2>
+                <div class="project-card">
+                    <h3>Interdisciplinary Research Network</h3>
+                    <div class="project-description">
+                        Our breast cancer research is conducted in close collaboration with leading clinicians and 
+                        researchers across multiple institutions. These partnerships ensure that our discoveries are 
+                        clinically relevant and can be rapidly translated to patient benefit.
+                    </div>
+
+                    <div class="collaboration-network">
+                        <div class="collaborator-card">
+                            <h4>Dr. Kornelia Polyak</h4>
+                            <p>Dana-Farber Cancer Institute<br>Breast Cancer Research</p>
+                        </div>
+                        <div class="collaborator-card">
+                            <h4>Dr. Leif Ellisen</h4>
+                            <p>Massachusetts General Hospital<br>Breast Oncology</p>
+                        </div>
+                        <div class="collaborator-card">
+                            <h4>Dr. Franziska Michor</h4>
+                            <p>Dana-Farber Cancer Institute<br>Computational Biology</p>
+                        </div>
+                        <div class="collaborator-card">
+                            <h4>Clinical Trial Teams</h4>
+                            <p>Multi-institutional<br>Clinical Translation</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Collaborative Research Outcomes</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Prevention Research</strong> - Novel stem cell populations and mRNA vaccine development</li>
+                            <li><strong>Immune Evasion Studies</strong> - Cycling T regulatory cells and intervention strategies</li>
+                            <li><strong>Clinical Translation</strong> - ADC response prediction and biomarker validation</li>
+                            <li><strong>Methodology Development</strong> - Clinical trial integration frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Directions -->
+            <div class="research-section">
+                <h2>Future Directions</h2>
+                <div class="impact-highlight">
+                    <h4>Integration with Pancreatic Cancer Research</h4>
+                    <p>
+                        While our current breast cancer research continues with our established collaborators, we are 
+                        exploring opportunities to apply our methodological innovations to pancreatic cancer. The single-cell 
+                        analysis frameworks, spatial profiling techniques, and immune modeling approaches developed for 
+                        breast cancer research will inform our pancreatic cancer early detection and treatment strategies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../index.html#research" class="btn btn-secondary">Back to Research Overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

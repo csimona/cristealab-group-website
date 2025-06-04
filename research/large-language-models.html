@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Language Models in Cancer Genomics | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .research-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .research-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .research-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .research-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .research-section {
+            margin-bottom: 4rem;
+        }
+        .research-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .project-details h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .methodology-list {
+            list-style: none;
+            padding: 0;
+        }
+        .methodology-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .methodology-list li:last-child {
+            border-bottom: none;
+        }
+        .methodology-list li::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+        .impact-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .impact-highlight h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .collaborator {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .figure-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .figure-caption {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#research" class="nav-link">Research</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#software" class="nav-link">Software</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Page Content -->
+    <div class="research-page">
+        <!-- Hero Section -->
+        <div class="research-hero">
+            <div class="container">
+                <h1>Large Language Models in Cancer Genomics</h1>
+                <p>
+                    Pioneering the application of generative AI and transformer architectures to understand 
+                    and generate cancer progression patterns, revolutionizing how we analyze single-cell genomics data 
+                    and predict clinical responses in oncology.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Overview -->
+            <div class="research-section">
+                <h2>Research Overview</h2>
+                <div class="project-description">
+                    Our lab is at the forefront of developing and applying Large Language Models (LLMs) specifically designed for cancer genomics. 
+                    We leverage the power of transformer architectures and generative AI to tackle some of the most challenging problems in 
+                    computational oncology. Our approach treats genomic data as a language, where genes are words, cells are sentences, 
+                    and cancer progression becomes a narrative that we can both understand and predict.
+                </div>
+                
+                <div class="impact-highlight">
+                    <h4>Revolutionary Impact</h4>
+                    <p>
+                        This research represents a paradigm shift in cancer genomics, enabling zero-shot prediction of cancer evolution, 
+                        mechanistic interpretability of tumor progression, and the generation of synthetic cancer progression data for 
+                        therapeutic development. Our models are the first to successfully apply natural language processing techniques 
+                        to single-cell cancer genomics at scale.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project A: LLMs in Genomics -->
+            <div class="research-section">
+                <h2>Project A: Multi-modal LLMs for Genomics</h2>
+                <div class="project-card">
+                    <h3>Foundation Models for Multi-omics Integration</h3>
+                    <div class="project-description">
+                        We are developing the next generation of foundation models that can simultaneously process and integrate 
+                        multiple types of genomic data - transcriptomics, proteomics, and epigenomics - within a unified transformer 
+                        architecture. This represents a significant advancement over current single-modality approaches.
+                    </div>
+                    
+                    <div class="project-details">
+                        <h5>Technical Approach</h5>
+                        <ul class="methodology-list">
+                            <li>Multi-modal transformer architecture with cross-attention mechanisms</li>
+                            <li>Custom tokenization strategies for different omics data types</li>
+                            <li>Self-supervised pre-training on large-scale cancer genomics datasets</li>
+                            <li>Fine-tuning for downstream tasks including drug response prediction</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">Hugging Face</span>
+                        <span class="tech-tag">Single-cell RNA-seq</span>
+                        <span class="tech-tag">Proteomics</span>
+                        <span class="tech-tag">Multi-modal Learning</span>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Key Innovation</h5>
+                        <p>
+                            Our multi-modal architecture can learn shared representations across different biological data types, 
+                            enabling the model to make predictions even when some data modalities are missing - a common challenge 
+                            in clinical settings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project B: evoCancerGPT -->
+            <div class="research-section">
+                <h2>Project B: evoCancerGPT - Zero-shot Cancer Evolution</h2>
+                <div class="project-card">
+                    <h3>Generating Cancer Progression with Generative AI</h3>
+                    <div class="project-description">
+                        evoCancerGPT is our flagship large language model specifically designed to understand and generate cancer 
+                        evolutionary trajectories. Using a decoder-only transformer architecture, the model can predict the next 
+                        steps in cancer progression given initial cellular states.
+                    </div>
+
+                    <div class="figure-container">
+                        <div style="background: #f8f9fa; padding: 3rem; border-radius: 10px; border: 2px dashed var(--primary-color);">
+                            <i class="fas fa-chart-line" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <p style="color: var(--primary-color); font-weight: 600;">evoCancerGPT Architecture Diagram</p>
+                            <p style="font-size: 0.9rem; color: var(--text-light);">Decoder-only transformer with MLP layers for sparse expression matrices</p>
+                        </div>
+                        <div class="figure-caption">
+                            Figure: Overview of evoCancerGPT architecture showing data preprocessing pipeline, sentence construction 
+                            from 4096 tokens representing cells in pseudotime order, and transformer architecture with extra MLP layers 
+                            to handle sparse scRNA-seq data and non-linear relationships.
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Model Architecture</h5>
+                        <ul class="methodology-list">
+                            <li>Decoder-only transformer with 4096 token context length</li>
+                            <li>Evolutionary sentences constructed in increasing pseudotime order</li>
+                            <li>Extra MLP layers before and after transformer blocks</li>
+                            <li>Specialized handling of sparse expression matrices</li>
+                            <li>Zero-shot generation capabilities for unseen cancer types</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Training Data & Performance</h5>
+                        <p>
+                            The model is trained on comprehensive single-cell RNA sequencing datasets from multiple cancer types, 
+                            enabling it to learn universal patterns of cancer evolution. In validation studies, evoCancerGPT 
+                            successfully generated realistic cancer progression trajectories that matched known biological patterns 
+                            and predicted novel evolutionary pathways validated by experimental follow-up.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">GPT Architecture</span>
+                        <span class="tech-tag">Pseudotime Analysis</span>
+                        <span class="tech-tag">Zero-shot Learning</span>
+                        <span class="tech-tag">Cancer Evolution</span>
+                        <span class="tech-tag">scRNA-seq</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project C: Clinical Trial Data -->
+            <div class="research-section">
+                <h2>Project C: LLM Applications in Clinical Trial Data</h2>
+                <div class="project-card">
+                    <h3>Foundation Models for Real-World Cancer Clinical Data</h3>
+                    <div class="project-description">
+                        We evaluate and apply state-of-the-art foundation models like scGPT to real-world single nucleus RNA 
+                        sequencing data from ongoing clinical trials at the Hale Center for Pancreatic Cancer. This work bridges 
+                        the gap between research models and clinical applications.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Clinical Trial Integration</h5>
+                        <ul class="methodology-list">
+                            <li>Analysis of Paricalcitol clinical trial data (Vitamin D receptor agonist)</li>
+                            <li>Pre-treatment and post-treatment single nucleus RNA sequencing</li>
+                            <li>Foundation model fine-tuning on clinical genomics data</li>
+                            <li>Biomarker discovery for treatment response prediction</li>
+                            <li>Integration with clinical outcome data</li>
+                        </ul>
+                    </div>
+
+                    <div class="figure-container">
+                        <div style="background: #f8f9fa; padding: 3rem; border-radius: 10px; border: 2px dashed var(--accent-color);">
+                            <i class="fas fa-hospital" style="font-size: 4rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <p style="color: var(--accent-color); font-weight: 600;">Clinical Trial Workflow</p>
+                            <p style="font-size: 0.9rem; color: var(--text-light);">Paricalcitol trial with pre/post treatment analysis</p>
+                        </div>
+                        <div class="figure-caption">
+                            Overview of the Paricalcitol clinical trial conducted at the Hale Center, evaluating the effect of 
+                            Paricalcitol (vitamin D receptor agonist) combined with gemcitabine and albumin-bound paclitaxel 
+                            in metastatic pancreatic cancer patients.
+                        </div>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Clinical Impact</h4>
+                        <p>
+                            This work directly impacts patient care by providing clinicians with AI-powered tools to predict 
+                            treatment responses and identify patients most likely to benefit from specific therapies. Our models 
+                            have shown superior performance compared to traditional biomarkers in predicting clinical outcomes.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">scGPT</span>
+                        <span class="tech-tag">Clinical Genomics</span>
+                        <span class="tech-tag">Biomarker Discovery</span>
+                        <span class="tech-tag">Treatment Response</span>
+                        <span class="tech-tag">snRNA-seq</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project D: Reinforcement Learning -->
+            <div class="research-section">
+                <h2>Project D: Reinforcement Learning Enhanced LLMs</h2>
+                <div class="project-card">
+                    <h3>RLHF for Single Cell Genomics Tasks</h3>
+                    <div class="project-description">
+                        We implement reinforcement learning from human feedback (RLHF) techniques to improve LLM performance 
+                        on single cell genomics tasks, particularly cell type annotation. This approach, inspired by our 
+                        collaboration with DeepSeek-R1, enhances model reasoning capabilities.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Reinforcement Learning Framework</h5>
+                        <ul class="methodology-list">
+                            <li>Human feedback integration for cell type annotation quality</li>
+                            <li>Reward model training based on expert biological knowledge</li>
+                            <li>Policy optimization for improved reasoning chains</li>
+                            <li>Multi-step reasoning for complex cell state identification</li>
+                            <li>Continuous learning from expert corrections</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Key Achievements</h5>
+                        <p>
+                            Our RLHF-enhanced models demonstrate significant improvements in cell type annotation accuracy, 
+                            particularly for rare cell types and transitional states. The models also provide interpretable 
+                            reasoning chains that help biologists understand the decision-making process.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">RLHF</span>
+                        <span class="tech-tag">DeepSeek-R1</span>
+                        <span class="tech-tag">Cell Type Annotation</span>
+                        <span class="tech-tag">Reasoning Models</span>
+                        <span class="tech-tag">Expert Knowledge</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Publications & Software -->
+            <div class="research-section">
+                <h2>Publications & Software</h2>
+                <div class="project-card">
+                    <h3>Key Outputs</h3>
+                    <div class="project-details">
+                        <h5>Recent Publications</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Tan et al.</strong> "Evaluating and Interpreting scGPT: a Foundation Model for Single-Cell Biology in Real-World Cancer Clinical Trial Data" - AACR Pancreatic Cancer 2024</li>
+                            <li><strong>evoCancerGPT manuscript</strong> - In preparation for Nature Methods submission 2025</li>
+                            <li><strong>Multi-modal foundation models review</strong> - Contributing to comprehensive survey paper</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Software & Tools</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>evoCancerGPT</strong> - Open-source implementation with pre-trained models</li>
+                            <li><strong>Clinical LLM Pipeline</strong> - Tools for applying foundation models to clinical data</li>
+                            <li><strong>Multi-modal Genomics Toolkit</strong> - Integration framework for omics data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaborations -->
+            <div class="research-section">
+                <h2>Key Collaborations</h2>
+                <div class="collaboration-grid">
+                    <div class="collaborator">
+                        <h4>Hale Center Teams</h4>
+                        <p>Dr. Brian Wolpin, Dr. Andrew Aguirre, Dr. Jonathan Nowak</p>
+                    </div>
+                    <div class="collaborator">
+                        <h4>Broad Institute</h4>
+                        <p>AI/ML and Genomics Platform collaborations</p>
+                    </div>
+                    <div class="collaborator">
+                        <h4>Industry Partners</h4>
+                        <p>DeepSeek AI, leading tech companies</p>
+                    </div>
+                    <div class="collaborator">
+                        <h4>Clinical Teams</h4>
+                        <p>Oncology and pathology departments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Directions -->
+            <div class="research-section">
+                <h2>Future Directions</h2>
+                <div class="impact-highlight">
+                    <h4>Next Phase Developments</h4>
+                    <p>
+                        We are expanding our LLM work to include multi-modal cancer genomics foundation models that integrate 
+                        transcriptomics, proteomics, and imaging data. Future developments include mechanistic interpretability 
+                        methods for these architectures and the implementation of reinforcement learning techniques to improve 
+                        model performance and establish the Hale Center as a leader in AI-driven cancer genomics research.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../index.html#research" class="btn btn-secondary">Back to Research Overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immune Modeling & Immunotherapy | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .research-page {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .research-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .research-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .research-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .research-section {
+            margin-bottom: 4rem;
+        }
+        .research-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .project-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .project-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .project-details h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .methodology-list {
+            list-style: none;
+            padding: 0;
+        }
+        .methodology-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .methodology-list li:last-child {
+            border-bottom: none;
+        }
+        .methodology-list li::before {
+            content: '🔬';
+            margin-right: 0.5rem;
+        }
+        .impact-highlight {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            margin: 2rem 0;
+        }
+        .impact-highlight h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .immune-highlight {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #4caf50;
+            margin: 2rem 0;
+        }
+        .immune-highlight h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        .data-integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .data-type-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+        .clinical-application {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 2rem 0;
+        }
+        .clinical-application h4 {
+            color: #f57c00;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#research" class="nav-link">Research</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#software" class="nav-link">Software</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Research Page Content -->
+    <div class="research-page">
+        <!-- Hero Section -->
+        <div class="research-hero">
+            <div class="container">
+                <h1>Immune Modeling & Immunotherapy</h1>
+                <p>
+                    Integrative longitudinal immune modeling combining single cell transcriptomic and T-cell receptor 
+                    sequencing clinical patient data to predict immunotherapy responses and understand immune evasion mechanisms.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Overview -->
+            <div class="research-section">
+                <h2>Research Overview</h2>
+                <div class="project-description">
+                    Our immune modeling research integrates cutting-edge single-cell technologies with T-cell receptor sequencing 
+                    to understand how pancreatic cancer evades immune surveillance and develops resistance to immunotherapy. 
+                    We develop predictive models that can identify patients most likely to respond to immune checkpoint blockade 
+                    and other immunotherapeutic approaches.
+                </div>
+                
+                <div class="immune-highlight">
+                    <h4>Immunotherapy Revolution</h4>
+                    <p>
+                        While immunotherapy has transformed treatment for many cancers, pancreatic cancer remains largely 
+                        resistant to these approaches. Our research aims to overcome this resistance by understanding the 
+                        unique immune landscape of pancreatic tumors and identifying combination strategies that can 
+                        make immunotherapy effective in this challenging cancer type.
+                    </p>
+                </div>
+
+                <div class="data-integration-grid">
+                    <div class="data-type-card">
+                        <i class="fas fa-dna" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4>Single-cell RNA-seq</h4>
+                        <p>Comprehensive immune cell profiling</p>
+                    </div>
+                    <div class="data-type-card">
+                        <i class="fas fa-shield-virus" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4>TCR Sequencing</h4>
+                        <p>T-cell receptor repertoire analysis</p>
+                    </div>
+                    <div class="data-type-card">
+                        <i class="fas fa-user-md" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4>Clinical Data</h4>
+                        <p>Treatment outcomes and survival</p>
+                    </div>
+                    <div class="data-type-card">
+                        <i class="fas fa-microscope" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h4>Spatial Analysis</h4>
+                        <p>Tumor-immune interactions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project A: Tumor and Blood Analysis -->
+            <div class="research-section">
+                <h2>Project A: Integrative Analysis of Tumor and Blood</h2>
+                <div class="project-card">
+                    <h3>Immunotherapy-Treated Pancreatic Cancer Patients</h3>
+                    <div class="project-description">
+                        We perform comprehensive integrative analysis of tumor tissue and peripheral blood from pancreatic 
+                        cancer patients treated with immunotherapy. This dual-compartment approach reveals how systemic 
+                        immune responses correlate with local tumor immune environments and treatment outcomes.
+                    </div>
+                    
+                    <div class="project-details">
+                        <h5>Multi-compartment Analysis</h5>
+                        <ul class="methodology-list">
+                            <li>Simultaneous analysis of tumor-infiltrating and circulating immune cells</li>
+                            <li>Longitudinal tracking of immune responses during treatment</li>
+                            <li>Integration of single-cell transcriptomics with TCR repertoire data</li>
+                            <li>Identification of shared vs. compartment-specific immune signatures</li>
+                            <li>Correlation with clinical response and survival outcomes</li>
+                        </ul>
+                    </div>
+
+                    <div class="clinical-application">
+                        <h4>Clinical Translation</h4>
+                        <p>
+                            This research enables the development of liquid biopsy-based biomarkers for immunotherapy 
+                            response prediction. By analyzing peripheral blood samples, we can non-invasively monitor 
+                            treatment responses and adjust therapeutic strategies in real-time, improving patient outcomes 
+                            while reducing the need for invasive tumor biopsies.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Key Research Questions</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li>How do systemic immune responses predict local tumor responses to immunotherapy?</li>
+                            <li>Which circulating immune cell populations are most predictive of treatment success?</li>
+                            <li>How does T-cell receptor diversity change during immunotherapy treatment?</li>
+                            <li>Can peripheral blood signatures replace tumor biopsies for response prediction?</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Immunotherapy</span>
+                        <span class="tech-tag">Liquid Biopsy</span>
+                        <span class="tech-tag">Multi-compartment Analysis</span>
+                        <span class="tech-tag">Longitudinal Profiling</span>
+                        <span class="tech-tag">Biomarker Discovery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project B: Data Repository -->
+            <div class="research-section">
+                <h2>Project B: Pancreatic Cancer Data Repository</h2>
+                <div class="project-card">
+                    <h3>Hale Center Clinical Trial Data Integration</h3>
+                    <div class="project-description">
+                        We are building a comprehensive data repository that integrates multi-modal immune profiling data 
+                        from ongoing clinical trials at the Hale Center for Pancreatic Cancer. This resource will serve 
+                        as a foundation for AI-driven discovery and enable cross-trial comparisons and meta-analyses.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Repository Components</h5>
+                        <ul class="methodology-list">
+                            <li>Standardized data collection protocols across clinical trials</li>
+                            <li>Multi-modal data integration (genomics, proteomics, imaging)</li>
+                            <li>Longitudinal patient tracking and outcome correlation</li>
+                            <li>AI-ready data formatting and annotation</li>
+                            <li>Secure, HIPAA-compliant data storage and access systems</li>
+                            <li>Collaborative research platform for multi-institutional studies</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-highlight">
+                        <h4>Research Acceleration</h4>
+                        <p>
+                            This repository will dramatically accelerate pancreatic cancer research by providing researchers 
+                            with access to high-quality, standardized datasets. The integration of multiple data types and 
+                            clinical outcomes will enable machine learning approaches that would be impossible with smaller, 
+                            single-trial datasets.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Data Standards & Quality</h5>
+                        <p>
+                            We implement rigorous quality control measures and standardized protocols to ensure data 
+                            consistency across different clinical trials and timepoints. This includes standardized 
+                            sample collection, processing protocols, and bioinformatics pipelines that enable meaningful 
+                            cross-study comparisons.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Clinical Trials</span>
+                        <span class="tech-tag">Data Integration</span>
+                        <span class="tech-tag">Standardization</span>
+                        <span class="tech-tag">Multi-modal Data</span>
+                        <span class="tech-tag">Research Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project C: ImmunoProfiler -->
+            <div class="research-section">
+                <h2>Project C: Predicting Immunotherapy Outcomes</h2>
+                <div class="project-card">
+                    <h3>Foundation Models for Immunotherapy Response Prediction</h3>
+                    <div class="project-description">
+                        We develop and apply foundation models for computational pathology to predict patient outcomes 
+                        after treatment with immune checkpoint blockade. Using the ImmunoProfiler dataset from DFCI, 
+                        we integrate histopathology images with immune profiling data to create comprehensive predictive models.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Computational Pathology Integration</h5>
+                        <ul class="methodology-list">
+                            <li>Foundation model analysis of H&E stained tumor sections</li>
+                            <li>Automated immune cell detection and quantification</li>
+                            <li>Integration with molecular immune profiling data</li>
+                            <li>Multi-modal predictive modeling for treatment response</li>
+                            <li>Validation across multiple cancer types and treatment regimens</li>
+                        </ul>
+                    </div>
+
+                    <div class="clinical-application">
+                        <h4>Clinical Decision Support</h4>
+                        <p>
+                            Our predictive models will be integrated into clinical workflows to help oncologists make 
+                            informed decisions about immunotherapy treatment. By analyzing routine pathology samples 
+                            with AI, we can provide rapid, accurate predictions of treatment response, enabling 
+                            personalized treatment selection and improved patient outcomes.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Model Development & Validation</h5>
+                        <p>
+                            We employ rigorous machine learning practices including cross-validation, external validation 
+                            cohorts, and prospective validation studies. Our models are designed to be robust across 
+                            different institutions and patient populations, ensuring broad clinical applicability.
+                        </p>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>ImmunoProfiler Dataset Integration</h5>
+                        <p>
+                            The ImmunoProfiler dataset from DFCI represents one of the largest collections of immune 
+                            checkpoint blockade-treated patients with comprehensive molecular and clinical annotation. 
+                            Our analysis of this dataset provides unprecedented insights into the mechanisms of 
+                            immunotherapy response and resistance.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Foundation Models</span>
+                        <span class="tech-tag">Computational Pathology</span>
+                        <span class="tech-tag">Checkpoint Blockade</span>
+                        <span class="tech-tag">Predictive Modeling</span>
+                        <span class="tech-tag">ImmunoProfiler</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodological Innovations -->
+            <div class="research-section">
+                <h2>Methodological Innovations</h2>
+                <div class="project-card">
+                    <h3>Advanced Computational Approaches</h3>
+                    <div class="project-description">
+                        Our research develops novel computational methods specifically designed for immune system analysis 
+                        in cancer. These methodological innovations enable more accurate and comprehensive understanding 
+                        of tumor-immune interactions and treatment responses.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Novel Analytical Methods</h5>
+                        <ul class="methodology-list">
+                            <li>Multi-modal data integration algorithms for immune profiling</li>
+                            <li>Longitudinal modeling of immune system dynamics</li>
+                            <li>Network analysis of T-cell receptor repertoire evolution</li>
+                            <li>Machine learning models for immune signature discovery</li>
+                            <li>Causal inference methods for treatment effect estimation</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Technical Challenges & Solutions</h5>
+                        <p>
+                            Immune system analysis presents unique computational challenges including high-dimensional 
+                            data integration, temporal dynamics modeling, and rare cell population detection. Our 
+                            methodological innovations address these challenges through specialized algorithms and 
+                            statistical approaches designed for immune system complexity.
+                        </p>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Algorithm Development</span>
+                        <span class="tech-tag">Multi-modal Integration</span>
+                        <span class="tech-tag">Longitudinal Analysis</span>
+                        <span class="tech-tag">Network Analysis</span>
+                        <span class="tech-tag">Causal Inference</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Publications & Software -->
+            <div class="research-section">
+                <h2>Publications & Software</h2>
+                <div class="project-card">
+                    <h3>Key Outputs</h3>
+                    <div class="project-details">
+                        <h5>Recent Publications</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Integrative immune profiling in pancreatic cancer</strong> - Manuscript in preparation, submission planned for Nature Immunology 2025</li>
+                            <li><strong>Foundation models for immunotherapy prediction</strong> - Analysis of ImmunoProfiler dataset, manuscript in preparation 2025</li>
+                            <li><strong>TCR repertoire dynamics during treatment</strong> - Longitudinal analysis of clinical trial patients, in preparation 2025</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Software & Data Resources</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>ImmuneProfiler Suite</strong> - Comprehensive toolkit for immune profiling analysis</li>
+                            <li><strong>TCR-Analytics</strong> - T-cell receptor repertoire analysis pipeline</li>
+                            <li><strong>Multi-Modal Immune Integration Platform</strong> - Framework for integrating diverse immune profiling data</li>
+                            <li><strong>Pancreatic Cancer Immune Atlas</strong> - Curated repository of immune profiling data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaborations & Clinical Impact -->
+            <div class="research-section">
+                <h2>Collaborations & Clinical Impact</h2>
+                <div class="project-card">
+                    <h3>Interdisciplinary Research Network</h3>
+                    <div class="project-description">
+                        Our immune modeling research involves close collaboration with clinicians, immunologists, and 
+                        computational biologists across multiple institutions. These partnerships ensure that our 
+                        research addresses real clinical needs and can be rapidly translated to patient care.
+                    </div>
+
+                    <div class="project-details">
+                        <h5>Key Collaborators</h5>
+                        <ul style="list-style-type: disc; padding-left: 2rem;">
+                            <li><strong>Dr. Stephanie Dougan</strong> - Medical Oncology, immunotherapy clinical trials</li>
+                            <li><strong>Dr. Brian Wolpin</strong> - Pancreatic cancer clinical research</li>
+                            <li><strong>Dr. Jonathan Nowak</strong> - Pathology and biomarker development</li>
+                            <li><strong>Hale Center Clinical Teams</strong> - Multi-institutional clinical trial network</li>
+                        </ul>
+                    </div>
+
+                    <div class="clinical-application">
+                        <h4>Direct Clinical Translation</h4>
+                        <p>
+                            Our research directly informs clinical trial design and patient treatment decisions at 
+                            Dana-Farber and partner institutions. Biomarkers and predictive models developed through 
+                            this work are being tested in prospective clinical trials, with the goal of improving 
+                            immunotherapy response rates in pancreatic cancer patients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Directions -->
+            <div class="research-section">
+                <h2>Future Directions</h2>
+                <div class="impact-highlight">
+                    <h4>Next-Generation Immune Modeling</h4>
+                    <p>
+                        We are developing the next generation of immune modeling approaches that integrate spatial 
+                        immune profiling with large language models. This will enable prediction of immunotherapy 
+                        responses at unprecedented resolution and accuracy, potentially transforming how we select 
+                        and monitor immunotherapy treatments in pancreatic cancer and other challenging cancer types.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Back Navigation -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../index.html#research" class="btn btn-secondary">Back to Research Overview</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

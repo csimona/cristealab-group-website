@@ -1,0 +1,1080 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #0d47a1;
+    --accent-color: #ff6b6b;
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.nav-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.875rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Japanese-Style AI Evolution Animation */
+.evolutionary-ai-animation {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+        rgba(26, 115, 232, 0.03) 0%, 
+        rgba(13, 71, 161, 0.05) 50%, 
+        rgba(255, 107, 107, 0.03) 100%);
+}
+
+.evolutionary-ai-animation::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(26, 115, 232, 0.08) 0%, 
+        transparent 60%);
+    animation: zen-pulse 6s ease-in-out infinite;
+}
+
+/* DNA Helix Structure */
+.dna-helix {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(to bottom, 
+        #0066cc 0%, #0066cc 25%, 
+        transparent 25%, transparent 75%, 
+        #0066cc 75%, #0066cc 100%);
+    transform-origin: 50% 50%;
+    animation: dna-twist 8s linear infinite;
+}
+
+.dna-helix.helix-0 {
+    transform: translateX(-5px);
+}
+
+.dna-helix.helix-1 {
+    transform: translateX(5px) rotateY(180deg);
+    animation-direction: reverse;
+}
+
+/* DNA Base Pairs */
+.dna-base-pair {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b 0%, #4ecdc4 100%);
+    opacity: 0;
+    animation: base-pair-appear 6s ease-in-out infinite;
+}
+
+/* Genetic Mutations */
+.genetic-mutation {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: mutation-pulse 4s ease-in-out infinite;
+}
+
+.genetic-mutation.oncogene {
+    background: radial-gradient(circle, #ff4444 0%, #cc0000 100%);
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+}
+
+.genetic-mutation.tumor-suppressor {
+    background: radial-gradient(circle, #4444ff 0%, #0000cc 100%);
+    box-shadow: 0 0 15px rgba(68, 68, 255, 0.6);
+}
+
+.genetic-mutation.dna-repair {
+    background: radial-gradient(circle, #44ff44 0%, #00cc00 100%);
+    box-shadow: 0 0 15px rgba(68, 255, 68, 0.6);
+}
+
+/* Transformer Core */
+.transformer-core {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, 
+        var(--primary-color) 0%, 
+        var(--secondary-color) 50%, 
+        transparent 100%);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: transformer-pulse 6s ease-in-out infinite;
+}
+
+/* Attention Heads */
+.attention-head {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: attention-focus 8s ease-in-out infinite;
+}
+
+.attention-head.head-0 { top: 40%; left: 50%; }
+.attention-head.head-1 { top: 45%; left: 55%; }
+.attention-head.head-2 { top: 55%; left: 55%; }
+.attention-head.head-3 { top: 60%; left: 50%; }
+.attention-head.head-4 { top: 55%; left: 45%; }
+.attention-head.head-5 { top: 45%; left: 45%; }
+
+/* Neural Network Nodes */
+.neural-node {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: neural-activation 5s ease-in-out infinite;
+}
+
+.neural-node.input {
+    background: #4ecdc4;
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.6);
+}
+
+.neural-node.hidden {
+    background: var(--primary-color);
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.6);
+}
+
+.neural-node.attention {
+    background: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
+}
+
+.neural-node.output {
+    background: #ffd93d;
+    box-shadow: 0 0 8px rgba(255, 217, 61, 0.6);
+}
+
+/* Data Embeddings */
+.data-embedding {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: embedding-flow 7s linear infinite;
+}
+
+/* Tumor Evolution Tree */
+.tumor-branch {
+    position: absolute;
+    background: var(--text-dark);
+    opacity: 0;
+    animation: branch-grow 4s ease-out infinite;
+}
+
+.tumor-branch.trunk {
+    background: #4a4a4a;
+}
+
+.tumor-branch.primary {
+    background: #ff6b6b;
+}
+
+.tumor-branch.secondary {
+    background: #ff8c42;
+}
+
+.tumor-branch.metastasis {
+    background: #d63031;
+}
+
+/* Tumor Cells */
+.tumor-cell {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: cell-evolution 5s ease-in-out infinite;
+}
+
+.tumor-cell.normal {
+    background: #4ecdc4;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.4);
+}
+
+.tumor-cell.primary {
+    background: #ff6b6b;
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.6);
+}
+
+.tumor-cell.resistant {
+    background: #ff4757;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.8);
+}
+
+.tumor-cell.metastatic {
+    background: #d63031;
+    box-shadow: 0 0 18px rgba(214, 48, 49, 0.9);
+}
+
+.tumor-cell.evolved {
+    background: #a29bfe;
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.8);
+}
+
+.tumor-cell.aggressive {
+    background: #6c5ce7;
+    box-shadow: 0 0 25px rgba(108, 92, 231, 1);
+}
+
+/* Evolution Arrows */
+.evolution-arrow {
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
+    opacity: 0;
+    animation: arrow-flow 6s ease-in-out infinite;
+}
+
+.evolution-arrow::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: -3px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--primary-color);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+/* Information Particles */
+.info-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: info-flow 12s linear infinite;
+}
+
+/* Biological Annotations */
+.bio-annotation {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0;
+    animation: annotation-fade 8s ease-in-out infinite;
+}
+
+.bio-annotation.phase-label {
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.bio-annotation.gene-label {
+    color: #ff6b6b;
+    font-size: 10px;
+}
+
+.bio-annotation.ai-label {
+    color: var(--secondary-color);
+    font-size: 10px;
+}
+
+.bio-annotation.tumor-label {
+    color: #d63031;
+    font-size: 10px;
+}
+
+/* Evolution Timeline */
+.evolution-timeline {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--text-light);
+    opacity: 0.8;
+    animation: timeline-appear 2s ease-in-out 8s forwards;
+    opacity: 0;
+}
+
+/* Japanese-Style Animation Keyframes */
+@keyframes zen-pulse {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.6; 
+        transform: scale(1.05); 
+    }
+}
+
+@keyframes ai-core-pulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1); 
+        box-shadow: 0 0 20px rgba(26, 115, 232, 0.6); 
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.1); 
+        box-shadow: 0 0 30px rgba(26, 115, 232, 0.8); 
+    }
+}
+
+@keyframes ring-expand {
+    0% { 
+        transform: scale(0.8); 
+        opacity: 0.1; 
+    }
+    50% { 
+        transform: scale(1); 
+        opacity: 0.4; 
+    }
+    100% { 
+        transform: scale(1.1); 
+        opacity: 0.1; 
+    }
+}
+
+@keyframes genetic-rotation {
+    0% { 
+        transform: translate(-50%, -100%) rotate(0deg); 
+    }
+    100% { 
+        transform: translate(-50%, -100%) rotate(360deg); 
+    }
+}
+
+@keyframes node-appear {
+    0%, 90% { 
+        opacity: 0; 
+        transform: scale(0.5); 
+    }
+    5%, 85% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.2); 
+    }
+}
+
+@keyframes connection-flow {
+    0%, 90% { 
+        opacity: 0; 
+        transform: scaleY(0); 
+    }
+    10%, 80% { 
+        opacity: 0.6; 
+        transform: scaleY(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scaleY(1.1); 
+    }
+}
+
+@keyframes zen-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px); 
+        opacity: 0.3; 
+    }
+    25% { 
+        transform: translateY(-10px) translateX(5px); 
+        opacity: 0.6; 
+    }
+    50% { 
+        transform: translateY(-5px) translateX(-5px); 
+        opacity: 0.8; 
+    }
+    75% { 
+        transform: translateY(-15px) translateX(10px); 
+        opacity: 0.4; 
+    }
+}
+
+@keyframes symbol-fade {
+    0%, 80% { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    10%, 70% { 
+        opacity: 0.7; 
+        transform: translateY(0px); 
+    }
+    40% { 
+        opacity: 1; 
+        transform: translateY(-5px); 
+    }
+}
+
+@keyframes binary-flow {
+    0% { 
+        transform: translateX(-20px); 
+        opacity: 0; 
+    }
+    20%, 80% { 
+        opacity: 0.4; 
+    }
+    100% { 
+        transform: translateX(20px); 
+        opacity: 0; 
+    }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+.section-alt {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.lead {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+/* Research Section */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.research-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.research-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.research-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.research-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Publications Section */
+.publications-list {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.publication {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary-color);
+}
+
+.publication h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.pub-authors {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.pub-authors strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.pub-journal {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.pub-link {
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.pub-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Software Section */
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.software-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.software-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.software-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.software-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.software-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    width: 30px;
+}
+
+.contact-item h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    color: #999;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .evolutionary-ai-animation {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .evo-node {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .evo-node.modern {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .evo-node.ancestor {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .binary-stream {
+        font-size: 8px;
+    }
+    
+    .comp-particle {
+        width: 2px;
+        height: 2px;
+    }
+    
+    .mutation-indicator {
+        width: 4px;
+        height: 4px;
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

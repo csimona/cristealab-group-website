@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristea Lab - Computational Cancer Research | Dana-Farber Cancer Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Cristea Lab</h1>
+                <span class="nav-subtitle">Computational Cancer Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#software" class="nav-link">Software</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to the Cristea Lab</h1>
+            <p class="hero-subtitle">
+                Pioneering AI and Large Language Models for cancer genomics at the Hale Center for Pancreatic Cancer, Dana-Farber Cancer Institute
+            </p>
+            <div class="hero-buttons">
+                <a href="#research" class="btn btn-primary">Our Research</a>
+                <a href="#publications" class="btn btn-secondary">Recent Publications</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="evolutionary-ai-animation"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Dr. Simona Cristea</h2>
+                    <p class="lead">
+                        Dr. Simona Cristea is Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer 
+                        and a faculty member in the Department of Data Science at Dana-Farber Cancer Institute, with a Research 
+                        Scientist appointment at Harvard T.H. Chan School of Public Health.
+                    </p>
+                    <p>
+                        She drives the vision, innovation and strategic development of Hale Center's computational efforts to cure 
+                        pancreatic cancer. Her lab integrates AI, computational biology, genomics and evolution to understand and 
+                        ultimately alter the molecular processes that initiate and drive cancer. Current work focuses on developing 
+                        single cell large language models to understand and generate cancer progression and clinical responses using 
+                        generative AI methodologies.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Publications</p>
+                        </div>
+                        <div class="stat">
+                            <h3>14</h3>
+                            <p>Team Members</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p>Active Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/lab-photo.jpg" alt="Cristea Lab Team" class="placeholder-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3><a href="research/large-language-models.html" style="text-decoration: none; color: inherit;">Large Language Models in Cancer Genomics</a></h3>
+                    <p>
+                        Developing single cell LLMs to understand and generate cancer progression and clinical responses 
+                        using generative AI. Creating foundation models like evoCancerGPT for zero-shot cancer evolution prediction.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/large-language-models.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3><a href="research/spatial-genomics.html" style="text-decoration: none; color: inherit;">Spatial Genomics & AI</a></h3>
+                    <p>
+                        Spatial modeling and analyses of pancreatic cancer progression using clinical trial patient genomic and imaging data. 
+                        Integrating CosMx spatial transcriptomics with computational pathology and foundation models.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/spatial-genomics.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3><a href="research/immune-modeling.html" style="text-decoration: none; color: inherit;">Immune Modeling & Immunotherapy</a></h3>
+                    <p>
+                        Integrative longitudinal immune modeling of single cell transcriptomic and TCR sequencing clinical patient data. 
+                        Predicting patient outcomes after treatment with immune checkpoint blockade.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/immune-modeling.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3><a href="research/drug-discovery.html" style="text-decoration: none; color: inherit;">Drug Discovery & KRAS Inhibition</a></h3>
+                    <p>
+                        Drug perturbation analysis through CRISPR screens on KRAS inhibitors. Cell surfaceome analysis 
+                        to identify targets for designing novel antibody-drug conjugates in pancreatic cancer.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/drug-discovery.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3><a href="research/early-detection.html" style="text-decoration: none; color: inherit;">Early Detection AI</a></h3>
+                    <p>
+                        Developing LLM methodology for early detection of pancreatic cancer from electronic health record data 
+                        in the Mass Gen-Brigham-Dana Farber medical system using deep learning clinical decision support tools.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/early-detection.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3><a href="research/breast-cancer.html" style="text-decoration: none; color: inherit;">Breast Cancer Genomics</a></h3>
+                    <p>
+                        Spatial and temporal single cell analyses of breast tumor initiation, malignant transformations, 
+                        and clinical response prediction for triple-negative breast cancers treated with antibody-drug conjugates.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/breast-cancer.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/headshot.jpg" alt="Dr. Simona Cristea" class="placeholder-img">
+                    </div>
+                    <h3><a href="team/simona-cristea.html" style="text-decoration: none; color: inherit;">Dr. Simona Cristea</a></h3>
+                    <p class="member-title">Principal Investigator</p>
+                    <p class="member-bio">
+                        Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer. Leading research in single cell LLMs 
+                        and AI foundation models for cancer genomics and clinical applications.
+                    </p>
+                    <div class="member-links">
+                        <a href="mailto:simona_cristea@dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="team/simona-cristea.html" class="social-link" title="View Profile"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/research-scientist-placeholder.jpg" alt="Research Scientist" class="placeholder-img">
+                    </div>
+                    <h3><a href="team/research-scientist.html" style="text-decoration: none; color: inherit;">Dr. [Name]</a></h3>
+                    <p class="member-title">Research Scientist</p>
+                    <p class="member-bio">
+                        Senior computational researcher developing AI applications for cancer biology, with expertise in spatial transcriptomics 
+                        and multi-omics integration for comprehensive cancer analysis.
+                    </p>
+                    <div class="member-links">
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="team/research-scientist.html" class="social-link" title="View Profile"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/postdoc-placeholder.jpg" alt="Postdoctoral Researcher" class="placeholder-img">
+                    </div>
+                    <h3><a href="team/postdoc-researcher.html" style="text-decoration: none; color: inherit;">Dr. [Name]</a></h3>
+                    <p class="member-title">Postdoctoral Researcher</p>
+                    <p class="member-bio">
+                        Computational biologist specializing in machine learning applications for cancer genomics and single-cell analysis. 
+                        Focused on developing novel algorithms for understanding tumor evolution.
+                    </p>
+                    <div class="member-links">
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="team/postdoc-researcher.html" class="social-link" title="View Profile"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/grad-student-placeholder.jpg" alt="Graduate Student" class="placeholder-img">
+                    </div>
+                    <h3><a href="team/graduate-student.html" style="text-decoration: none; color: inherit;">[Name]</a></h3>
+                    <p class="member-title">Graduate Student</p>
+                    <p class="member-bio">
+                        Ph.D. candidate focusing on deep learning approaches for cancer genomics and evolutionary modeling.
+                    </p>
+                    <div class="member-links">
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="team/graduate-student.html" class="social-link" title="View Profile"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/grad-student-2-placeholder.jpg" alt="Graduate Student" class="placeholder-img">
+                    </div>
+                    <h3>[Name]</h3>
+                    <p class="member-title">Graduate Student</p>
+                    <p class="member-bio">
+                        Ph.D. candidate working on single-cell analysis and computational methods for tumor heterogeneity.
+                    </p>
+                    <div class="member-links">
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/undergrad-placeholder.jpg" alt="Undergraduate Researcher" class="placeholder-img">
+                    </div>
+                    <h3>[Name]</h3>
+                    <p class="member-title">Undergraduate Researcher</p>
+                    <p class="member-bio">
+                        Computer science student contributing to machine learning projects in cancer research.
+                    </p>
+                    <div class="member-links">
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publications-list">
+                <article class="publication">
+                    <h3>Multi-modal foundation models for molecular biology: opportunities and challenges</h3>
+                    <p class="pub-authors">Haotian Cui, Alejandro Tejada-Lapuerta, Maria Brbic, Julio Saez-Rodriguez, <strong>Simona Cristea</strong>, Hani Goodarzi, Mohammad Lotfollahi, Fabian J. Theis, Bo Wang</p>
+                    <p class="pub-journal">Nature 640, 623–633, 2024</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1038/s41586-024-08042-3" class="pub-link" target="_blank">Paper</a>
+                    </div>
+                </article>
+                <article class="publication">
+                    <h3>Peripheral blood TCR clonotype diversity as an age-associated marker of breast cancer progression</h3>
+                    <p class="pub-authors">Jun Nishida*, <strong>Simona Cristea</strong>*+, Sudheshna Bodapati*, Julieann Puleo, Gali Bai, Ashka Patel, Melissa Hughes, Craig Snow, Virginia Borges, Kathryn J Ruddy, Laura C Collins, Anne-Marie Feeney, Kara Slowik, Veerle Bossuyt, Deborah Dillon, Nancy U Lin, Ann H Partridge, Franziska Michor+, Kornelia Polyak+</p>
+                    <p class="pub-journal">PNAS 120(49), 2023 (*co-first; +co-senior author)</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1073/pnas.2311174120" class="pub-link" target="_blank">Paper</a>
+                    </div>
+                </article>
+                <article class="publication">
+                    <h3>Single-cell heterogeneity of EGFR and CDK4 co-amplification is linked to immune infiltration in glioblastoma</h3>
+                    <p class="pub-authors">Kacper A. Walentynowicz*, Dalit Engelhardt*, <strong>Simona Cristea</strong>*, Shreya Yadav, Ugoma Onubogu, Roberto Salatino, Cristina Vincentelli, Thomas O. McDonald, Franziska Michor, Michalina Janiszewska</p>
+                    <p class="pub-journal">Cell Reports 42(3), 2023 (*co-first author)</p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.celrep.2023.112252" class="pub-link" target="_blank">Paper</a>
+                        <a href="https://github.com/cristealab/glioblastoma-EGFR-CDK4" class="pub-link" target="_blank">Code</a>
+                    </div>
+                </article>
+                <!-- Add more publications -->
+            </div>
+            <div class="text-center">
+                <a href="publications.html" class="btn btn-primary">View All Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="section">
+        <div class="container">
+            <h2 class="section-title">Software & Tools</h2>
+            <div class="software-grid">
+                <div class="software-card">
+                    <h3>evoCancerGPT</h3>
+                    <p>Large Language Model for zero-shot cancer progression prediction using generative AI and transformer architecture</p>
+                    <div class="software-links">
+                        <a href="#" class="software-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="software-link"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
+                <div class="software-card">
+                    <h3>CosMx Spatial Analysis Pipeline</h3>
+                    <p>Comprehensive framework for spatial transcriptomics data analysis and integration with computational pathology</p>
+                    <div class="software-links">
+                        <a href="#" class="software-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="software-link"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
+                <div class="software-card">
+                    <h3>Single Cell Foundation Models</h3>
+                    <p>Multi-modal AI framework integrating scRNA-seq, proteomics, and imaging data for cancer analysis</p>
+                    <div class="software-links">
+                        <a href="#" class="software-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="software-link"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
+                <div class="software-card">
+                    <h3>TCR-seq Analysis Toolkit</h3>
+                    <p>Computational methods for T-cell receptor sequencing and immune repertoire analysis in cancer patients</p>
+                    <div class="software-links">
+                        <a href="#" class="software-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="software-link"><i class="fas fa-book"></i> Docs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Dana-Farber Cancer Institute<br>
+                            450 Brookline Ave<br>
+                            Boston, MA 02215</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>simona_cristea@dfci.harvard.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (617) 632-XXXX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Join Our Team</h3>
+                    <p>We are always looking for talented and motivated individuals to join our research group. 
+                    If you're interested in computational cancer research, please get in touch!</p>
+                    <a href="#" class="btn btn-primary">Open Positions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Cristea Lab</h3>
+                    <p>Computational Cancer Research</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
+                    <a href="https://www.harvard.edu" target="_blank">Harvard University</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
