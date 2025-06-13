@@ -414,8 +414,11 @@ body {
 /* Research Section */
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: var(--space-8);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Team Section */
@@ -568,6 +571,13 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 900px) and (min-width: 769px) {
+    .research-grid {
+        max-width: 800px;
+        gap: var(--space-6);
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding-left: var(--space-4);
@@ -629,7 +639,12 @@ body {
         max-width: 280px;
     }
     
-    .research-grid,
+    .research-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-width: none;
+    }
+    
     .team-grid {
         grid-template-columns: 1fr;
     }
