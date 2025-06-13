@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pancreatic Cancer Genomics | Cristea Lab</title>
+    <title>Pancreatic Cancer Genomics: Immune Modeling & Drug Discovery | Cristea Lab</title>
     <link rel="stylesheet" href="../styles-warm-accent.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,96 +13,101 @@
             padding: 3rem 0;
         }
         .research-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
             color: white;
             padding: 4rem 0;
             text-align: center;
             margin-bottom: 4rem;
         }
         .research-hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .research-hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         .research-section {
             margin-bottom: 4rem;
         }
         .research-section h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
+            font-size: 2rem;
+            color: var(--color-text-primary);
             margin-bottom: 2rem;
-            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
         }
         .project-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            padding: 2.5rem;
+            background: var(--color-surface-elevated);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
             margin-bottom: 2rem;
-            border-left: 5px solid var(--accent-color);
-            transition: var(--transition);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-normal);
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .project-card h3 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .project-card h4 {
-            font-size: 1.3rem;
-            color: var(--accent-color);
+            font-size: 1.4rem;
+            color: var(--color-text-primary);
             margin-bottom: 1rem;
             font-weight: 600;
         }
         .project-description {
-            font-size: 1.1rem;
+            color: var(--color-text-secondary);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
-        .project-details {
-            background: var(--bg-light);
+        .key-results {
+            background: var(--color-accent-light);
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: var(--radius-lg);
             margin: 1.5rem 0;
+            border-left: 4px solid var(--color-accent);
         }
-        .project-details h5 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+        .key-results h4 {
+            color: var(--color-accent-hover);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
-        .methodology-list {
-            list-style: none;
+        .key-results ul {
+            list-style-type: none;
             padding: 0;
         }
-        .methodology-list li {
+        .key-results li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5rem;
         }
-        .methodology-list li:last-child {
-            border-bottom: none;
+        .key-results li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
         }
-        .methodology-list li::before {
-            content: '🔬';
-            margin-right: 0.5rem;
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
-        .impact-highlight {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--secondary-color);
-            margin: 2rem 0;
+        .methodology-item {
+            background: var(--color-surface);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
         }
-        .impact-highlight h4 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+        .methodology-item h5 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         .tech-stack {
             display: flex;
@@ -111,104 +116,50 @@
             margin: 1rem 0;
         }
         .tech-tag {
-            background: var(--primary-color);
+            background: var(--color-accent);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
-        .immune-highlight {
-            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-normal);
+            margin-right: 1rem;
+        }
+        .publication-link:hover {
+            color: var(--color-accent-hover);
+        }
+        .impact-box {
+            background: linear-gradient(135deg, var(--color-surface), var(--color-surface-elevated));
             padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #4caf50;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
             margin: 2rem 0;
         }
-        .immune-highlight h4 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
+        .collaboration-info {
+            background: var(--color-surface);
+            padding: 1rem;
+            border-radius: var(--radius-lg);
+            margin: 1rem 0;
+            border-left: 3px solid var(--color-accent-medium);
         }
-        .drug-highlight {
-            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #ff9800;
-            margin: 2rem 0;
-        }
-        .drug-highlight h4 {
-            color: #f57c00;
-            margin-bottom: 1rem;
-        }
-        .resistance-analysis {
-            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #e91e63;
-            margin: 2rem 0;
-        }
-        .resistance-analysis h4 {
-            color: #c2185b;
-            margin-bottom: 1rem;
-        }
-        .clinical-application {
-            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #ff9800;
-            margin: 2rem 0;
-        }
-        .clinical-application h4 {
-            color: #f57c00;
-            margin-bottom: 1rem;
-        }
-        .data-integration-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .data-type-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent-color);
-            text-align: center;
-        }
-        .screen-results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .screen-result-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent-color);
-            text-align: center;
-        }
-        .target-discovery {
-            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #2196f3;
-            margin: 2rem 0;
-        }
-        .target-discovery h4 {
-            color: #1976d2;
-            margin-bottom: 1rem;
-        }
-        .overview-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
+        .collaboration-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
         }
         @media (max-width: 768px) {
-            .overview-grid {
+            .research-hero h1 {
+                font-size: 2rem;
+            }
+            .methodology-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -225,7 +176,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../index.html#research" class="nav-link">Research</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../index.html#team" class="nav-link">Team</a></li>
                 <li><a href="../publications.html" class="nav-link">Publications</a></li>
                 <li><a href="../index.html#software" class="nav-link">Software</a></li>
                 <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
@@ -245,9 +196,8 @@
             <div class="container">
                 <h1>Pancreatic Cancer Genomics</h1>
                 <p>
-                    Comprehensive genomic and immune profiling to understand pancreatic cancer biology, 
-                    predict treatment responses, and develop novel therapeutic strategies through integrative 
-                    analysis of multi-modal data from clinical trials and patient samples.
+                    Integrative immune modeling, drug resistance mechanisms, and target discovery through 
+                    single-cell multi-omics, CRISPR screens, and clinical trial data analysis
                 </p>
             </div>
         </div>
@@ -257,443 +207,307 @@
             <div class="research-section">
                 <h2>Research Overview</h2>
                 <div class="project-description">
-                    Our pancreatic cancer genomics research combines cutting-edge technologies in immune profiling, 
-                    drug discovery, and computational analysis to tackle one of the most challenging cancers. We 
-                    integrate single-cell technologies, CRISPR screening, proteomics, and AI-driven approaches to 
-                    understand disease mechanisms and develop new therapeutic strategies.
+                    <p>
+                        Our laboratory conducts comprehensive genomic analyses of pancreatic cancer, integrating single-cell 
+                        transcriptomics, T-cell receptor sequencing, and CRISPR screening to understand treatment response 
+                        and resistance mechanisms. We analyze clinical trial data from the Hale Center to identify biomarkers 
+                        for immunotherapy response, characterize resistance to KRAS inhibition, and discover novel therapeutic 
+                        targets through surface proteome profiling.
+                    </p>
                 </div>
                 
-                <div class="overview-grid">
-                    <div class="immune-highlight">
-                        <h4>Immunotherapy Revolution</h4>
-                        <p>
-                            While immunotherapy has transformed treatment for many cancers, pancreatic cancer remains largely 
-                            resistant to these approaches. Our research aims to overcome this resistance by understanding the 
-                            unique immune landscape of pancreatic tumors and identifying combination strategies that can 
-                            make immunotherapy effective in this challenging cancer type.
-                        </p>
-                    </div>
-                    
-                    <div class="drug-highlight">
-                        <h4>KRAS: The "Undruggable" Target</h4>
-                        <p>
-                            KRAS has long been considered "undruggable" due to its smooth protein surface and high affinity 
-                            for its substrate. Recent breakthroughs in KRAS inhibitor development have opened new therapeutic 
-                            possibilities for pancreatic cancer patients, but resistance inevitably emerges. Our research 
-                            aims to stay ahead of resistance by understanding its mechanisms and developing combination 
-                            strategies to prevent or overcome it.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="data-integration-grid">
-                    <div class="data-type-card">
-                        <i class="fas fa-dna" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>Single-cell RNA-seq</h4>
-                        <p>Comprehensive immune cell profiling</p>
-                    </div>
-                    <div class="data-type-card">
-                        <i class="fas fa-shield-virus" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>TCR Sequencing</h4>
-                        <p>T-cell receptor repertoire analysis</p>
-                    </div>
-                    <div class="data-type-card">
-                        <i class="fas fa-cut" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>CRISPR Screening</h4>
-                        <p>Systematic vulnerability discovery</p>
-                    </div>
-                    <div class="data-type-card">
-                        <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>Mass Spectrometry</h4>
-                        <p>Proteomics & post-translational analysis</p>
-                    </div>
-                    <div class="data-type-card">
-                        <i class="fas fa-user-md" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>Clinical Data</h4>
-                        <p>Treatment outcomes and survival</p>
-                    </div>
-                    <div class="data-type-card">
-                        <i class="fas fa-microscope" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                        <h4>Spatial Analysis</h4>
-                        <p>Tumor-immune interactions</p>
-                    </div>
+                <div class="impact-box">
+                    <h4 style="color: var(--color-accent); margin-bottom: 1rem;">Clinical Impact</h4>
+                    <p>
+                        Our integrated genomics approach directly impacts patient care by: (1) identifying biomarkers that 
+                        predict immunotherapy response, (2) elucidating resistance mechanisms to guide combination therapies, 
+                        (3) discovering novel antibody-drug conjugate targets, and (4) creating accessible data resources 
+                        that accelerate translational research across the Hale Center.
+                    </p>
                 </div>
             </div>
 
-            <!-- Immune Profiling Section -->
+            <!-- Part 1: Immune Modeling -->
             <div class="research-section">
-                <h2>Immune Profiling & Surveillance</h2>
+                <h2>Integrative Immune Modeling</h2>
                 
-                <!-- Project: Tumor and Blood Analysis -->
+                <!-- Project A: Immunotherapy Analysis -->
                 <div class="project-card">
-                    <h3>Integrative Analysis of Tumor and Blood</h3>
-                    <h4>Immunotherapy-Treated Pancreatic Cancer Patients</h4>
+                    <h3>Single-cell Analysis of Immunotherapy-treated Pancreatic Cancers</h3>
                     <div class="project-description">
-                        We perform comprehensive integrative analysis of tumor tissue and peripheral blood from pancreatic 
-                        cancer patients treated with immunotherapy. This dual-compartment approach reveals how systemic 
-                        immune responses correlate with local tumor immune environments and treatment outcomes.
-                    </div>
-                    
-                    <div class="project-details">
-                        <h5>Multi-compartment Analysis</h5>
-                        <ul class="methodology-list">
-                            <li>Simultaneous analysis of tumor-infiltrating and circulating immune cells</li>
-                            <li>Longitudinal tracking of immune responses during treatment</li>
-                            <li>Integration of single-cell transcriptomics with TCR repertoire data</li>
-                            <li>Identification of shared vs. compartment-specific immune signatures</li>
-                            <li>Correlation with clinical response and survival outcomes</li>
-                        </ul>
-                    </div>
-
-                    <div class="clinical-application">
-                        <h4>Clinical Translation</h4>
                         <p>
-                            This research enables the development of liquid biopsy-based biomarkers for immunotherapy 
-                            response prediction. By analyzing peripheral blood samples, we can non-invasively monitor 
-                            treatment responses and adjust therapeutic strategies in real-time, improving patient outcomes 
-                            while reducing the need for invasive tumor biopsies.
+                            We analyze scRNA-seq and scTCR-seq data from DFCI clinical trials comparing FOLFIRINOX, 
+                            pembrolizumab, and gemcitabine/nab-paclitaxel treatments. Our integrated analysis reveals 
+                            treatment-specific immune responses and TCR clonal expansion patterns that correlate with 
+                            clinical outcomes.
                         </p>
                     </div>
 
+                    <div class="collaboration-info">
+                        <p><strong>Collaboration:</strong> Dr. Chong Zuo (Dr. Stephanie Dougan's lab, DFCI)</p>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Key Findings</h4>
+                        <ul>
+                            <li>FOLFIRINOX drives CD8 T effector memory (Tem) cell expansion</li>
+                            <li>Pembrolizumab specifically affects CD8 T effector cells (Teff)</li>
+                            <li>Cell2Sentence framework achieves 85% accuracy in cell-type classification</li>
+                            <li>Treatment prediction accuracy reaches 95% using fine-tuned LLMs</li>
+                        </ul>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Data Integration</h5>
+                            <p>Tumor and blood samples with paired TCR sequencing</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>LLM Application</h5>
+                            <p>Cell2Sentence and scGPT for cellular embeddings</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Clinical Correlation</h5>
+                            <p>Survival time and recurrence prediction</p>
+                        </div>
+                    </div>
+
                     <div class="tech-stack">
+                        <span class="tech-tag">scRNA-seq</span>
+                        <span class="tech-tag">scTCR-seq</span>
                         <span class="tech-tag">Immunotherapy</span>
-                        <span class="tech-tag">Liquid Biopsy</span>
-                        <span class="tech-tag">Multi-compartment Analysis</span>
-                        <span class="tech-tag">Longitudinal Profiling</span>
-                        <span class="tech-tag">Biomarker Discovery</span>
+                        <span class="tech-tag">Cell2Sentence</span>
+                        <span class="tech-tag">Clinical Trials</span>
                     </div>
                 </div>
 
-                <!-- Project: ImmunoProfiler -->
+                <!-- Project B: Data Repository -->
                 <div class="project-card">
-                    <h3>Foundation Models for Immunotherapy Response Prediction</h3>
+                    <h3>Hale Center Data Repository</h3>
                     <div class="project-description">
-                        We develop and apply foundation models for computational pathology to predict patient outcomes 
-                        after treatment with immune checkpoint blockade. Using the ImmunoProfiler dataset from DFCI, 
-                        we integrate histopathology images with immune profiling data to create comprehensive predictive models.
+                        <p>
+                            We developed a comprehensive data sharing platform for genomic sequencing samples generated 
+                            at the Hale Center. The web-based repository enables interactive data exploration, clinical 
+                            data integration, and streamlined access to multi-omics datasets for the research community.
+                        </p>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Computational Pathology Integration</h5>
-                        <ul class="methodology-list">
-                            <li>Foundation model analysis of H&E stained tumor sections</li>
-                            <li>Automated immune cell detection and quantification</li>
-                            <li>Integration with molecular immune profiling data</li>
-                            <li>Multi-modal predictive modeling for treatment response</li>
-                            <li>Validation across multiple cancer types and treatment regimens</li>
+                    <div class="key-results">
+                        <h4>Platform Features</h4>
+                        <ul>
+                            <li>Flask-based web application with R and Dash components</li>
+                            <li>Interactive data exploration tools</li>
+                            <li>Clinical data integration and visualization</li>
+                            <li>Secure access within DFCI network/VPN</li>
                         </ul>
                     </div>
 
                     <div class="tech-stack">
-                        <span class="tech-tag">Foundation Models</span>
-                        <span class="tech-tag">Computational Pathology</span>
-                        <span class="tech-tag">Checkpoint Blockade</span>
-                        <span class="tech-tag">Predictive Modeling</span>
-                        <span class="tech-tag">ImmunoProfiler</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Dash</span>
+                        <span class="tech-tag">Data Sharing</span>
                     </div>
+
+                    <div style="margin-top: 1rem;">
+                        <a href="http://haledatarepo.dfci.harvard.edu/" class="publication-link" target="_blank">
+                            <i class="fas fa-database"></i> Access Repository (DFCI Network)
+                        </a>
+                        <a href="https://github.com/cristea-lab" class="publication-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project C: ICB Biomarkers -->
+                <div class="project-card">
+                    <h3>Biomarkers for Immune Checkpoint Blockade Response</h3>
+                    <div class="project-description">
+                        <p>
+                            We conducted a comprehensive review of prognostic biomarkers for immunotherapy response 
+                            across diverse data modalities. Our analysis integrates genetic signatures, genomic features, 
+                            and imaging data to improve prediction of patient outcomes after ICB therapy.
+                        </p>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Review Highlights</h4>
+                        <ul>
+                            <li>Pan-cancer analysis of ICB biomarkers</li>
+                            <li>Integration of multi-omics and imaging features</li>
+                            <li>Computational approaches for outcome prediction</li>
+                            <li>Challenges in immunotherapy prognostication</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 1rem; font-style: italic;">
+                        Liu Y et al. "Predicting patient outcomes after treatment with immune checkpoint blockade: 
+                        A review of biomarkers derived from diverse data modalities" 
+                        <em>Cell Genomics</em> 4, 100444, 2024
+                    </p>
                 </div>
             </div>
 
-            <!-- Drug Discovery Section -->
+            <!-- Part 2: Drug Resistance -->
             <div class="research-section">
-                <h2>Drug Discovery & KRAS Inhibition</h2>
+                <h2>Drug Perturbation & Resistance Mechanisms</h2>
                 
-                <!-- Project: Resistance Mechanisms -->
+                <!-- Project A: KRAS Resistance -->
                 <div class="project-card">
-                    <h3>Mechanisms of KRAS Inhibition Resistance</h3>
-                    <h4>Whole Exome Sequencing and Bulk Genomics Analysis</h4>
+                    <h3>Mechanisms of Resistance to KRAS Inhibition</h3>
                     <div class="project-description">
-                        We perform comprehensive genomic analysis of pancreatic cancer models and patient samples that 
-                        have developed resistance to KRAS inhibitors. This work identifies genetic alterations that 
-                        drive resistance and reveals potential therapeutic targets to overcome resistance mechanisms.
-                    </div>
-                    
-                    <div class="project-details">
-                        <h5>Resistance Analysis Pipeline</h5>
-                        <ul class="methodology-list">
-                            <li>Longitudinal whole exome sequencing of resistant tumor samples</li>
-                            <li>Comparative genomics between sensitive and resistant cell lines</li>
-                            <li>Identification of resistance-associated mutations and copy number alterations</li>
-                            <li>Pathway analysis of resistance mechanisms</li>
-                            <li>Validation of resistance drivers through functional studies</li>
-                        </ul>
-                    </div>
-
-                    <div class="resistance-analysis">
-                        <h4>Key Resistance Mechanisms Identified</h4>
                         <p>
-                            Our analysis has revealed multiple pathways through which pancreatic cancers can escape 
-                            KRAS inhibition, including reactivation of downstream signaling pathways, activation 
-                            of alternative oncogenic drivers, and metabolic reprogramming. Understanding these 
-                            mechanisms enables the development of rational combination therapies.
+                            Using clinical samples and preclinical models, we characterized heterogeneous genetic and 
+                            non-genetic mechanisms of resistance to KRAS inhibitors. Our work guides combination therapy 
+                            approaches to improve efficacy and durability of these promising treatments.
                         </p>
                     </div>
 
+                    <div class="key-results">
+                        <h4>Major Discoveries</h4>
+                        <ul>
+                            <li>Mutations in PIK3CA and KRAS emerge at resistance</li>
+                            <li>Amplifications of KRASG12C, MYC, MET, EGFR, CDK6</li>
+                            <li>EMT and PI3K-AKT-mTOR signaling drive resistance</li>
+                            <li>Mesenchymal/basal states show increased KRAS inhibitor response</li>
+                            <li>Combination with chemotherapy improves tumor control</li>
+                        </ul>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Model Systems</h5>
+                            <p>KPC mice, organoids, cell lines, PDX models</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Drug Testing</h5>
+                            <p>Adagrasib, sotorasib, MRTX1133</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Genomic Analysis</h5>
+                            <p>WES, RNA-seq, amplification detection</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem; font-style: italic;">
+                        Dilly J et al. "Mechanisms of Resistance to Oncogenic KRAS Inhibition in Pancreatic Cancer" 
+                        <em>Cancer Discovery</em> 2024
+                    </p>
+
                     <div class="tech-stack">
-                        <span class="tech-tag">Whole Exome Sequencing</span>
+                        <span class="tech-tag">KRAS Inhibitors</span>
                         <span class="tech-tag">Resistance Mechanisms</span>
-                        <span class="tech-tag">Comparative Genomics</span>
-                        <span class="tech-tag">Pathway Analysis</span>
-                        <span class="tech-tag">Clinical Validation</span>
+                        <span class="tech-tag">Mouse Models</span>
+                        <span class="tech-tag">Combination Therapy</span>
                     </div>
                 </div>
 
-                <!-- Project: CRISPR Screens -->
+                <!-- Project B: CRISPR Screens -->
                 <div class="project-card">
-                    <h3>CRISPR Screening of KRAS Inhibitors</h3>
-                    <h4>Pan-RAS and KRAS Mutant-Selective Inhibition Analysis</h4>
+                    <h3>CRISPR Screening for Pan-RAS vs Mutant-Selective Inhibition</h3>
                     <div class="project-description">
-                        We conduct large-scale CRISPR knockout screens to identify genetic dependencies and resistance 
-                        mechanisms for both pan-RAS inhibitors and KRAS mutant-selective inhibitors in pancreatic 
-                        cancer cell lines. This systematic approach reveals vulnerabilities that can be exploited 
-                        for combination therapies.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>CRISPR Screen Design</h5>
-                        <ul class="methodology-list">
-                            <li>Genome-wide CRISPR knockout screens in multiple pancreatic cancer cell lines</li>
-                            <li>Comparative analysis of pan-RAS vs. mutant-selective inhibitor responses</li>
-                            <li>Time-course analysis to identify early and late resistance mechanisms</li>
-                            <li>Drug dose response screening to identify synergistic combinations</li>
-                            <li>Functional validation of top candidate genes</li>
-                        </ul>
-                    </div>
-
-                    <div class="screen-results-grid">
-                        <div class="screen-result-card">
-                            <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Synthetic Lethal Targets</h4>
-                            <p>Genes essential only in KRAS mutant context</p>
-                        </div>
-                        <div class="screen-result-card">
-                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Resistance Genes</h4>
-                            <p>Genes that protect against KRAS inhibition</p>
-                        </div>
-                        <div class="screen-result-card">
-                            <i class="fas fa-link" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Combination Targets</h4>
-                            <p>Genes for synergistic drug combinations</p>
-                        </div>
-                        <div class="screen-result-card">
-                            <i class="fas fa-route" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Pathway Dependencies</h4>
-                            <p>Essential signaling pathways in resistance</p>
-                        </div>
-                    </div>
-
-                    <div class="impact-highlight">
-                        <h4>Therapeutic Innovation</h4>
                         <p>
-                            Our CRISPR screens have identified several promising combination therapy opportunities 
-                            that are now being tested in preclinical models and clinical trials. These rational 
-                            combinations have the potential to prevent resistance and improve patient outcomes 
-                            compared to KRAS inhibitor monotherapy.
+                            We are conducting genome-wide CRISPR screens to compare pan-RAS versus mutant-selective 
+                            KRAS inhibitors across multiple pancreatic cancer cell lines. Our novel permutation-based 
+                            analysis integrates multiple replicates to identify robust resistance and sensitization genes.
                         </p>
+                    </div>
+
+                    <div class="collaboration-info">
+                        <p><strong>Collaboration:</strong> Dr. Andrew Aguirre's lab (DFCI/BWH)</p>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Inhibitors Tested</h5>
+                            <p>RMC-7977 (pan-RAS), RMC-9945, MRTX1133 (G12D-specific)</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Analysis Focus</h5>
+                            <p>Resistance genes, sensitizers, pathway modulation</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Statistical Method</h5>
+                            <p>Permutation approach for replicate integration</p>
+                        </div>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Analysis Questions</h4>
+                        <ul>
+                            <li>Pan-RAS vs mutant-selective inhibitor differences</li>
+                            <li>Universal vs specific resistance mechanisms</li>
+                            <li>Common vulnerabilities across inhibitor types</li>
+                            <li>Protein-protein interaction networks in resistance</li>
+                        </ul>
                     </div>
 
                     <div class="tech-stack">
                         <span class="tech-tag">CRISPR Screening</span>
-                        <span class="tech-tag">Pan-RAS Inhibitors</span>
-                        <span class="tech-tag">Synthetic Lethality</span>
-                        <span class="tech-tag">Combination Therapy</span>
-                        <span class="tech-tag">Drug Synergy</span>
+                        <span class="tech-tag">RAS Inhibitors</span>
+                        <span class="tech-tag">Genetic Dependencies</span>
+                        <span class="tech-tag">Drug Resistance</span>
                     </div>
                 </div>
 
-                <!-- Project: PhageDisplay and Mass Spec -->
+                <!-- Project C: Phage Display -->
                 <div class="project-card">
-                    <h3>Target Discovery Through PhageDisplay and Mass Spectrometry</h3>
+                    <h3>PhageDisplay Antibody Screening for Novel Targets</h3>
                     <div class="project-description">
-                        We employ complementary approaches of PhageDisplay antibody screening and quantitative mass 
-                        spectrometry to identify novel cell surface targets and understand protein-level changes during 
-                        KRAS inhibition and resistance development.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Integrated Discovery Pipeline</h5>
-                        <ul class="methodology-list">
-                            <li>Large-scale phage display library screening on pancreatic cancer cell lines</li>
-                            <li>Quantitative proteomics analysis under various drug concentrations</li>
-                            <li>Time-course analysis of protein expression changes during treatment</li>
-                            <li>Cell surface proteome enrichment for ADC target identification</li>
-                            <li>Post-translational modification analysis (phosphoproteomics, ubiquitinomics)</li>
-                            <li>Antibody affinity maturation and characterization</li>
-                        </ul>
-                    </div>
-
-                    <div class="target-discovery">
-                        <h4>Novel Target Discovery</h4>
                         <p>
-                            Our integrated approach has identified several previously unknown cell surface proteins 
-                            that are specifically expressed or upregulated in KRAS-driven pancreatic cancers. 
-                            These targets represent opportunities for developing highly specific antibody-drug 
-                            conjugates that can deliver cytotoxic payloads directly to cancer cells.
+                            We employ PhageDisplay technology to identify novel cell surface targets in KRAS 
+                            inhibitor-resistant pancreatic cancer. Our VHH antibody library screening reveals 
+                            targetable proteins for developing next-generation antibody-drug conjugates.
                         </p>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Experimental Design</h5>
+                            <p>5 conditions: parental/resistant, baseline/treated</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Technology</h5>
+                            <p>VHH phage library, NGS sequencing</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Analysis Platform</h5>
+                            <p>dBio Abgenesis for clonotype clustering</p>
+                        </div>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Screening Approach</h4>
+                        <ul>
+                            <li>Positive selection on pancreatic cancer cells</li>
+                            <li>Negative selection on 293T cells</li>
+                            <li>Multiple enrichment rounds</li>
+                            <li>High-throughput sequencing of enriched VHH</li>
+                        </ul>
                     </div>
 
                     <div class="tech-stack">
                         <span class="tech-tag">PhageDisplay</span>
-                        <span class="tech-tag">Mass Spectrometry</span>
-                        <span class="tech-tag">Antibody Screening</span>
-                        <span class="tech-tag">ADC Development</span>
-                        <span class="tech-tag">Phosphoproteomics</span>
+                        <span class="tech-tag">Antibody Discovery</span>
+                        <span class="tech-tag">Surface Proteome</span>
+                        <span class="tech-tag">ADC Targets</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Data Integration Hub -->
+            <!-- Publications -->
             <div class="research-section">
-                <h2>Pancreatic Cancer Data Repository</h2>
+                <h2>Selected Publications</h2>
                 <div class="project-card">
-                    <h3>Hale Center Clinical Trial Data Integration</h3>
                     <div class="project-description">
-                        We are building a comprehensive data repository that integrates multi-modal immune profiling data 
-                        from ongoing clinical trials at the Hale Center for Pancreatic Cancer. This resource will serve 
-                        as a foundation for AI-driven discovery and enable cross-trial comparisons and meta-analyses.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Repository Components</h5>
-                        <ul class="methodology-list">
-                            <li>Standardized data collection protocols across clinical trials</li>
-                            <li>Multi-modal data integration (genomics, proteomics, imaging)</li>
-                            <li>Longitudinal patient tracking and outcome correlation</li>
-                            <li>AI-ready data formatting and annotation</li>
-                            <li>Secure, HIPAA-compliant data storage and access systems</li>
-                            <li>Collaborative research platform for multi-institutional studies</li>
-                        </ul>
-                    </div>
-
-                    <div class="impact-highlight">
-                        <h4>Research Acceleration</h4>
-                        <p>
-                            This repository will dramatically accelerate pancreatic cancer research by providing researchers 
-                            with access to high-quality, standardized datasets. The integration of multiple data types and 
-                            clinical outcomes will enable machine learning approaches that would be impossible with smaller, 
-                            single-trial datasets.
-                        </p>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">Clinical Trials</span>
-                        <span class="tech-tag">Data Integration</span>
-                        <span class="tech-tag">Standardization</span>
-                        <span class="tech-tag">Multi-modal Data</span>
-                        <span class="tech-tag">Research Infrastructure</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Methodological Innovations -->
-            <div class="research-section">
-                <h2>Methodological Innovations</h2>
-                <div class="project-card">
-                    <h3>Advanced Computational Approaches</h3>
-                    <div class="project-description">
-                        Our research develops novel computational methods specifically designed for integrative analysis 
-                        of pancreatic cancer data. These methodological innovations enable more accurate understanding 
-                        of tumor biology, immune interactions, and drug responses.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Novel Analytical Methods</h5>
-                        <ul class="methodology-list">
-                            <li>Multi-modal data integration algorithms for immune and genomic profiling</li>
-                            <li>Longitudinal modeling of treatment responses and resistance evolution</li>
-                            <li>Network analysis of T-cell receptor repertoire and signaling pathways</li>
-                            <li>Machine learning models for biomarker discovery and validation</li>
-                            <li>Causal inference methods for treatment effect estimation</li>
-                            <li>AI-driven target identification and drug design</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">Algorithm Development</span>
-                        <span class="tech-tag">Multi-modal Integration</span>
-                        <span class="tech-tag">Longitudinal Analysis</span>
-                        <span class="tech-tag">Network Analysis</span>
-                        <span class="tech-tag">Causal Inference</span>
-                        <span class="tech-tag">AI/ML Models</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clinical Translation -->
-            <div class="research-section">
-                <h2>Clinical Translation & Impact</h2>
-                <div class="project-card">
-                    <h3>From Discovery to Patient Care</h3>
-                    <div class="project-description">
-                        Our research is designed with clinical translation as a primary goal. We work closely with 
-                        clinicians, pharmaceutical companies, and regulatory agencies to ensure that our discoveries 
-                        can be rapidly translated into new treatments and diagnostic tools for pancreatic cancer patients.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Active Clinical Collaborations</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>Dr. Stephanie Dougan</strong> - Medical Oncology, immunotherapy clinical trials</li>
-                            <li><strong>Dr. Brian Wolpin</strong> - Pancreatic cancer clinical research</li>
-                            <li><strong>Dr. Jonathan Nowak</strong> - Pathology and biomarker development</li>
-                            <li><strong>Revolution Medicines</strong> - RMC-6236 clinical trial analysis</li>
-                            <li><strong>Hale Center Clinical Teams</strong> - Multi-institutional clinical trial network</li>
-                            <li><strong>Pharmaceutical Partners</strong> - ADC development and combination therapy trials</li>
-                        </ul>
-                    </div>
-
-                    <div class="clinical-application">
-                        <h4>Direct Patient Impact</h4>
-                        <p>
-                            Our research directly informs clinical trial design and patient treatment decisions at 
-                            Dana-Farber and partner institutions. Several biomarkers and therapeutic targets identified 
-                            through our work are now being tested in clinical trials, with the goal of improving 
-                            outcomes for pancreatic cancer patients who currently have limited treatment options.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Publications & Software -->
-            <div class="research-section">
-                <h2>Publications, Software & Intellectual Property</h2>
-                <div class="project-card">
-                    <h3>Key Research Outputs</h3>
-                    <div class="project-details">
-                        <h5>Manuscripts in Preparation</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>Integrative immune profiling in pancreatic cancer</strong> - Nature Immunology 2025</li>
-                            <li><strong>CRISPR screening reveals vulnerabilities in KRAS-driven pancreatic cancer</strong> - Nature Cancer 2025</li>
-                            <li><strong>Mechanisms of resistance to pan-RAS inhibition</strong> - Cancer Cell 2025</li>
-                            <li><strong>Foundation models for immunotherapy prediction</strong> - Nature Medicine 2025</li>
-                            <li><strong>PhageDisplay identification of novel ADC targets</strong> - Nature Biotechnology 2025</li>
-                            <li><strong>TCR repertoire dynamics during treatment</strong> - Cell 2025</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Software & Data Resources</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>ImmuneProfiler Suite</strong> - Comprehensive toolkit for immune profiling analysis</li>
-                            <li><strong>CRISPR-Analytics Suite</strong> - Pipeline for CRISPR screen analysis</li>
-                            <li><strong>TCR-Analytics</strong> - T-cell receptor repertoire analysis pipeline</li>
-                            <li><strong>Resistance Predictor</strong> - ML models for resistance prediction</li>
-                            <li><strong>ADC Target Database</strong> - Curated database of cell surface targets</li>
-                            <li><strong>Drug Combination Optimizer</strong> - Tools for rational combination design</li>
-                            <li><strong>Pancreatic Cancer Immune Atlas</strong> - Curated repository of immune profiling data</li>
-                            <li><strong>Multi-Modal Immune Integration Platform</strong> - Framework for integrating diverse data types</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Patent Applications</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>Novel ADC targets in pancreatic cancer</strong> - Patent application filed 2024</li>
-                            <li><strong>Biomarkers for KRAS inhibitor resistance</strong> - Patent application in preparation</li>
-                            <li><strong>Combination therapy strategies</strong> - Patent applications filed 2024-2025</li>
-                            <li><strong>Immune signature predictors</strong> - Patent application in preparation 2025</li>
-                        </ul>
+                        <p><strong>Dilly J</strong>, Hoffman MT, Abbassi L, ... <strong>Cristea S</strong>, ... Aguirre AJ. 
+                        "Mechanisms of Resistance to Oncogenic KRAS Inhibition in Pancreatic Cancer" 
+                        <em>Cancer Discovery</em>, 2024.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>Liu Y</strong>, Altreuter J, Bodapati S, <strong>Cristea S</strong>, Wong CJ, Wu CJ, Michor F. 
+                        "Predicting patient outcomes after treatment with immune checkpoint blockade: A review of biomarkers derived from diverse data modalities" 
+                        <em>Cell Genomics</em> 4, 100444, 2024.</p>
                     </div>
                 </div>
             </div>
@@ -701,21 +515,14 @@
             <!-- Future Directions -->
             <div class="research-section">
                 <h2>Future Directions</h2>
-                <div class="impact-highlight">
-                    <h4>Next-Generation Pancreatic Cancer Research</h4>
+                <div class="impact-box">
                     <p>
-                        We are developing the next generation of integrative approaches that combine spatial omics, 
-                        large language models, and foundation models for comprehensive understanding of pancreatic 
-                        cancer biology. Our future work will focus on:
+                        We are expanding our pancreatic cancer genomics research to include: (1) multi-modal integration 
+                        of spatial transcriptomics with immune profiling, (2) development of resistance prediction models 
+                        using machine learning, (3) validation of novel ADC targets in preclinical models, and (4) 
+                        prospective biomarker validation in clinical trials. Our goal is to translate genomic insights 
+                        into actionable therapeutic strategies that improve patient outcomes.
                     </p>
-                    <ul style="list-style-type: disc; padding-left: 2rem; margin-top: 1rem;">
-                        <li>AI-driven prediction of drug responses and resistance evolution</li>
-                        <li>Spatial multi-omics integration for tumor microenvironment analysis</li>
-                        <li>Personalized combination therapy design using machine learning</li>
-                        <li>Real-time treatment monitoring through liquid biopsy and AI analysis</li>
-                        <li>Development of next-generation immunotherapies for pancreatic cancer</li>
-                        <li>Creation of digital twins for patient-specific treatment optimization</li>
-                    </ul>
                 </div>
             </div>
 
@@ -745,11 +552,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+                <p>&copy; 2025 Cristea Lab. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script-clean-modern.js"></script>
 </body>
 </html>

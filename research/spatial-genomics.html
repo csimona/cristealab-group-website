@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spatial Genomics & AI | Cristea Lab</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Spatial Modeling and Analyses of Pancreatic Cancer | Cristea Lab</title>
+    <link rel="stylesheet" href="../styles-warm-accent.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -13,96 +13,101 @@
             padding: 3rem 0;
         }
         .research-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
             color: white;
             padding: 4rem 0;
             text-align: center;
             margin-bottom: 4rem;
         }
         .research-hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .research-hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         .research-section {
             margin-bottom: 4rem;
         }
         .research-section h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
+            font-size: 2rem;
+            color: var(--color-text-primary);
             margin-bottom: 2rem;
-            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
         }
         .project-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            padding: 2.5rem;
+            background: var(--color-surface-elevated);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
             margin-bottom: 2rem;
-            border-left: 5px solid var(--accent-color);
-            transition: var(--transition);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-normal);
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .project-card h3 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .project-card h4 {
-            font-size: 1.3rem;
-            color: var(--accent-color);
+            font-size: 1.4rem;
+            color: var(--color-text-primary);
             margin-bottom: 1rem;
             font-weight: 600;
         }
         .project-description {
-            font-size: 1.1rem;
+            color: var(--color-text-secondary);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
-        .project-details {
-            background: var(--bg-light);
+        .key-results {
+            background: var(--color-accent-light);
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: var(--radius-lg);
             margin: 1.5rem 0;
+            border-left: 4px solid var(--color-accent);
         }
-        .project-details h5 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+        .key-results h4 {
+            color: var(--color-accent-hover);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
-        .methodology-list {
-            list-style: none;
+        .key-results ul {
+            list-style-type: none;
             padding: 0;
         }
-        .methodology-list li {
+        .key-results li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5rem;
         }
-        .methodology-list li:last-child {
-            border-bottom: none;
+        .key-results li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
         }
-        .methodology-list li::before {
-            content: '🔬';
-            margin-right: 0.5rem;
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
-        .impact-highlight {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--secondary-color);
-            margin: 2rem 0;
+        .methodology-item {
+            background: var(--color-surface);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
         }
-        .impact-highlight h4 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+        .methodology-item h5 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         .tech-stack {
             display: flex;
@@ -111,36 +116,62 @@
             margin: 1rem 0;
         }
         .tech-tag {
-            background: var(--primary-color);
+            background: var(--color-accent);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
-        .clinical-trial-highlight {
-            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        .software-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-normal);
+            margin-right: 1rem;
+        }
+        .software-link:hover {
+            color: var(--color-accent-hover);
+        }
+        .impact-box {
+            background: linear-gradient(135deg, var(--color-surface), var(--color-surface-elevated));
             padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #2196f3;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
             margin: 2rem 0;
         }
-        .clinical-trial-highlight h4 {
-            color: #1976d2;
-            margin-bottom: 1rem;
-        }
-        .platform-grid {
+        .collaboration-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
-        .platform-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent-color);
+        .collaborator-card {
+            background: var(--color-surface);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+        .collaborator-card h5 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+        .collaborator-card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .research-hero h1 {
+                font-size: 2rem;
+            }
+            .methodology-grid, .collaboration-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -150,12 +181,12 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <h1>Cristea Lab</h1>
-                <span class="nav-subtitle">Computational Cancer Research</span>
+                <span class="nav-subtitle">AI Cancer Genomics Research</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../index.html#research" class="nav-link">Research</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../index.html#team" class="nav-link">Team</a></li>
                 <li><a href="../publications.html" class="nav-link">Publications</a></li>
                 <li><a href="../index.html#software" class="nav-link">Software</a></li>
                 <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
@@ -173,10 +204,10 @@
         <!-- Hero Section -->
         <div class="research-hero">
             <div class="container">
-                <h1>Spatial Genomics & AI</h1>
+                <h1>Spatial Modeling and Analyses of Pancreatic Cancer</h1>
                 <p>
-                    Revolutionizing pancreatic cancer research through spatial modeling and analyses using clinical trial 
-                    patient genomic and imaging data, integrating cutting-edge spatial transcriptomics with computational pathology.
+                    Pioneering spatial transcriptomics and proteomics analyses to understand tumor microenvironment 
+                    architecture, fibroblast heterogeneity, and resistance mechanisms in pancreatic cancer
                 </p>
             </div>
         </div>
@@ -186,318 +217,313 @@
             <div class="research-section">
                 <h2>Research Overview</h2>
                 <div class="project-description">
-                    Our spatial genomics research integrates high-resolution spatial transcriptomics, proteomics, and computational 
-                    pathology to understand the complex tumor microenvironment in pancreatic cancer. We develop AI-powered analysis 
-                    frameworks that can map cellular interactions, identify resistance mechanisms, and predict treatment responses 
-                    at unprecedented spatial resolution.
+                    <p>
+                        Our laboratory is at the forefront of spatial genomics technology, developing comprehensive analysis frameworks 
+                        for CosMx spatial transcriptomics and high-plex protein imaging. We are analyzing over 300 pancreatic tumors 
+                        to map the complex relationships between spatial organization, cellular composition, and clinical outcomes. 
+                        Our work reveals how the tumor microenvironment architecture drives treatment resistance and identifies 
+                        targetable spatial niches for therapeutic intervention.
+                    </p>
                 </div>
                 
-                <div class="impact-highlight">
-                    <h4>Clinical Translation</h4>
+                <div class="impact-box">
+                    <h4 style="color: var(--color-accent); margin-bottom: 1rem;">Clinical Translation</h4>
                     <p>
-                        This work directly impacts patient care by providing spatial biomarkers for treatment response prediction, 
-                        identifying resistance mechanisms in KRAS inhibitor therapy, and developing personalized treatment strategies 
-                        based on tumor microenvironment characteristics from ongoing clinical trials at Dana-Farber.
+                        Our spatial analysis pipelines are actively used for multiple clinical trials at the Hale Center, including 
+                        the Break Through Cancer Trial and RMC-6236 RAS inhibitor trial. These tools enable: (1) automated processing 
+                        of spatial transcriptomics data, (2) identification of resistance mechanisms to KRAS inhibition, (3) mapping 
+                        of fibroblast heterogeneity and its impact on treatment response, and (4) development of spatial biomarkers 
+                        for patient stratification.
                     </p>
                 </div>
             </div>
 
-            <!-- Project A: Analysis Frameworks -->
+            <!-- Key Projects -->
             <div class="research-section">
-                <h2>Project A: Spatial Transcriptomics Analysis Frameworks</h2>
+                <h2>Key Projects</h2>
+                
+                <!-- Project A: CosMx Pipeline -->
                 <div class="project-card">
-                    <h3>CosMx Spatial Analysis Pipeline Development</h3>
+                    <h3>CosMx Spatial Transcriptomics Analysis Framework</h3>
                     <div class="project-description">
-                        We are developing comprehensive computational frameworks for analyzing high-resolution spatial transcriptomics 
-                        data from the Nanostring CosMx platform. Our pipeline integrates spatial gene expression analysis with 
-                        computational pathology to provide multi-scale insights into tumor architecture.
+                        <p>
+                            We developed a comprehensive automated pipeline for CosMx NanoString spatial transcriptomics data analysis, 
+                            supporting both 1,000 and 6,000 gene panels. The pipeline performs cell segmentation, quality control, 
+                            tumor polarity analysis, cell subtyping, and fibroblast activity assessment. Built using Snakemake, 
+                            it requires no coding experience and ensures full reproducibility.
+                        </p>
                     </div>
-                    
-                    <div class="project-details">
-                        <h5>Pipeline Components</h5>
-                        <ul class="methodology-list">
-                            <li>Quality control and normalization for CosMx spatial data</li>
-                            <li>Cell segmentation and molecular assignment algorithms</li>
-                            <li>Spatial neighborhood analysis and cellular interaction mapping</li>
-                            <li>Integration with H&E histopathology images</li>
-                            <li>Multi-resolution spatial analysis from subcellular to tissue-level</li>
-                            <li>Statistical frameworks for spatial hypothesis testing</li>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Automated Processing</h5>
+                            <p>Cell segmentation, QC metrics, and batch effect correction</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Cell Type Annotation</h5>
+                            <p>Benchmarked tools with manually curated reference profiles</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Interactive Reports</h5>
+                            <p>Spatial projections, tumor subtyping, cell-cell interactions</p>
+                        </div>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Pipeline Features</h4>
+                        <ul>
+                            <li>Tumor subtyping (basal/classical classification)</li>
+                            <li>Fibroblast activity profiling and spatial mapping</li>
+                            <li>Cell-cell interaction analysis with ligand-receptor pairs</li>
+                            <li>Interactive HTML reports for data exploration</li>
                         </ul>
                     </div>
 
-                    <div class="platform-grid">
-                        <div class="platform-card">
-                            <h4>Data Processing</h4>
-                            <p>Advanced algorithms for handling the unique challenges of spatial transcriptomics data, including spatial autocorrelation, technical artifacts, and multi-scale analysis.</p>
-                        </div>
-                        <div class="platform-card">
-                            <h4>Visualization Tools</h4>
-                            <p>Interactive visualization platforms for exploring spatial gene expression patterns, cellular neighborhoods, and tissue architecture.</p>
-                        </div>
-                        <div class="platform-card">
-                            <h4>Statistical Methods</h4>
-                            <p>Novel statistical approaches for spatial differential expression analysis and identification of spatially variable genes.</p>
-                        </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">CosMx NanoString</span>
+                        <span class="tech-tag">Snakemake</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Spatial Analysis</span>
                     </div>
 
-                    <div class="tech-stack">
-                        <span class="tech-tag">CosMx Platform</span>
-                        <span class="tech-tag">Spatial Transcriptomics</span>
-                        <span class="tech-tag">Image Analysis</span>
-                        <span class="tech-tag">Python/R Pipelines</span>
-                        <span class="tech-tag">Statistical Modeling</span>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/cristea-lab/CosMx_Spatial_Pipelines" class="software-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub Repository
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project B: Fibroblast Diversity -->
-            <div class="research-section">
-                <h2>Project B: Fibroblast Spatial Diversity in Pancreatic Cancer</h2>
+                <!-- Project B: Fibroblast Diversity -->
                 <div class="project-card">
-                    <h3>Mapping Fibroblast Heterogeneity in Primary and Metastatic Disease</h3>
+                    <h3>Fibroblast Spatial Diversity in Primary and Metastatic PDAC</h3>
                     <div class="project-description">
-                        We investigate the spatial organization and functional diversity of cancer-associated fibroblasts (CAFs) 
-                        in primary pancreatic tumors and metastatic sites. This work reveals how fibroblast subtypes contribute 
-                        to tumor progression and treatment resistance through spatial analysis of clinical samples.
+                        <p>
+                            In collaboration with Drs. Wolpin and Nowak, we spatially profiled 300+ pancreatic tumors using 
+                            12-marker immunofluorescence to map fibroblast heterogeneity and its clinical impact. We identified 
+                            distinct fibroblast subtypes with prognostic significance and characterized their response to 
+                            neoadjuvant FOLFIRINOX chemotherapy.
+                        </p>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Research Objectives</h5>
-                        <ul class="methodology-list">
-                            <li>Characterize fibroblast subtypes using spatial transcriptomics</li>
-                            <li>Map fibroblast-cancer cell interactions in tumor microenvironment</li>
-                            <li>Compare primary vs. metastatic fibroblast spatial organization</li>
-                            <li>Identify fibroblast signatures associated with treatment resistance</li>
-                            <li>Develop spatial biomarkers for patient stratification</li>
+                    <div class="key-results">
+                        <h4>Major Findings</h4>
+                        <ul>
+                            <li>FAP+ fibroblasts associated with poor survival and basal tumors</li>
+                            <li>Inflammatory CAFs (iCAFs) correlated with better clinical outcomes</li>
+                            <li>FOLFIRINOX treatment remodels fibroblast composition</li>
+                            <li>Distinct ligand-receptor patterns between tumor subtypes</li>
                         </ul>
                     </div>
 
-                    <div class="clinical-trial-highlight">
-                        <h4>Clinical Relevance</h4>
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Clinical Cohorts</h5>
+                            <p>Upfront surgery, neoadjuvant therapy, liver metastases</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Spatial Analysis</h5>
+                            <p>Cell density, composition, tumor-fibroblast interactions</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Survival Analysis</h5>
+                            <p>Fibroblast subtypes as prognostic biomarkers</p>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1rem; font-style: italic;">
+                        Elganainy et al. "Stromal Composition, Fibroblast Heterogeneity and Tumor Spatial Organization 
+                        in Pancreatic Adenocarcinoma" - Manuscript in preparation, 2025
+                    </p>
+                </div>
+
+                <!-- Project C: HexAligner -->
+                <div class="project-card">
+                    <h3>HexAligner - Collagen-Stroma Spatial Analysis</h3>
+                    <div class="project-description">
                         <p>
-                            Cancer-associated fibroblasts are key drivers of pancreatic cancer progression and treatment resistance. 
-                            Our spatial analysis reveals how different fibroblast subtypes create therapeutic barriers and identifies 
-                            opportunities for combination therapies targeting the tumor microenvironment.
+                            We developed HexAligner, a novel computational tool to analyze spatial relationships between 
+                            collagen deposition and fibroblast subtypes. The tool aligns multi-modal images and tessellates 
+                            them into hexagonal regions for quantitative analysis of stromal architecture.
                         </p>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Key Findings</h5>
-                        <p>
-                            Our analysis has identified distinct spatial patterns of fibroblast organization that correlate with 
-                            patient outcomes. Specific fibroblast subtypes form protective niches around cancer cells, contributing 
-                            to drug resistance and immune evasion. These findings are informing new therapeutic strategies.
-                        </p>
+                    <div class="key-results">
+                        <h4>Key Discovery</h4>
+                        <ul>
+                            <li>Myofibroblasts (myCAFs) concentrate with collagen deposits</li>
+                            <li>iCAFs show less collagen association</li>
+                            <li>Implications for drug delivery and immune infiltration</li>
+                            <li>Open-source tool for spatial image analysis</li>
+                        </ul>
                     </div>
 
                     <div class="tech-stack">
-                        <span class="tech-tag">Cancer-Associated Fibroblasts</span>
-                        <span class="tech-tag">Spatial Analysis</span>
-                        <span class="tech-tag">Tumor Microenvironment</span>
-                        <span class="tech-tag">Clinical Samples</span>
+                        <span class="tech-tag">Image Analysis</span>
+                        <span class="tech-tag">Spatial Statistics</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Hexagonal Tessellation</span>
+                    </div>
+
+                    <div style="margin-top: 1rem;">
+                        <a href="https://github.com/cristea-lab/HexAligner" class="software-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project D: KRAS Resistance -->
+                <div class="project-card">
+                    <h3>Spatial Features of KRAS Inhibitor Resistance</h3>
+                    <div class="project-description">
+                        <p>
+                            Using CosMx spatial transcriptomics, we are characterizing resistance mechanisms to the KRASG12D 
+                            inhibitor MRTX1133 in mouse models. Our analysis reveals malignant subclones with distinct spatial 
+                            niches and identifies putative drivers of resistance in their microenvironmental context.
+                        </p>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Model System</h5>
+                            <p>KPC mice with acquired resistance after complete regression</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Spatial Profiling</h5>
+                            <p>Whole-tissue CosMx with resistance marker analysis</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Subclone Mapping</h5>
+                            <p>Spatial niches specific to resistant populations</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">KRAS Inhibition</span>
+                        <span class="tech-tag">Resistance Mechanisms</span>
+                        <span class="tech-tag">CosMx</span>
+                        <span class="tech-tag">Mouse Models</span>
+                    </div>
+                </div>
+
+                <!-- Project E: High-plex Proteomics -->
+                <div class="project-card">
+                    <h3>High-plex Protein Profiling for RAS Inhibitor Clinical Trial</h3>
+                    <div class="project-description">
+                        <p>
+                            In collaboration with Revolution Medicines and Breakthrough Cancer, we are analyzing 60-marker 
+                            protein expression profiles from the RMC-6236 clinical trial. Our computational pipeline uses 
+                            distribution-based thresholding and machine learning to accurately phenotype cells and track 
+                            treatment-induced changes in the tumor microenvironment.
+                        </p>
+                    </div>
+
+                    <div class="key-results">
+                        <h4>Technical Innovation</h4>
+                        <ul>
+                            <li>60 patients at 3 timepoints with 60-plex protein profiling</li>
+                            <li>Automated thresholding validated against pathologist annotations</li>
+                            <li>High-confidence phenotyping for biomarker discovery</li>
+                            <li>Spatial analysis of treatment response patterns</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">CODEX/PhenoCycler</span>
+                        <span class="tech-tag">Clinical Trial</span>
+                        <span class="tech-tag">Machine Learning</span>
                         <span class="tech-tag">Biomarker Discovery</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project C: Collagen-Stroma Analysis -->
-            <div class="research-section">
-                <h2>Project C: Spatial Analysis of Collagen-Stroma Associations</h2>
+                <!-- Project F: Counterfactual Pathology -->
                 <div class="project-card">
-                    <h3>Extracellular Matrix Architecture in Pancreatic Cancer</h3>
+                    <h3>Counterfactual Perturbations with Pathology Foundation Models</h3>
                     <div class="project-description">
-                        We develop novel computational methods to analyze the spatial relationship between collagen deposition, 
-                        stromal cell organization, and cancer cell invasion patterns. This work combines imaging mass cytometry 
-                        with spatial transcriptomics to understand how ECM remodeling drives tumor progression.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Analytical Approaches</h5>
-                        <ul class="methodology-list">
-                            <li>Multi-modal integration of spatial transcriptomics and proteomics</li>
-                            <li>Collagen fiber orientation and density analysis</li>
-                            <li>Spatial correlation analysis between ECM and cellular components</li>
-                            <li>Machine learning models for ECM pattern classification</li>
-                            <li>Mechanistic modeling of tumor-stroma interactions</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Clinical Applications</h5>
                         <p>
-                            The dense stromal environment of pancreatic cancer creates barriers to drug delivery and promotes 
-                            resistance. Our spatial analysis identifies ECM patterns that predict treatment response and reveals 
-                            opportunities for stroma-targeted therapies to improve drug penetration and efficacy.
+                            We are developing explainable AI methods to generate synthetic H&E images that simulate 
+                            post-immunotherapy tumor morphology. Using the ImmunoPROFILE dataset (1,767 images), we 
+                            create counterfactual perturbations that predict treatment response while maintaining 
+                            biological interpretability.
                         </p>
+                    </div>
+
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Foundation Models</h5>
+                            <p>Feature extraction from pre-trained pathology models</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Counterfactual AI</h5>
+                            <p>Explainable synthetic image generation</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Clinical Validation</h5>
+                            <p>Pathologist review for biological plausibility</p>
+                        </div>
                     </div>
 
                     <div class="tech-stack">
-                        <span class="tech-tag">Extracellular Matrix</span>
-                        <span class="tech-tag">Collagen Analysis</span>
-                        <span class="tech-tag">Stromal Biology</span>
-                        <span class="tech-tag">Multi-modal Integration</span>
-                        <span class="tech-tag">Drug Delivery</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project D: KRAS Resistance -->
-            <div class="research-section">
-                <h2>Project D: Spatial Features of KRAS Inhibition Resistance</h2>
-                <div class="project-card">
-                    <h3>Understanding Resistance Mechanisms Through Spatial Analysis</h3>
-                    <div class="project-description">
-                        In collaboration with Revolution Medicines, we analyze spatial features of resistance to KRAS inhibition 
-                        in pancreatic cancer using data from the RMC-6236 clinical trial. This work identifies spatial biomarkers 
-                        of resistance and maps how resistant cell populations emerge and spread within tumors.
-                    </div>
-
-                    <div class="clinical-trial-highlight">
-                        <h4>RMC-6236 Clinical Trial</h4>
-                        <p>
-                            We are analyzing spatial transcriptomics and proteomics data from patients treated with RMC-6236, 
-                            a next-generation KRAS inhibitor. This represents one of the first comprehensive spatial analyses 
-                            of KRAS inhibitor resistance in clinical samples, providing unprecedented insights into resistance mechanisms.
-                        </p>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Resistance Analysis Framework</h5>
-                        <ul class="methodology-list">
-                            <li>Pre-treatment and post-treatment spatial profiling</li>
-                            <li>Identification of resistant cell populations and their spatial distribution</li>
-                            <li>Analysis of cell-cell communication networks in resistance</li>
-                            <li>Spatial mapping of compensatory signaling pathways</li>
-                            <li>Development of predictive models for resistance emergence</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Therapeutic Implications</h5>
-                        <p>
-                            Our spatial analysis reveals that resistance to KRAS inhibition often emerges in specific 
-                            microenvironmental niches. Understanding the spatial patterns of resistance will inform 
-                            combination therapy strategies and help predict which patients are most likely to benefit 
-                            from KRAS-targeted treatments.
-                        </p>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">KRAS Inhibitors</span>
-                        <span class="tech-tag">Drug Resistance</span>
-                        <span class="tech-tag">Clinical Trial Data</span>
-                        <span class="tech-tag">Spatial Biomarkers</span>
-                        <span class="tech-tag">Revolution Medicines</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project E: High-plex Protein Profiling -->
-            <div class="research-section">
-                <h2>Project E: High-plex Protein Profiling in PDAC</h2>
-                <div class="project-card">
-                    <h3>Spatial Proteomics Analysis Framework</h3>
-                    <div class="project-description">
-                        We develop comprehensive frameworks for analyzing high-plex spatial proteomics data in pancreatic 
-                        ductal adenocarcinoma (PDAC). This work integrates imaging mass cytometry with spatial transcriptomics 
-                        to provide multi-dimensional views of the tumor microenvironment at protein and RNA levels.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Proteomics Pipeline</h5>
-                        <ul class="methodology-list">
-                            <li>High-dimensional protein expression analysis in spatial context</li>
-                            <li>Cell phenotyping and functional state identification</li>
-                            <li>Protein-protein interaction network analysis</li>
-                            <li>Integration with spatial transcriptomics data</li>
-                            <li>Identification of spatial protein biomarkers</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Multi-omics Integration</h5>
-                        <p>
-                            By combining spatial proteomics with transcriptomics, we can identify post-translational 
-                            modifications, protein localization patterns, and functional protein complexes that are 
-                            not detectable through transcriptomics alone. This provides a more complete picture of 
-                            cellular function in the tumor microenvironment.
-                        </p>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spatial Proteomics</span>
-                        <span class="tech-tag">Imaging Mass Cytometry</span>
-                        <span class="tech-tag">Multi-omics Integration</span>
-                        <span class="tech-tag">Protein Networks</span>
-                        <span class="tech-tag">High-plex Analysis</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project F: Computational Pathology -->
-            <div class="research-section">
-                <h2>Project F: Foundation Models in Computational Pathology</h2>
-                <div class="project-card">
-                    <h3>Counterfactual Perturbations of Histopathology Images</h3>
-                    <div class="project-description">
-                        We implement cutting-edge foundation models for computational pathology to generate counterfactual 
-                        perturbations of histopathology images. This work allows us to simulate treatment effects and 
-                        understand how therapeutic interventions change tissue architecture.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Foundation Model Applications</h5>
-                        <ul class="methodology-list">
-                            <li>Pre-trained histopathology foundation models (e.g., PathLDM, HistoGen)</li>
-                            <li>Counterfactual image generation for treatment simulation</li>
-                            <li>Integration with spatial transcriptomics data</li>
-                            <li>Morphological feature extraction and analysis</li>
-                            <li>Automated pathology assessment and scoring</li>
-                        </ul>
-                    </div>
-
-                    <div class="impact-highlight">
-                        <h4>Revolutionary Approach</h4>
-                        <p>
-                            This work represents a new paradigm in computational pathology where we can generate synthetic 
-                            images showing how tissues might respond to treatments. This capability will accelerate drug 
-                            development and help predict treatment responses before therapy initiation.
-                        </p>
-                    </div>
-
-                    <div class="tech-stack">
+                        <span class="tech-tag">Digital Pathology</span>
                         <span class="tech-tag">Foundation Models</span>
-                        <span class="tech-tag">Computational Pathology</span>
-                        <span class="tech-tag">Counterfactual Analysis</span>
-                        <span class="tech-tag">Image Generation</span>
-                        <span class="tech-tag">Treatment Simulation</span>
+                        <span class="tech-tag">Explainable AI</span>
+                        <span class="tech-tag">Immunotherapy</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Key Publications & Software -->
+            <!-- Collaborations -->
             <div class="research-section">
-                <h2>Publications & Software</h2>
-                <div class="project-card">
-                    <h3>Key Outputs</h3>
-                    <div class="project-details">
-                        <h5>Manuscripts in Preparation</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>Spatial transcriptomics analysis framework</strong> - Comprehensive pipeline for CosMx data analysis (2025)</li>
-                            <li><strong>Fibroblast spatial diversity in pancreatic cancer</strong> - Primary vs. metastatic analysis (2025)</li>
-                            <li><strong>KRAS inhibitor resistance spatial signatures</strong> - RMC-6236 clinical trial analysis (2025)</li>
-                            <li><strong>Computational pathology foundation models</strong> - Counterfactual perturbation methods (2025)</li>
-                        </ul>
+                <h2>Key Collaborations</h2>
+                <div class="collaboration-grid">
+                    <div class="collaborator-card">
+                        <h5>Dr. Brian Wolpin</h5>
+                        <p>Hale Center Director</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Clinical trials & biomarkers</p>
                     </div>
+                    <div class="collaborator-card">
+                        <h5>Dr. Andrew Aguirre</h5>
+                        <p>DFCI/BWH</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">KRAS inhibition studies</p>
+                    </div>
+                    <div class="collaborator-card">
+                        <h5>Dr. Jonathan Nowak</h5>
+                        <p>BWH Pathology</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Spatial pathology</p>
+                    </div>
+                    <div class="collaborator-card">
+                        <h5>Dr. Stephanie Dougan</h5>
+                        <p>DFCI</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Immunotherapy</p>
+                    </div>
+                    <div class="collaborator-card">
+                        <h5>Revolution Medicines</h5>
+                        <p>Industry Partner</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">RMC-6236 trial</p>
+                    </div>
+                    <div class="collaborator-card">
+                        <h5>Breakthrough Cancer</h5>
+                        <p>Consortium</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Multi-site trials</p>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="project-details">
-                        <h5>Software & Tools</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>CosMx Analysis Suite</strong> - Comprehensive spatial transcriptomics pipeline</li>
-                            <li><strong>Spatial Biomarker Toolkit</strong> - Tools for spatial biomarker discovery and validation</li>
-                            <li><strong>Multi-modal Spatial Integration Platform</strong> - Framework for combining spatial omics data</li>
-                            <li><strong>PathologyFoundation Toolkit</strong> - Counterfactual image generation tools</li>
-                        </ul>
+            <!-- Software & Resources -->
+            <div class="research-section">
+                <h2>Software & Resources</h2>
+                <div class="impact-box">
+                    <h4 style="color: var(--color-accent); margin-bottom: 1rem;">Open-Source Tools</h4>
+                    <p style="margin-bottom: 1rem;">
+                        All our spatial analysis tools are freely available on GitHub with comprehensive documentation:
+                    </p>
+                    <div>
+                        <a href="https://github.com/cristea-lab/CosMx_Spatial_Pipelines" class="software-link" target="_blank">
+                            <i class="fab fa-github"></i> CosMx Spatial Pipelines
+                        </a>
+                        <a href="https://github.com/cristea-lab/HexAligner" class="software-link" target="_blank">
+                            <i class="fab fa-github"></i> HexAligner Tool
+                        </a>
                     </div>
                 </div>
             </div>
@@ -505,13 +531,13 @@
             <!-- Future Directions -->
             <div class="research-section">
                 <h2>Future Directions</h2>
-                <div class="impact-highlight">
-                    <h4>Integrative Spatial LLMs</h4>
+                <div class="impact-box">
                     <p>
-                        We are developing the next generation of spatial analysis tools that integrate LLM approaches with 
-                        spatial multi-omics data. This will enable predictive spatial models of pancreatic cancer response 
-                        to various treatments, revolutionizing personalized treatment selection by providing spatial predictions 
-                        of treatment efficacy before therapy administration.
+                        We are expanding our spatial genomics capabilities to include: (1) integration with single-cell 
+                        foundation models for enhanced cell type annotation, (2) development of spatial biomarkers for 
+                        early detection, (3) multi-modal integration of spatial transcriptomics with proteomics and 
+                        metabolomics, and (4) AI-driven discovery of targetable spatial niches. Our goal is to transform 
+                        spatial biology data into actionable insights for precision oncology.
                     </p>
                 </div>
             </div>
@@ -529,7 +555,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>Cristea Lab</h3>
-                    <p>Computational Cancer Research</p>
+                    <p>AI Cancer Genomics Research</p>
                 </div>
                 <div class="footer-links">
                     <a href="https://www.dana-farber.org" target="_blank">Dana-Farber Cancer Institute</a>
@@ -542,11 +568,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+                <p>&copy; 2025 Cristea Lab. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script-clean-modern.js"></script>
 </body>
 </html>

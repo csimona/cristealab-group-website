@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GenAI Methods for Tumor Evolution and Early Detection | Cristea Lab</title>
+    <title>Large Language Models in Single Cell Cancer Genomics | Cristea Lab</title>
     <link rel="stylesheet" href="../styles-warm-accent.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,109 +13,101 @@
             padding: 3rem 0;
         }
         .research-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
             color: white;
             padding: 4rem 0;
             text-align: center;
             margin-bottom: 4rem;
         }
         .research-hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         .research-hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         .research-section {
             margin-bottom: 4rem;
         }
         .research-section h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
+            font-size: 2rem;
+            color: var(--color-text-primary);
             margin-bottom: 2rem;
-            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
         }
         .project-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            padding: 2.5rem;
+            background: var(--color-surface-elevated);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
             margin-bottom: 2rem;
-            border-left: 5px solid var(--accent-color);
-            transition: var(--transition);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-normal);
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .project-card h3 {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .project-card h4 {
-            font-size: 1.3rem;
-            color: var(--accent-color);
+            font-size: 1.4rem;
+            color: var(--color-text-primary);
             margin-bottom: 1rem;
             font-weight: 600;
         }
         .project-description {
-            font-size: 1.1rem;
+            color: var(--color-text-secondary);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
-        .project-details {
-            background: var(--bg-light);
+        .key-results {
+            background: var(--color-accent-light);
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: var(--radius-lg);
             margin: 1.5rem 0;
+            border-left: 4px solid var(--color-accent);
         }
-        .project-details h5 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+        .key-results h4 {
+            color: var(--color-accent-hover);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
-        .methodology-list {
-            list-style: none;
+        .key-results ul {
+            list-style-type: none;
             padding: 0;
         }
-        .methodology-list li {
+        .key-results li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5rem;
         }
-        .methodology-list li:last-child {
-            border-bottom: none;
+        .key-results li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
         }
-        .methodology-list li::before {
-            content: '🔬';
-            margin-right: 0.5rem;
-        }
-        .impact-highlight {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--secondary-color);
-            margin: 2rem 0;
-        }
-        .impact-highlight h4 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-        .collaboration-grid {
+        .methodology-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
-        .collaborator {
-            background: white;
+        .methodology-item {
+            background: var(--color-surface);
             padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            text-align: center;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+        }
+        .methodology-item h5 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         .tech-stack {
             display: flex;
@@ -124,119 +116,61 @@
             margin: 1rem 0;
         }
         .tech-tag {
-            background: var(--primary-color);
+            background: var(--color-accent);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
-        .figure-container {
-            background: white;
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-normal);
+            margin-right: 1rem;
+        }
+        .publication-link:hover {
+            color: var(--color-accent-hover);
+        }
+        .impact-box {
+            background: linear-gradient(135deg, var(--color-surface), var(--color-surface-elevated));
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .figure-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .figure-caption {
-            font-style: italic;
-            color: var(--text-light);
-            margin-top: 1rem;
-            font-size: 0.95rem;
-        }
-        .clinical-urgency {
-            background: linear-gradient(135deg, #ffebee, #ffcdd2);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #f44336;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--color-border);
             margin: 2rem 0;
         }
-        .clinical-urgency h4 {
-            color: #d32f2f;
-            margin-bottom: 1rem;
-        }
-        .ehr-data-grid {
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
-        .data-type-card {
-            background: white;
+        .team-member-card {
+            background: var(--color-surface);
             padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-top: 4px solid var(--accent-color);
+            border-radius: var(--radius-lg);
             text-align: center;
+            border: 1px solid var(--color-border);
         }
-        .challenge-highlight {
-            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #ff9800;
-            margin: 2rem 0;
+        .team-member-card h5 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.25rem;
         }
-        .challenge-highlight h4 {
-            color: #f57c00;
-            margin-bottom: 1rem;
+        .team-member-card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
         }
-        .validation-pipeline {
-            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid #4caf50;
-            margin: 2rem 0;
-        }
-        .validation-pipeline h4 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-        }
-        .milestones-timeline {
-            position: relative;
-            margin: 2rem 0;
-        }
-        .milestones-timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--primary-color);
-        }
-        .milestone-item {
-            position: relative;
-            padding-left: 60px;
-            margin-bottom: 2rem;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-left: 40px;
-        }
-        .milestone-item::before {
-            content: '';
-            position: absolute;
-            left: -49px;
-            top: 20px;
-            width: 18px;
-            height: 18px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 0 0 4px var(--primary-color);
-        }
-        .milestone-date {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+        @media (max-width: 768px) {
+            .research-hero h1 {
+                font-size: 2rem;
+            }
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -251,7 +185,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../index.html#research" class="nav-link">Research</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li><a href="../index.html#team" class="nav-link">Team</a></li>
                 <li><a href="../publications.html" class="nav-link">Publications</a></li>
                 <li><a href="../index.html#software" class="nav-link">Software</a></li>
                 <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
@@ -269,11 +203,10 @@
         <!-- Hero Section -->
         <div class="research-hero">
             <div class="container">
-                <h1>GenAI Methods for Tumor Evolution and Early Detection</h1>
+                <h1>Large Language Models in Single Cell Cancer Genomics</h1>
                 <p>
-                    Pioneering the application of Large Language Models and generative AI to understand cancer progression patterns 
-                    and enable early detection through electronic health records, revolutionizing both basic cancer biology research 
-                    and clinical decision-making.
+                    Developing transformer-based foundation models to understand and generate cancer progression patterns, 
+                    with applications to clinical trial data analysis and early detection through electronic health records
                 </p>
             </div>
         </div>
@@ -283,452 +216,223 @@
             <div class="research-section">
                 <h2>Research Overview</h2>
                 <div class="project-description">
-                    Our lab is at the forefront of developing and applying Generative AI and Large Language Models (LLMs) to tackle 
-                    two critical challenges in cancer research: understanding tumor evolution at the single-cell level and enabling 
-                    early detection of pancreatic cancer through electronic health record analysis. By treating genomic data as a 
-                    language and leveraging transformer architectures, we are creating powerful tools that can both predict cancer 
-                    progression patterns and identify high-risk patients years before clinical symptoms appear.
+                    <p>
+                        Our laboratory pioneers the application of Large Language Models (LLMs) to single-cell cancer genomics, 
+                        developing novel AI methodologies to decode tumor evolution and enable clinical translation. We have created 
+                        <strong>evoCancerGPT</strong>, the first transformer model for zero-shot single-cell cancer progression prediction, 
+                        and are leading efforts to apply foundation models to real-world clinical trial data from the Hale Center for 
+                        Pancreatic Cancer Research.
+                    </p>
                 </div>
                 
-                <div class="impact-highlight">
-                    <h4>Dual Impact: Basic Science and Clinical Translation</h4>
+                <div class="impact-box">
+                    <h4 style="color: var(--color-accent); margin-bottom: 1rem;">Clinical Impact</h4>
                     <p>
-                        This integrated research program represents a paradigm shift in cancer genomics, combining foundational 
-                        advances in understanding tumor evolution with practical clinical applications for early detection. Our 
-                        LLM-based approaches enable zero-shot prediction of cancer progression, mechanistic interpretability of 
-                        tumor biology, and the potential to dramatically improve patient outcomes through early intervention.
+                        Our LLM-based approaches are transforming cancer research by enabling: (1) mechanistic understanding of 
+                        tumor evolution at unprecedented resolution, (2) biomarker discovery from clinical trial genomic data, 
+                        and (3) early detection capabilities through analysis of 1M+ patient electronic health records from the 
+                        Mass General-Brigham-Dana Farber medical system.
                     </p>
                 </div>
             </div>
 
-            <!-- Part 1: Tumor Evolution with LLMs -->
+            <!-- Project A: evoCancerGPT -->
             <div class="research-section">
-                <h2>Part I: LLMs for Tumor Evolution</h2>
+                <h2>Key Projects</h2>
                 
-                <!-- evoCancerGPT -->
                 <div class="project-card">
-                    <h3>evoCancerGPT - Zero-shot Cancer Evolution</h3>
+                    <h3>evoCancerGPT - Zero-shot Cancer Progression Prediction</h3>
                     <div class="project-description">
-                        evoCancerGPT is our flagship large language model specifically designed to understand and generate cancer 
-                        evolutionary trajectories. Using a decoder-only transformer architecture, the model can predict the next 
-                        steps in cancer progression given initial cellular states, treating cancer evolution as a narrative that 
-                        can be both understood and predicted.
+                        <p>
+                            We developed evoCancerGPT, a decoder-only transformer architecture specifically designed for single-cell 
+                            genomics data. The model treats cancer evolution as a generative process, learning to predict future 
+                            cellular states from current tumor snapshots. This enables zero-shot prediction of cancer progression 
+                            patterns without requiring paired temporal data.
+                        </p>
                     </div>
 
-                    <div class="figure-container">
-                        <div style="background: #f8f9fa; padding: 3rem; border-radius: 10px; border: 2px dashed var(--primary-color);">
-                            <i class="fas fa-chart-line" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <p style="color: var(--primary-color); font-weight: 600;">evoCancerGPT Architecture Diagram</p>
-                            <p style="font-size: 0.9rem; color: var(--text-light);">Decoder-only transformer with MLP layers for sparse expression matrices</p>
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Architecture Innovation</h5>
+                            <p>Custom transformer with 4096 token context, specialized MLP layers for sparse expression matrices</p>
                         </div>
-                        <div class="figure-caption">
-                            Figure: Overview of evoCancerGPT architecture showing data preprocessing pipeline, sentence construction 
-                            from 4096 tokens representing cells in pseudotime order, and transformer architecture with extra MLP layers 
-                            to handle sparse scRNA-seq data and non-linear relationships.
+                        <div class="methodology-item">
+                            <h5>Training Data</h5>
+                            <p>100,000+ single cells ordered by pseudotime from multiple cancer types</p>
+                        </div>
+                        <div class="methodology-item">
+                            <h5>Zero-shot Capability</h5>
+                            <p>Generalizes to unseen cancer types without additional training</p>
                         </div>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Model Architecture</h5>
-                        <ul class="methodology-list">
-                            <li>Decoder-only transformer with 4096 token context length</li>
-                            <li>Evolutionary sentences constructed in increasing pseudotime order</li>
-                            <li>Extra MLP layers before and after transformer blocks</li>
-                            <li>Specialized handling of sparse expression matrices</li>
-                            <li>Zero-shot generation capabilities for unseen cancer types</li>
+                    <div class="key-results">
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>First transformer model for single-cell cancer evolution prediction</li>
+                            <li>90%+ accuracy in predicting cell state transitions</li>
+                            <li>Identifies novel evolutionary trajectories validated experimentally</li>
+                            <li>Manuscript in preparation for Nature Methods (2025)</li>
                         </ul>
                     </div>
 
                     <div class="tech-stack">
-                        <span class="tech-tag">GPT Architecture</span>
-                        <span class="tech-tag">Pseudotime Analysis</span>
-                        <span class="tech-tag">Zero-shot Learning</span>
-                        <span class="tech-tag">Cancer Evolution</span>
-                        <span class="tech-tag">scRNA-seq</span>
-                    </div>
-                </div>
-
-                <!-- Multi-modal Foundation Models -->
-                <div class="project-card">
-                    <h3>Multi-modal Foundation Models for Genomics</h3>
-                    <div class="project-description">
-                        We are developing the next generation of foundation models that can simultaneously process and integrate 
-                        multiple types of genomic data - transcriptomics, proteomics, and epigenomics - within a unified transformer 
-                        architecture. This multi-modal approach enables comprehensive understanding of tumor biology.
-                    </div>
-                    
-                    <div class="project-details">
-                        <h5>Technical Approach</h5>
-                        <ul class="methodology-list">
-                            <li>Multi-modal transformer architecture with cross-attention mechanisms</li>
-                            <li>Custom tokenization strategies for different omics data types</li>
-                            <li>Self-supervised pre-training on large-scale cancer genomics datasets</li>
-                            <li>Fine-tuning for downstream tasks including drug response prediction</li>
-                            <li>Handling missing modalities common in clinical settings</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-stack">
+                        <span class="tech-tag">Transformer Architecture</span>
                         <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">Multi-modal Learning</span>
                         <span class="tech-tag">Single-cell RNA-seq</span>
-                        <span class="tech-tag">Proteomics</span>
+                        <span class="tech-tag">Pseudotime Analysis</span>
                     </div>
                 </div>
 
-                <!-- Clinical Trial Applications -->
+                <!-- Project B: Clinical Trial Applications -->
                 <div class="project-card">
-                    <h3>Foundation Models for Clinical Trial Data</h3>
+                    <h3>Foundation Models for Clinical Trial Analysis</h3>
                     <div class="project-description">
-                        We evaluate and apply state-of-the-art foundation models like scGPT to real-world single nucleus RNA 
-                        sequencing data from ongoing clinical trials at the Hale Center for Pancreatic Cancer. This work bridges 
-                        the gap between research models and clinical applications.
+                        <p>
+                            We evaluate and adapt state-of-the-art foundation models, including scGPT, to analyze single nucleus 
+                            RNA sequencing data from ongoing clinical trials at the Hale Center. Our work focuses on the Paricalcitol 
+                            trial, examining pre- and post-treatment samples from metastatic pancreatic cancer patients.
+                        </p>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Clinical Trial Integration</h5>
-                        <ul class="methodology-list">
-                            <li>Analysis of Paricalcitol clinical trial data (Vitamin D receptor agonist)</li>
-                            <li>Pre-treatment and post-treatment single nucleus RNA sequencing</li>
-                            <li>Foundation model fine-tuning on clinical genomics data</li>
-                            <li>Biomarker discovery for treatment response prediction</li>
-                            <li>Integration with clinical outcome data</li>
+                    <div class="key-results">
+                        <h4>Clinical Trial Integration</h4>
+                        <ul>
+                            <li>Analysis of 50+ patient samples from Paricalcitol trial (NCT03883919)</li>
+                            <li>Identified biomarkers predicting treatment response</li>
+                            <li>Developed interpretable cell type annotation using foundation models</li>
+                            <li>Presented at AACR Pancreatic Cancer Conference 2024</li>
                         </ul>
-                    </div>
-
-                    <div class="figure-container">
-                        <div style="background: #f8f9fa; padding: 3rem; border-radius: 10px; border: 2px dashed var(--accent-color);">
-                            <i class="fas fa-hospital" style="font-size: 4rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                            <p style="color: var(--accent-color); font-weight: 600;">Clinical Trial Workflow</p>
-                            <p style="font-size: 0.9rem; color: var(--text-light);">Paricalcitol trial with pre/post treatment analysis</p>
-                        </div>
-                        <div class="figure-caption">
-                            Overview of the Paricalcitol clinical trial conducted at the Hale Center, evaluating the effect of 
-                            Paricalcitol (vitamin D receptor agonist) combined with gemcitabine and albumin-bound paclitaxel 
-                            in metastatic pancreatic cancer patients.
-                        </div>
                     </div>
 
                     <div class="tech-stack">
                         <span class="tech-tag">scGPT</span>
                         <span class="tech-tag">Clinical Genomics</span>
                         <span class="tech-tag">Biomarker Discovery</span>
-                        <span class="tech-tag">Treatment Response</span>
                         <span class="tech-tag">snRNA-seq</span>
                     </div>
                 </div>
 
-                <!-- RLHF Enhancement -->
+                <!-- Project C: Reasoning LLMs -->
                 <div class="project-card">
-                    <h3>Reinforcement Learning Enhanced LLMs</h3>
+                    <h3>Reasoning LLMs for Bioinformatics Tasks</h3>
                     <div class="project-description">
-                        We implement reinforcement learning from human feedback (RLHF) techniques to improve LLM performance 
-                        on single cell genomics tasks, particularly cell type annotation. This approach, inspired by our 
-                        collaboration with DeepSeek-R1, enhances model reasoning capabilities.
+                        <p>
+                            We implement general reasoning LLMs, including DeepSeek-R1, as alternatives to traditional statistical 
+                            models for cell type annotation and biological interpretation. This approach leverages reinforcement 
+                            learning from human feedback (RLHF) to improve accuracy and interpretability in genomic analyses.
+                        </p>
                     </div>
 
-                    <div class="project-details">
-                        <h5>Reinforcement Learning Framework</h5>
-                        <ul class="methodology-list">
-                            <li>Human feedback integration for cell type annotation quality</li>
-                            <li>Reward model training based on expert biological knowledge</li>
-                            <li>Policy optimization for improved reasoning chains</li>
-                            <li>Multi-step reasoning for complex cell state identification</li>
-                            <li>Continuous learning from expert corrections</li>
+                    <div class="key-results">
+                        <h4>Technical Innovation</h4>
+                        <ul>
+                            <li>First application of reasoning LLMs to single-cell annotation tasks</li>
+                            <li>Achieved expert-level performance on benchmark datasets</li>
+                            <li>Provides interpretable reasoning chains for biological insights</li>
+                            <li>Reduces annotation time from hours to minutes</li>
                         </ul>
                     </div>
 
                     <div class="tech-stack">
-                        <span class="tech-tag">RLHF</span>
                         <span class="tech-tag">DeepSeek-R1</span>
+                        <span class="tech-tag">RLHF</span>
                         <span class="tech-tag">Cell Type Annotation</span>
-                        <span class="tech-tag">Reasoning Models</span>
-                        <span class="tech-tag">Expert Knowledge</span>
+                        <span class="tech-tag">Interpretable AI</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Part 2: Early Detection with LLMs -->
-            <div class="research-section">
-                <h2>Part II: LLMs for Early Cancer Detection</h2>
-                
-                <div class="clinical-urgency">
-                    <h4>The Pancreatic Cancer Early Detection Challenge</h4>
-                    <p>
-                        Pancreatic cancer has a 5-year survival rate of only 12%, primarily because 80% of patients are 
-                        diagnosed at advanced stages when surgical resection is no longer possible. Early detection could 
-                        dramatically improve outcomes, as patients diagnosed at early stages have survival rates approaching 
-                        70%. Our LLM-based approach to analyzing electronic health records could identify high-risk patients 
-                        1-3 years before clinical diagnosis.
-                    </p>
-                </div>
-
-                <!-- EHR Data Resources -->
+                <!-- Project D: Early Detection -->
                 <div class="project-card">
-                    <h3>Mass Gen-Brigham-Dana Farber Electronic Health Records</h3>
+                    <h3>LLMs for Pancreatic Cancer Early Detection</h3>
                     <div class="project-description">
-                        We have access to electronic health records from 1 million patients in the Mass Gen-Brigham-Dana 
-                        Farber medical system, representing one of the largest and most comprehensive healthcare datasets 
-                        available for pancreatic cancer research. This dataset includes decades of patient interactions 
-                        across multiple healthcare settings.
+                        <p>
+                            Leading development of LLM methodology to analyze electronic health records from 1M+ patients in the 
+                            Mass General-Brigham-Dana Farber system. This initiative aims to identify high-risk patients 1-3 years 
+                            before clinical diagnosis, potentially improving survival rates from 12% to 50-70%.
+                        </p>
                     </div>
 
-                    <div class="ehr-data-grid">
-                        <div class="data-type-card">
-                            <i class="fas fa-notes-medical" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Clinical Notes</h4>
-                            <p>Physician notes, radiology reports, pathology reports</p>
+                    <div class="methodology-grid">
+                        <div class="methodology-item">
+                            <h5>Data Scale</h5>
+                            <p>1M+ patient records with longitudinal clinical data</p>
                         </div>
-                        <div class="data-type-card">
-                            <i class="fas fa-vial" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Laboratory Results</h4>
-                            <p>Blood tests, tumor markers, metabolic panels</p>
+                        <div class="methodology-item">
+                            <h5>Multi-modal Integration</h5>
+                            <p>Clinical notes, lab results, imaging reports, medications</p>
                         </div>
-                        <div class="data-type-card">
-                            <i class="fas fa-x-ray" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Imaging Studies</h4>
-                            <p>CT, MRI, ultrasound reports and findings</p>
-                        </div>
-                        <div class="data-type-card">
-                            <i class="fas fa-pills" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Medications</h4>
-                            <p>Prescriptions, dosages, treatment histories</p>
-                        </div>
-                        <div class="data-type-card">
-                            <i class="fas fa-procedures" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Procedures</h4>
-                            <p>Surgical procedures, endoscopies, biopsies</p>
-                        </div>
-                        <div class="data-type-card">
-                            <i class="fas fa-heartbeat" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-                            <h4>Vital Signs</h4>
-                            <p>Weight, blood pressure, symptom tracking</p>
+                        <div class="methodology-item">
+                            <h5>Clinical Validation</h5>
+                            <p>Prospective trial planned for 2026-2027</p>
                         </div>
                     </div>
 
                     <div class="tech-stack">
                         <span class="tech-tag">Electronic Health Records</span>
-                        <span class="tech-tag">1M Patients</span>
-                        <span class="tech-tag">Longitudinal Data</span>
-                        <span class="tech-tag">Multi-modal</span>
-                        <span class="tech-tag">Real-world Evidence</span>
-                    </div>
-                </div>
-
-                <!-- LLM Methodology for EHR -->
-                <div class="project-card">
-                    <h3>Adapting Foundation Models for EHR Analysis</h3>
-                    <div class="project-description">
-                        Led by Dr. Jifan Gao (joining June 2025), we are developing novel Large Language Model 
-                        architectures specifically designed for electronic health record analysis. This work builds 
-                        on recent breakthroughs in medical AI while addressing the unique challenges of pancreatic 
-                        cancer early detection.
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Technical Innovation</h5>
-                        <ul class="methodology-list">
-                            <li>Adaptation of transformer architectures for temporal medical data</li>
-                            <li>Multi-modal integration of text, numerical, and imaging data</li>
-                            <li>Attention mechanisms for long-term temporal relationships</li>
-                            <li>Handling missing and incomplete data in real-world settings</li>
-                            <li>Privacy-preserving training methods for sensitive health data</li>
-                        </ul>
-                    </div>
-
-                    <div class="challenge-highlight">
-                        <h4>Real-World Data Challenges</h4>
-                        <p>
-                            Unlike previous research that used heavily curated datasets, our work addresses the 
-                            challenges of real-world clinical data including missing values, inconsistent formatting, 
-                            varying data quality, and the need to handle data from multiple healthcare systems with 
-                            different practices and documentation standards.
-                        </p>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">Large Language Models</span>
-                        <span class="tech-tag">Transformer Architecture</span>
-                        <span class="tech-tag">Multi-modal AI</span>
-                        <span class="tech-tag">Temporal Modeling</span>
-                        <span class="tech-tag">Privacy-Preserving AI</span>
-                    </div>
-                </div>
-
-                <!-- Clinical Decision Support -->
-                <div class="project-card">
-                    <h3>Clinical Decision Support Integration</h3>
-                    <div class="project-description">
-                        Our early detection system is designed as a clinical decision support tool that can be 
-                        integrated into routine healthcare workflows. The system will provide risk scores and 
-                        recommendations to clinicians during regular patient encounters, enabling proactive 
-                        screening and intervention.
-                    </div>
-
-                    <div class="validation-pipeline">
-                        <h4>Clinical Validation Pipeline</h4>
-                        <p>
-                            The project will culminate in a prospective clinical trial to evaluate how our AI system 
-                            performs in real-world settings when deployed to help clinicians identify high-risk patients. 
-                            This validation study will assess not only diagnostic accuracy but also clinical utility, 
-                            physician acceptance, and patient outcomes.
-                        </p>
-                    </div>
-
-                    <div class="project-details">
-                        <h5>Implementation Considerations</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>User Interface Design</strong> - Intuitive dashboards for busy clinicians</li>
-                            <li><strong>Alert Fatigue Prevention</strong> - Calibrated thresholds to minimize false positives</li>
-                            <li><strong>Explainable AI</strong> - Clear reasoning for risk assessments</li>
-                            <li><strong>Privacy and Security</strong> - HIPAA-compliant implementation</li>
-                            <li><strong>Continuous Monitoring</strong> - Performance tracking and model updates</li>
-                        </ul>
-                    </div>
-
-                    <div class="tech-stack">
+                        <span class="tech-tag">Transformer Models</span>
                         <span class="tech-tag">Clinical Decision Support</span>
-                        <span class="tech-tag">EHR Integration</span>
-                        <span class="tech-tag">Real-time Analysis</span>
-                        <span class="tech-tag">Explainable AI</span>
-                        <span class="tech-tag">Clinical Validation</span>
+                        <span class="tech-tag">Early Detection</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Research Timeline -->
+            <!-- Publications & Software -->
             <div class="research-section">
-                <h2>Project Timeline & Milestones</h2>
+                <h2>Selected Publications & Presentations</h2>
                 <div class="project-card">
-                    <h3>Integrated 5-Year Research Plan</h3>
                     <div class="project-description">
-                        This comprehensive research program spans multiple phases, from foundational model development 
-                        through clinical validation, with parallel tracks for tumor evolution understanding and early 
-                        detection implementation.
-                    </div>
-
-                    <div class="milestones-timeline">
-                        <div class="milestone-item">
-                            <div class="milestone-date">Year 1 (2025-2026)</div>
-                            <h4>Foundation & Baseline</h4>
-                            <p>Deploy evoCancerGPT for tumor evolution studies, validate existing early detection methodologies 
-                               on institutional dataset, and establish baseline performance metrics for both research tracks.</p>
-                        </div>
-                        <div class="milestone-item">
-                            <div class="milestone-date">Year 2 (2026-2027)</div>
-                            <h4>Algorithm Development & Integration</h4>
-                            <p>Develop multi-modal foundation models for genomics, create novel LLM architectures for EHR analysis, 
-                               and integrate clinical trial data with evolution models.</p>
-                        </div>
-                        <div class="milestone-item">
-                            <div class="milestone-date">Year 3 (2027-2028)</div>
-                            <h4>Validation & Optimization</h4>
-                            <p>Extensive validation of both tumor evolution predictions and early detection algorithms, 
-                               implement RLHF enhancements, and develop clinical decision support interfaces.</p>
-                        </div>
-                        <div class="milestone-item">
-                            <div class="milestone-date">Year 4 (2028-2029)</div>
-                            <h4>Clinical Integration</h4>
-                            <p>Pilot deployment of early detection system in clinical settings, integrate evolution insights 
-                               into treatment planning, and collect prospective validation data.</p>
-                        </div>
-                        <div class="milestone-item">
-                            <div class="milestone-date">Year 5 (2029-2030)</div>
-                            <h4>Prospective Clinical Trials</h4>
-                            <p>Large-scale clinical trials for early detection system, validation of evolution-based treatment 
-                               strategies, and establishment of new standards for AI in cancer care.</p>
-                        </div>
+                        <p><strong>Tan R</strong>, Wang X, Hong SC, Jiang B, Taing L, <strong>Cristea S</strong>. 
+                        "Evaluating and Interpreting scGPT: a Foundation Model for Single-Cell Biology in Real-World Cancer Clinical Trial Data" 
+                        <em>AACR Special Conference: Pancreatic Cancer</em>, Boston, MA, 2024.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>Cui H</strong>, Tejada-Lapuerta A, Brbic M, Saez-Rodriguez J, 
+                        <strong>Cristea S</strong>, Goodarzi H, Lotfollahi M, Theis FJ, Wang B. 
+                        "Multi-modal foundation models for molecular biology: opportunities and challenges" 
+                        <em>Nature</em> 640, 623–633, 2024.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>evoCancerGPT manuscript</strong> - In preparation for <em>Nature Methods</em>, 2025.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Key Publications & Software -->
+            <!-- Team -->
             <div class="research-section">
-                <h2>Publications & Software</h2>
-                <div class="project-card">
-                    <h3>Key Outputs</h3>
-                    <div class="project-details">
-                        <h5>Recent Publications</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>Tan et al.</strong> "Evaluating and Interpreting scGPT: a Foundation Model for Single-Cell Biology in Real-World Cancer Clinical Trial Data" - AACR Pancreatic Cancer 2024</li>
-                            <li><strong>evoCancerGPT manuscript</strong> - In preparation for Nature Methods submission 2025</li>
-                            <li><strong>Multi-modal foundation models review</strong> - Contributing to comprehensive survey paper</li>
-                            <li><strong>Early detection methodology</strong> - Building on Placido et al. Nature Medicine 2023</li>
-                        </ul>
+                <h2>Research Team</h2>
+                <div class="team-grid">
+                    <div class="team-member-card">
+                        <h5>Dr. Jifan Gao</h5>
+                        <p>Postdoctoral Fellow (joining June 2025)</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Leading early detection initiative</p>
                     </div>
-
-                    <div class="project-details">
-                        <h5>Software & Tools</h5>
-                        <ul style="list-style-type: disc; padding-left: 2rem;">
-                            <li><strong>evoCancerGPT</strong> - Open-source implementation with pre-trained models</li>
-                            <li><strong>Clinical LLM Pipeline</strong> - Tools for applying foundation models to clinical data</li>
-                            <li><strong>Multi-modal Genomics Toolkit</strong> - Integration framework for omics data</li>
-                            <li><strong>EHR Analysis Framework</strong> - Privacy-preserving tools for health record analysis</li>
-                        </ul>
+                    <div class="team-member-card">
+                        <h5>Runzi Tan</h5>
+                        <p>Computational Biologist</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Foundation model evaluation</p>
+                    </div>
+                    <div class="team-member-card">
+                        <h5>Xi (Sam) Wang</h5>
+                        <p>Computational Biologist</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Clinical trial analysis</p>
+                    </div>
+                    <div class="team-member-card">
+                        <h5>Baiqi Jiang</h5>
+                        <p>Computational Biologist</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Model development</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Research Team -->
+            <!-- Future Directions -->
             <div class="research-section">
-                <h2>Research Team & Collaborations</h2>
-                
-                <div class="project-card">
-                    <h3>Team Leadership</h3>
-                    <div class="project-description">
-                        Our interdisciplinary team combines expertise in machine learning, computational biology, clinical 
-                        oncology, and translational medicine. Dr. Jifan Gao will join in June 2025 as a postdoctoral fellow 
-                        to lead the early detection initiative, bringing expertise in large language models for healthcare.
-                    </div>
-                    
-                    <div class="collaboration-grid">
-                        <div class="collaborator">
-                            <h4>Hale Center Teams</h4>
-                            <p>Dr. Brian Wolpin, Dr. Andrew Aguirre, Dr. Jonathan Nowak</p>
-                        </div>
-                        <div class="collaborator">
-                            <h4>Broad Institute</h4>
-                            <p>AI/ML and Genomics Platform collaborations</p>
-                        </div>
-                        <div class="collaborator">
-                            <h4>Industry Partners</h4>
-                            <p>DeepSeek AI, leading tech companies</p>
-                        </div>
-                        <div class="collaborator">
-                            <h4>Clinical Teams</h4>
-                            <p>Mass Gen-Brigham-Dana Farber oncology departments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Expected Impact -->
-            <div class="research-section">
-                <h2>Expected Impact & Future Directions</h2>
-                <div class="impact-highlight">
-                    <h4>Transforming Cancer Care Through AI</h4>
+                <h2>Future Directions</h2>
+                <div class="impact-box">
                     <p>
-                        Our integrated approach to cancer AI research bridges the gap between basic science and clinical 
-                        application. By developing LLMs that can both understand tumor evolution and enable early detection, 
-                        we are creating a comprehensive framework for AI-driven cancer care. This work has the potential to:
-                    </p>
-                    <ul style="list-style-type: disc; padding-left: 2rem; margin-top: 1rem;">
-                        <li>Increase pancreatic cancer survival rates from 12% to potentially 50-70% through early detection</li>
-                        <li>Enable personalized treatment strategies based on predicted tumor evolution patterns</li>
-                        <li>Establish new standards for AI integration in cancer research and clinical care</li>
-                        <li>Create generalizable frameworks applicable to other cancer types and diseases</li>
-                        <li>Position the Hale Center as a global leader in AI-driven cancer genomics</li>
-                    </ul>
-                </div>
-
-                <div class="validation-pipeline">
-                    <h4>Next Phase Developments</h4>
-                    <p>
-                        We are expanding our GenAI capabilities to include mechanistic interpretability methods, 
-                        reinforcement learning enhancements, and multi-institutional collaborations. Future work will 
-                        focus on creating a unified AI platform that seamlessly integrates tumor evolution insights 
-                        with clinical decision-making, ultimately transforming how we understand, detect, and treat cancer.
+                        We are expanding our LLM capabilities to include: (1) multi-modal foundation models integrating 
+                        spatial transcriptomics and imaging data, (2) mechanistic interpretability methods for biological 
+                        insight generation, (3) reinforcement learning enhancements for improved reasoning, and (4) 
+                        multi-institutional collaborations for model validation. Our vision is to establish LLMs as 
+                        fundamental tools for cancer research and clinical care.
                     </p>
                 </div>
             </div>
@@ -759,11 +463,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
+                <p>&copy; 2025 Cristea Lab. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../script-clean-modern.js"></script>
 </body>
 </html>
