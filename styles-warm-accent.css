@@ -413,12 +413,26 @@ body {
 
 /* Research Section */
 .research-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: var(--space-8);
-    max-width: 1000px;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: var(--space-8) !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+/* Force 2x2 grid specifically for research section */
+#research .research-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    width: 100% !important;
+    max-width: 1000px !important;
+}
+
+#research .research-grid .card {
+    width: 100% !important;
+    min-width: unset !important;
 }
 
 /* Team Section */
@@ -572,9 +586,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 900px) and (min-width: 769px) {
-    .research-grid {
-        max-width: 800px;
-        gap: var(--space-6);
+    .research-grid, #research .research-grid {
+        max-width: 800px !important;
+        gap: var(--space-6) !important;
     }
 }
 
@@ -639,10 +653,10 @@ body {
         max-width: 280px;
     }
     
-    .research-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        max-width: none;
+    .research-grid, #research .research-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        max-width: none !important;
     }
     
     .team-grid {
