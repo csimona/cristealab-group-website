@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristea Lab - Warm Accent Preview | Dana-Farber Cancer Institute</title>
-    <link rel="stylesheet" href="styles-warm-accent.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Cristea Lab - Computational Cancer Research | Dana-Farber Cancer Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Pioneering AI and Large Language Models for cancer genomics at the Hale Center for Pancreatic Cancer, Dana-Farber Cancer Institute">
 </head>
 <body>
     <!-- Navigation -->
@@ -16,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <h1>Cristea Lab</h1>
-                <span class="nav-subtitle">AI Cancer Genomics Research</span>
+                <span class="nav-subtitle">Computational Cancer Research</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -24,7 +22,6 @@
                 <li><a href="#team" class="nav-link">Team</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#software" class="nav-link">Software</a></li>
-                <li><a href="https://www.simona.ai" class="nav-link" target="_blank">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-toggle">
@@ -37,20 +34,18 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to the Cristea Lab</h1>
-                <p class="hero-subtitle">
-                    Pioneering AI and Large Language Models for cancer genomics at the Hale Center for Pancreatic Cancer Research, Dana-Farber Cancer Institute
-                </p>
-                <div class="hero-buttons">
-                    <a href="#research" class="btn btn-secondary">Our Research</a>
-                    <a href="#publications" class="btn btn-secondary">Recent Publications</a>
-                </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to the Cristea Lab</h1>
+            <p class="hero-subtitle">
+                Pioneering AI and Large Language Models for cancer genomics at the Hale Center for Pancreatic Cancer, Dana-Farber Cancer Institute
+            </p>
+            <div class="hero-buttons">
+                <a href="#research" class="btn btn-primary">Our Research</a>
+                <a href="#publications" class="btn btn-secondary">Recent Publications</a>
             </div>
-            <div class="hero-visual">
-                <div class="hero-graphic"></div>
-            </div>
+        </div>
+        <div class="hero-image">
+            <div class="evolutionary-ai-animation"></div>
         </div>
     </section>
 
@@ -59,7 +54,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About Us</h2>
+                    <h2>About Dr. Simona Cristea</h2>
                     <p class="lead">
                         Dr. Simona Cristea is Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer 
                         and a faculty member in the Department of Data Science at Dana-Farber Cancer Institute, with a Research 
@@ -95,55 +90,87 @@
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="section">
+    <section id="research" class="section section-alt">
         <div class="container">
-            <h2 class="section-title text-center mb-12">Research Areas</h2>
+            <h2 class="section-title">Research Areas</h2>
             <div class="research-grid">
-                <div class="card">
-                    <h3 class="card-title">
-                        <i class="fas fa-robot" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
-                        GenAI Methods for Tumor Evolution and Early Detection
-                    </h3>
-                    <p class="card-description">
-                        Developing genomics single cell foundation models to explain and generate tumor evolution 
-                        and LLM methodology for pancreatic cancer early detection from electronic health record data 
-                        in the Mass General-Brigham-Dana Farber medical system using deep learning clinical decision support tools.
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3><a href="research/large-language-models.html" style="text-decoration: none; color: inherit;">Large Language Models in Cancer Genomics</a></h3>
+                    <p>
+                        Developing single cell LLMs to understand and generate cancer progression and clinical responses 
+                        using generative AI. Creating foundation models like evoCancerGPT for zero-shot cancer evolution prediction.
                     </p>
-                    <a href="research/genai-tumor-evolution-early-detection.html" class="btn btn-secondary">Learn More</a>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/large-language-models.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title">
-                        <i class="fas fa-map-marked-alt" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
-                        Spatial Progression of Pancreatic Tumors 
-                    </h3>
-                    <p class="card-description">
-                        Spatial Transcriptomics & Spatial Proteomics modeling and analyses of pancreatic cancer progression using clinical trial patient genomic and imaging data. 
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3><a href="research/spatial-genomics.html" style="text-decoration: none; color: inherit;">Spatial Genomics & AI</a></h3>
+                    <p>
+                        Spatial modeling and analyses of pancreatic cancer progression using clinical trial patient genomic and imaging data. 
                         Integrating CosMx spatial transcriptomics with computational pathology and foundation models.
                     </p>
-                    <a href="research/spatial-genomics.html" class="btn btn-secondary">Learn More</a>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/spatial-genomics.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title">
-                        <i class="fas fa-dna" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
-                        Pancreatic Cancer Genomics
-                    </h3>
-                    <p class="card-description">
-                        Integrative longitudinal immune modeling of single cell transcriptomic and TCR sequencing clinical patient data 
-                        for cancer surveillance and predicting patient outcomes after immunotherapy treatment. Drug perturbation analysis 
-                        through CRISPR screens on KRAS inhibitors and cell surfaceome analysis to identify targets for novel antibody-drug conjugates.
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3><a href="research/immune-modeling.html" style="text-decoration: none; color: inherit;">Immune Modeling & Immunotherapy</a></h3>
+                    <p>
+                        Integrative longitudinal immune modeling of single cell transcriptomic and TCR sequencing clinical patient data. 
+                        Predicting patient outcomes after treatment with immune checkpoint blockade.
                     </p>
-                    <a href="research/pancreatic-cancer-genomics.html" class="btn btn-secondary">Learn More</a>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/immune-modeling.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 class="card-title">
-                        <i class="fas fa-microscope" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
-                        Breast Cancer Genomics
-                    </h3>
-                    <p class="card-description">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3><a href="research/drug-discovery.html" style="text-decoration: none; color: inherit;">Drug Discovery & KRAS Inhibition</a></h3>
+                    <p>
+                        Drug perturbation analysis through CRISPR screens on KRAS inhibitors. Cell surfaceome analysis 
+                        to identify targets for designing novel antibody-drug conjugates in pancreatic cancer.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/drug-discovery.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3><a href="research/early-detection.html" style="text-decoration: none; color: inherit;">Early Detection AI</a></h3>
+                    <p>
+                        Developing LLM methodology for early detection of pancreatic cancer from electronic health record data 
+                        in the Mass Gen-Brigham-Dana Farber medical system using deep learning clinical decision support tools.
+                    </p>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/early-detection.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3><a href="research/breast-cancer.html" style="text-decoration: none; color: inherit;">Breast Cancer Genomics</a></h3>
+                    <p>
                         Spatial and temporal single cell analyses of breast tumor initiation, malignant transformations, 
                         and clinical response prediction for triple-negative breast cancers treated with antibody-drug conjugates.
                     </p>
-                    <a href="research/breast-cancer.html" class="btn btn-secondary">Learn More</a>
+                    <div class="text-center" style="margin-top: 1rem;">
+                        <a href="research/breast-cancer.html" class="btn btn-secondary btn-sm">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,7 +179,7 @@
     <!-- Team Section -->
     <section id="team" class="section">
         <div class="container">
-            <h2 class="section-title text-center mb-12">Our Team</h2>
+            <h2 class="section-title">Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-photo">
@@ -262,7 +289,7 @@
     <!-- Publications Section -->
     <section id="publications" class="section section-alt">
         <div class="container">
-            <h2 class="section-title text-center mb-12">Selected Publications</h2>
+            <h2 class="section-title">Selected Publications</h2>
             <div class="publications-list">
                 <article class="publication">
                     <h3>Multi-modal foundation models for molecular biology: opportunities and challenges</h3>
@@ -300,7 +327,7 @@
     <!-- Software Section -->
     <section id="software" class="section">
         <div class="container">
-            <h2 class="section-title text-center mb-12">Software & Tools</h2>
+            <h2 class="section-title">Software & Tools</h2>
             <div class="software-grid">
                 <div class="software-card">
                     <h3>evoCancerGPT</h3>
@@ -398,11 +425,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Cristea Lab. All rights reserved.</p>
+                <p>&copy; 2024 Cristea Lab. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script-clean-modern.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
