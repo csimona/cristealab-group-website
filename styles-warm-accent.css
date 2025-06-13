@@ -435,6 +435,16 @@ body {
     min-width: unset !important;
 }
 
+/* Close Friends Section - Force single row */
+#close-friends .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: 1fr !important;
+    gap: var(--space-6) !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
 /* Team Section */
 .team-grid {
     display: grid;
@@ -661,6 +671,10 @@ body {
     
     .team-grid {
         grid-template-columns: 1fr;
+    }
+    
+    #close-friends .team-grid {
+        grid-template-columns: 1fr !important;
     }
     
     .section {
