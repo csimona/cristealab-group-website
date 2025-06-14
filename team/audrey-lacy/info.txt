@@ -1,0 +1,4 @@
+Name: Audrey Lacy
+Email: audrey@ds.dfci.harvard.edu
+LinkedIn: https://www.linkedin.com/in/audrey-lacy/
+One-liner: Specializing in biomedical imaging & spatial proteomics method development and analysis

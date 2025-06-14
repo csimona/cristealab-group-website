@@ -1,0 +1,5 @@
+Name: Jifan Gao
+Email: jifan.gao@wisc.edu
+LinkedIn: https://www.linkedin.com/in/jifangao/
+Website: https://ggggfan.github.io/profile/
+One-liner: Advancing interpretable multimodal learning for clinical risk prediction
