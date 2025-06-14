@@ -491,6 +491,62 @@ body {
     line-height: 1.5;
 }
 
+/* Team Member Styles */
+.team-member {
+    text-align: center;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--space-4);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--color-border);
+    transition: all var(--transition-normal);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member:hover .member-photo {
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.member-title {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-3);
+}
+
+.member-bio {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--space-4);
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.member-links .social-link {
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.member-links .social-link:hover {
+    color: var(--color-accent);
+}
+
 /* Publications Section */
 .publications-list {
     display: grid;
