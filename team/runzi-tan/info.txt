@@ -1,0 +1,3 @@
+Name: Runzi Tan
+Email: runzi@ds.dfci.harvard.edu
+One-liner: Working on single-cell genomics and AI-driven methodology for biology
