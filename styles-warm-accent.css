@@ -547,6 +547,12 @@ body {
     color: var(--color-accent);
 }
 
+/* Specific photo adjustments */
+.len-photo img {
+    object-position: center top;
+    transform: translateY(20px);
+}
+
 /* Publications Section */
 .publications-list {
     display: grid;
