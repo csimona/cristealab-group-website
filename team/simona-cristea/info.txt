@@ -1,0 +1,3 @@
+Name: Dr. Simona Cristea
+Email: simona_cristea@dfci.harvard.edu
+One-liner: Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer Research, pioneering single cell LLMs and AI foundation models for cancer genomics

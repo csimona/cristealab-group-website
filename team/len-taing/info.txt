@@ -1,0 +1,4 @@
+Name: Len Taing
+social media: n/a
+Email: lentaing@jimmy.harvard.edu
+one-liner: I specialize in building analysis pipelines and other informatics infrastructure for the lab.
