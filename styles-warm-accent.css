@@ -549,8 +549,32 @@ body {
 
 /* Specific photo adjustments */
 .len-photo img {
-    object-position: center top;
-    transform: translateY(20px);
+    object-position: center 35%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.chong-photo img {
+    object-position: center 25%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.jifan-photo img {
+    object-position: center 45%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sung-photo img {
+    object-position: 60% 30%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
 }
 
 /* Publications Section */
