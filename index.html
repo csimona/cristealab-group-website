@@ -20,12 +20,12 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About us</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#team" class="nav-link">Team</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#software" class="nav-link">Software</a></li>
                 <li><a href="https://www.simona.ai" class="nav-link" target="_blank">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-toggle">
                 <span class="bar"></span>
@@ -61,16 +61,12 @@
                 <div class="about-text">
                     <h2>About Us</h2>
                     <p class="lead">
-                        Dr. Simona Cristea is Head of Genomics Data Science and AI at the Hale Center for Pancreatic Cancer 
-                        and a faculty member in the Department of Data Science at Dana-Farber Cancer Institute, with a Research 
-                        Scientist appointment at Harvard T.H. Chan School of Public Health.
+                        We are a computational cancer genomics lab in the Department of Data Science at Dana-Farber Cancer Institute, part of the Hale Center for Pancreatic Cancer Research.
+                        Our lab integrates AI, computational biology, genomics and evolution to understand and ultimately alter the molecular processes that initiate and drive cancer.
+                        We develop multi-modal foundation models for AI cancer genomics and clinical applications such as early detection, as well as computational frameworks for CRISPR screens, spatial genomics and immunology.
+                        We are always looking for new collaborators and passionate researchers to join our team. Please reach out if you are interested in working with us!
                     </p>
                     <p>
-                        She drives the vision, innovation and strategic development of Hale Center's computational efforts to cure 
-                        pancreatic cancer. Her lab integrates AI, computational biology, genomics and evolution to understand and 
-                        ultimately alter the molecular processes that initiate and drive cancer. Current work focuses on developing 
-                        single cell large language models to understand and generate cancer progression and clinical responses using 
-                        generative AI methodologies.
                     </p>
                     <div class="stats">
                         <div class="stat">
@@ -82,13 +78,33 @@
                             <p>Team Members</p>
                         </div>
                         <div class="stat">
-                            <h3>25+</h3>
+                            <h3>15+</h3>
                             <p>Active Projects</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
                     <img src="images/lab-photo.jpg" alt="Cristea Lab Team" >
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-content" style="margin-top: 3rem;">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>The Hale Center for Pancreatic Cancer<br>
+                            Dana-Farber Cancer Institute<br>
+                            450 Brookline Ave<br>
+                            Boston, MA 02215</p>
+                            <br>
+                            <p>Harvard T.H. Chan School of Public Health<br>
+                            677 Huntington Avenue<br>
+                            Boston, MA 02115</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,10 +120,12 @@
                         <i class="fas fa-robot" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
                         GenAI Methods for Tumor Evolution and Early Detection
                     </h3>
-                    <p class="card-description">
-                        Developing genomics single cell Foundation Models to explain and generate tumor evolution 
-                        and LLM AI approaches for the early detection of pancreatic cancer from time-series electronic health record data.
-                    </p>
+                    <div class="card-description">
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+                            <li>Developing genomics single cell Foundation Models to explain and generate tumor evolution</li>
+                            <li>LLM AI approaches for early detection of pancreatic cancer from time-series electronic health record data</li>
+                        </ul>
+                    </div>
                     <a href="research/genai-tumor-evolution-early-detection.html" class="btn btn-secondary">Learn More</a>
                 </div>
                 <div class="card">
@@ -115,10 +133,13 @@
                         <i class="fas fa-map-marked-alt" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
                         Spatial Progression of Pancreatic Tumors 
                     </h3>
-                    <p class="card-description">
-                        Spatial transcriptomics & Spatial proteomics modeling and analyses of pancreatic cancer progression using clinical trial patient genomic and imaging data. 
-                        Integrating CosMx spatial transcriptomics with computational pathology and foundation models.
-                    </p>
+                    <div class="card-description">
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+                            <li>Spatial transcriptomics & proteomics modeling of pancreatic cancer progression</li>
+                            <li>Analysis using clinical trial patient genomic and imaging data</li>
+                            <li>Integration of CosMx spatial transcriptomics with computational pathology and foundation models</li>
+                        </ul>
+                    </div>
                     <a href="research/spatial-genomics.html" class="btn btn-secondary">Learn More</a>
                 </div>
                 <div class="card">
@@ -126,11 +147,14 @@
                         <i class="fas fa-dna" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
                         Pancreatic Cancer Genomics
                     </h3>
-                    <p class="card-description">
-                        Integrative longitudinal immune modeling of paired single cell transcriptomic and TCR sequencing clinical patient data 
-                        for cancer surveillance. Predicting patient outcomes after immunotherapy treatment. Drug perturbation analysis 
-                        through CRISPR screens on KRAS inhibitors and cell surfaceome analysis to identify targets for novel antibody-drug conjugates.
-                    </p>
+                    <div class="card-description">
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+                            <li>Integrative longitudinal immune modeling using paired scRNA-seq and TCR-seq data</li>
+                            <li>Cancer surveillance and patient outcome prediction after immunotherapy</li>
+                            <li>Drug perturbation analysis through CRISPR screens on KRAS inhibitors</li>
+                            <li>Cell surfaceome analysis to identify novel antibody-drug conjugate targets</li>
+                        </ul>
+                    </div>
                     <a href="research/pancreatic-cancer-genomics.html" class="btn btn-secondary">Learn More</a>
                 </div>
                 <div class="card">
@@ -138,10 +162,13 @@
                         <i class="fas fa-microscope" style="color: var(--color-accent); margin-right: 0.5rem;"></i>
                         Breast Cancer Genomics
                     </h3>
-                    <p class="card-description">
-                        Spatial and temporal single cell analyses of breast tumor initiation, malignant transformations, 
-                        and clinical response prediction for triple-negative breast cancers treated with antibody-drug conjugates.
-                    </p>
+                    <div class="card-description">
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0;">
+                            <li>Spatial and temporal single cell analyses of breast tumor initiation</li>
+                            <li>Study of malignant transformations in breast cancer</li>
+                            <li>Clinical response prediction for triple-negative breast cancers treated with antibody-drug conjugates</li>
+                        </ul>
+                    </div>
                     <a href="research/breast-cancer.html" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
@@ -164,10 +191,10 @@
                         
                     </p>
                     <div class="member-links">
-                        <a href="mailto:scristea@ds.dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="team/templates/simona-cristea.html" class="social-link" title="View Profile"><i class="fas fa-user"></i></a>
+                        <a href="mailto:scristea@ds.dfci.harvard.edu" class="social-link" title="scristea@ds.dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://x.com/simocristea" class="social-link" target="_blank" title="@simocristea"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/cristea-lab" class="social-link" target="_blank" title="View GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.simona.ai" class="social-link" target="_blank" title="Visit Substack"><i class="fas fa-user"></i></a>
                     </div>
                 </div>
                 
@@ -181,9 +208,9 @@
                         Advancing interpretable multimodal learning for clinical risk prediction.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:jifan.gao@wisc.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://ggggfan.github.io/profile/" class="social-link" target="_blank"><i class="fas fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/in/jifangao/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:jifan.gao@ds.dfci.harvard.edu" class="social-link" title="jifan.gao@ds.dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://ggggfan.github.io/profile/" class="social-link" target="_blank" title="Visit Website"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/jifangao/" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -197,8 +224,8 @@
                         Single-cell and spatial transcriptomic analysis and clinical trial statistician.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:shong@ds.dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/sung-chul-david-hong/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:shong@ds.dfci.harvard.edu" class="social-link" title="shong@ds.dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sung-chul-david-hong/" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -212,8 +239,8 @@
                         Data analyst for the PhAST Phage Display project, with expertise in Phage Display, Whole Exome Sequencing (WXS), and CRISPR analysis.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:baiqijiang0108@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://linkedin.com/in/baiqi-jiang-95b4a7270" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:baiqijiang0108@gmail.com" class="social-link" title="baiqijiang0108@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/baiqi-jiang-95b4a7270" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -227,8 +254,8 @@
                         Specializing in biomedical imaging & spatial proteomics method development and analysis.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:audrey@ds.dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/audrey-lacy/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:audrey@ds.dfci.harvard.edu" class="social-link" title="audrey@ds.dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/audrey-lacy/" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -242,7 +269,7 @@
                         I specialize in building analysis pipelines and other informatics infrastructure for the lab.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:lentaing@jimmy.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:lentaing@jimmy.harvard.edu" class="social-link" title="lentaing@jimmy.harvard.edu"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
@@ -256,7 +283,7 @@
                         Working on single-cell genomics and AI-driven methodology for biology.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:runzi@ds.dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:runzi@ds.dfci.harvard.edu" class="social-link" title="runzi@ds.dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
@@ -270,9 +297,9 @@
                         Computational biologist specializing in AI/ML‑driven single‑cell and spatial genomics of pancreatic cancer.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:xisamwang@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://samwang.net" class="social-link" target="_blank"><i class="fas fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/in/xiw020" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:xisamwang@gmail.com" class="social-link" title="xisamwang@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://samwang.net" class="social-link" target="_blank" title="Visit Website"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/xiw020" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -294,24 +321,8 @@
                         Interested in tumor evolution and single cell omics.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:Julien_dilly@dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://twitter.com/Julien__Dilly" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="images/research-scientist-placeholder.jpg" alt="Jacob Geisberg" >
-                    </div>
-                    <h3>Jacob Geisberg</h3>
-                    <p class="member-title">Computational Biologist II</p>
-                    <p class="member-bio">
-                        Senior computational researcher specializing in genomic data analysis and bioinformatics applications.
-                    </p>
-                    <div class="member-links">
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:Julien_dilly@dfci.harvard.edu" class="social-link" title="Julien_dilly@dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://twitter.com/Julien__Dilly" class="social-link" target="_blank" title="@Julien__Dilly"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
@@ -325,8 +336,22 @@
                         Integrating computational and wet-lab tools to decipher T-cell biology.
                     </p>
                     <div class="member-links">
-                        <a href="mailto:Chong_Zuo@dfci.harvard.edu" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.linkedin.com/in/chong-zuo-28243771/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:Chong_Zuo@dfci.harvard.edu" class="social-link" title="Chong_Zuo@dfci.harvard.edu"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/chong-zuo-28243771/" class="social-link" target="_blank" title="View LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/undergrad-placeholder.jpg" alt="Gautham Krishna Sankar Ramalaxmi">
+                    </div>
+                    <h3>Gautham Krishna Sankar Ramalaxmi</h3>
+                    <p class="member-title">Summer Intern</p>
+                    <p class="member-bio">
+                        Summer intern contributing to computational biology research.
+                    </p>
+                    <div class="member-links">
+                        <a href="mailto:gkjordan10@gmail.com" class="social-link" title="gkjordan10@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -412,46 +437,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Dana-Farber Cancer Institute<br>
-                            450 Brookline Ave<br>
-                            Boston, MA 02215</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>simona_cristea@dfci.harvard.edu</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+1 (617) 632-XXXX</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Join Our Team</h3>
-                    <p>We are always looking for talented and motivated individuals to join our research group. 
-                    If you're interested in computational cancer research, please get in touch!</p>
-                    <a href="#" class="btn btn-primary">Open Positions</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
