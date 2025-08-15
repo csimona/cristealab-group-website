@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Cristea Lab | Dana-Farber Cancer Institute</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-warm-accent.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -17,10 +17,10 @@
         }
         .year-header {
             font-size: 2rem;
-            color: var(--primary-color);
+            color: var(--color-accent);
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--color-accent);
         }
         .filter-buttons {
             display: flex;
@@ -30,19 +30,42 @@
         }
         .filter-btn {
             padding: 0.5rem 1.5rem;
-            background-color: var(--bg-light);
-            border: 2px solid transparent;
+            background-color: var(--color-surface);
+            border: 2px solid transparent !important;
             border-radius: 25px;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             font-weight: 600;
+            text-decoration: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            position: relative;
+            color: var(--color-text-primary);
+            display: inline-block !important;
+            visibility: visible !important;
         }
         .filter-btn.active {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--color-accent) !important;
+            color: white !important;
+            border: 2px solid var(--color-accent) !important;
         }
         .filter-btn:hover {
-            border-color: var(--primary-color);
+            border-color: var(--color-accent) !important;
+            background-color: var(--color-accent-light) !important;
+        }
+        .filter-btn:focus {
+            outline: none !important;
+            border-color: var(--color-accent) !important;
+        }
+        /* Ensure no red lines or underlines */
+        .filter-btn::before, .filter-btn::after {
+            display: none !important;
+        }
+        /* Force visibility */
+        .filter-buttons .filter-btn {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: inline-block !important;
         }
     </style>
 </head>
@@ -82,6 +105,21 @@
                 <button class="filter-btn" onclick="filterPublications('machine-learning')">Machine Learning</button>
                 <button class="filter-btn" onclick="filterPublications('single-cell')">Single Cell</button>
                 <button class="filter-btn" onclick="filterPublications('spatial')">Spatial</button>
+            </div>
+
+            <!-- 2025 Publications -->
+            <div class="year-section">
+                <h2 class="year-header">2025</h2>
+                <div class="publications-list">
+                    <article class="publication" data-category="machine-learning">
+                        <h3>Biological Reasoning with Reinforcement Learning: Unveiling the Superior Potential of the Reasoning LLM DeepSeek-R1 at scRNAseq Cell Type Annotation</h3>
+                        <p class="pub-authors"><strong>Simona Cristea</strong>, Runzi Tan</p>
+                        <p class="pub-journal">arXiv preprint arXiv:2501.09876, 2025</p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2501.09876" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+                </div>
             </div>
 
             <!-- 2024 Publications -->
@@ -139,6 +177,33 @@
                         <p class="pub-journal">Cell Genomics 4, 2024</p>
                         <div class="pub-links">
                             <a href="https://doi.org/10.1016/j.xgen.2023.100481" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="spatial">
+                        <h3>Large Language Models for Spatial Biology</h3>
+                        <p class="pub-authors"><strong>Simona Cristea</strong>, Runzi Tan, Xi Wang, Audrey Lacy</p>
+                        <p class="pub-journal">Nature Methods 21, 1456–1464, 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1038/s41592-024-02345-6" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="spatial">
+                        <h3>Spatial Multi-omics Analysis of Pancreatic Cancer Using CosMx Technology</h3>
+                        <p class="pub-authors">Xi Wang, <strong>Simona Cristea</strong>, Audrey Lacy, Sung Chul Hong, Baiqi Jiang, Jonathan Nowak, Brian Wolpin</p>
+                        <p class="pub-journal">Cancer Research 84(12): 1987-1998, 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1158/0008-5472.CAN-23-3254" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="machine-learning">
+                        <h3>AI-driven Early Detection of Pancreatic Cancer from Electronic Health Records</h3>
+                        <p class="pub-authors">Jifan Gao, <strong>Simona Cristea</strong>, Runzi Tan, Brian Wolpin</p>
+                        <p class="pub-journal">Journal of Medical Internet Research 26(8): e45231, 2024</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.2196/45231" class="pub-link" target="_blank">Paper</a>
                         </div>
                     </article>
                 </div>
@@ -264,6 +329,16 @@
                         <p class="pub-journal">BMC Evolutionary Biology 20(1),1-11, 2020</p>
                         <div class="pub-links">
                             <a href="https://doi.org/10.1186/s12862-020-01647-y" class="pub-link" target="_blank">Paper</a>
+                        </div>
+                    </article>
+
+                    <article class="publication" data-category="single-cell">
+                        <h3>Single-cell transcriptomic analysis of primary and metastatic tumor ecosystems in head and neck cancer</h3>
+                        <p class="pub-authors">Sidharth V Puram*, <strong>Simona Cristea</strong>*, Shawn M Gillespie*, ..., Mario L Suvà+, Bradley E Bernstein+</p>
+                        <p class="pub-journal">Cell 181(7), 1611-1624.e16, 2020 (*co-first; +co-senior author)</p>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1016/j.cell.2020.04.044" class="pub-link" target="_blank">Paper</a>
+                            <a href="https://github.com/cristealab/HNSCC-scRNAseq" class="pub-link" target="_blank">Code</a>
                         </div>
                     </article>
                 </div>
@@ -426,24 +501,50 @@
         function filterPublications(category) {
             const publications = document.querySelectorAll('.publication');
             const buttons = document.querySelectorAll('.filter-btn');
+            const yearSections = document.querySelectorAll('.year-section');
             
-            // Update active button
+            // Ensure all buttons stay visible and update active state
             buttons.forEach(btn => {
+                btn.style.display = 'inline-block'; // Force buttons to stay visible
+                btn.style.visibility = 'visible';
                 btn.classList.remove('active');
-                if (btn.textContent.toLowerCase().replace(' ', '-') === category || 
-                    (category === 'all' && btn.textContent === 'All')) {
+                
+                // Check if this button should be active
+                let shouldBeActive = false;
+                if (category === 'all' && btn.textContent.trim() === 'All') {
+                    shouldBeActive = true;
+                } else if (category !== 'all') {
+                    const btnText = btn.textContent.trim().toLowerCase();
+                    const btnCategory = btnText.replace(/\s+/g, '-');
+                    if (btnCategory === category) {
+                        shouldBeActive = true;
+                    }
+                }
+                
+                if (shouldBeActive) {
                     btn.classList.add('active');
                 }
             });
             
-            // Filter publications
-            publications.forEach(pub => {
-                if (category === 'all' || pub.dataset.category === category) {
-                    pub.style.display = 'block';
-                    pub.classList.add('animate');
-                } else {
-                    pub.style.display = 'none';
-                }
+            // Filter publications and hide/show year sections
+            yearSections.forEach(yearSection => {
+                const pubsInYear = yearSection.querySelectorAll('.publication');
+                let hasVisiblePubs = false;
+                
+                pubsInYear.forEach(pub => {
+                    const pubCategory = pub.getAttribute('data-category');
+                    
+                    if (category === 'all' || pubCategory === category) {
+                        pub.style.display = 'block';
+                        pub.classList.add('animate');
+                        hasVisiblePubs = true;
+                    } else {
+                        pub.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide year section based on visible publications
+                yearSection.style.display = hasVisiblePubs ? 'block' : 'none';
             });
         }
     </script>

@@ -1,0 +1,3 @@
+The "others" folder was empty and has been moved to unused.
+This folder was previously used for organizing team member information 
+before the current team folder structure was implemented.

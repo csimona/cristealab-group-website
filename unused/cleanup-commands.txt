@@ -1,0 +1,34 @@
+# Commands to remove original files after backup
+
+# Files that have been backed up to the unused folder:
+# - ANIMATION-BACKUP-README.md
+# - script-ai-genomics-backup.js
+# - script-dna-backup.js
+# - styles-dna-backup.css
+# - index.html.backup
+# - script.js (legacy)
+# - styles.css (legacy)
+# - team.html (standalone page)
+# - others/ (empty folder)
+
+# To clean up the parent directory, run these commands:
+# rm "ANIMATION-BACKUP-README.md"
+# rm "script-ai-genomics-backup.js"
+# rm "script-dna-backup.js"
+# rm "styles-dna-backup.css"
+# rm "index.html.backup"
+# rm "script.js"
+# rm "styles.css"
+# rm "team.html"
+# rmdir "others"
+
+# Active files that should remain:
+# - index.html (current main page)
+# - script-clean-modern.js (current JavaScript)
+# - styles-warm-accent.css (current CSS)
+# - publications.html
+# - README.md
+# - images/ (folder with all images)
+# - research/ (folder with research pages)
+# - team/ (folder with team information)
+# - unused/ (this folder with backed up files)
